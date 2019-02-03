@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.2)  2 FEB 2019 21:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.3)  3 FEB 2019 11:41
 entering extended mode
 **./template_Article.tex
 (template_Article.tex
@@ -24,7 +24,7 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \bibindent=\dimen102
 ) ("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.s
 ty"
-Package: multicol 2018/11/09 v1.8u multicolumn formatting (FMi)
+Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \c@tracingmulticols=\count88
 \mult@box=\box27
 \multicol@leftmargin=\dimen103
@@ -125,71 +125,54 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 370.
 ) (template_Article.aux)
 \openout1 = `template_Article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 11.
+(Font)              <7> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 11.
+(Font)              <5> on input line 9.
 
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 30.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 30.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 34.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 34.
-
-! Double superscript.
-<recently read> ^
-                 
-l.34 ...br^{2n}\backslash \{0\}$ and that $H’’
-                                                  (x)$ is \dots \end{lemma}
-I treat `x^1^2' essentially like `x^1{}^2'.
+Overfull \hbox (2.7661pt too wide) in paragraph at lines 21--23
+\OT1/cmr/m/n/10 Na-tional Lab-o-ra-tory: www.kaggle.com/c/LANL-Earthquake-Predi
+ction. Be-cause
+ []
 
 [1
 
 {C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (template_Article.aux) ) 
 Here is how much of TeX's memory you used:
- 624 strings out of 492946
- 7409 string characters out of 3126267
- 75593 words of memory out of 3000000
- 4593 multiletter control sequences out of 15000+200000
+ 622 strings out of 492946
+ 7384 string characters out of 3126267
+ 73588 words of memory out of 3000000
+ 4591 multiletter control sequences out of 15000+200000
  6111 words of font info for 22 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,4n,21p,272b,138s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,4n,21p,352b,138s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/danie/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danie/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/danie/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
 Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/danie/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/danie/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/da
-nie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
->
-Output written on template_Article.pdf (1 page, 134108 bytes).
+r10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/danie/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on template_Article.pdf (1 page, 107274 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
