@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Mar 10 14:37:40 2019
-
 @author: danie
 """
-
 #%%
 from __future__ import print_function, division
 import os
@@ -19,9 +17,26 @@ from os import chdir, getcwd
 chdir('C:\\Users\\danie\\Documents\\GitHub\\OlgaDanCapstone\\GPUProject')
 #getcwd()
 #%%
-#traindata = pd.read_csv('train.csv')
+def iter_loadtxt(filename, delimiter=',', skiprows=1, dtype=float):
+    def iter_func():
+        with open(filename, 'r') as infile:
+            for _ in range(skiprows):
+                next(infile)
+            for line in infile:
+                line = line.rstrip().split(delimiter)
+                for item in line:
+                    yield dtype(item)
+        iter_loadtxt.rowlength = len(line)
+
+    data = np.fromiter(iter_func(), dtype=dtype)
+    data = data.reshape((-1, iter_loadtxt.rowlength))
+    return data
+#data = iter_loadtxt('train.csv')
+
 #%%
-#traindata=np.genfromtxt("train.csv", delimiter=',')
+#traindata=np.array(data[0:],dtype={'names': ('acoustic_data', 'time_to_failure'),'formats': (np.int64,np.float32)} )
+np.save('data', traindata) 
+
 #np.loadtxt('train.csv',dtype={'names': ('acoustic_data', 'time_to_failure'),'formats': (np.int,np.float64)},delimiter=',', skiprows=1)
 #%%
 if torch.cuda.is_available():
@@ -70,5 +85,4 @@ allFiles = []
 for i, filepath in enumerate(filepaths):
     files = glob.glob(filepath + '*.jpg')
     allFiles = allFiles + files
-
 print(str(datetime.now()))
