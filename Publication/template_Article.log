@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.24)  24 MAR 2019 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.24)  24 MAR 2019 14:41
 entering extended mode
 **./template_Article.tex
 (template_Article.tex
@@ -142,42 +142,35 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 19.
+(Font)              <7> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 19.
+(Font)              <5> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 19.
+(Font)              <9> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
+(Font)              <6> on input line 11.
 
-Underfull \hbox (badness 2790) in paragraph at lines 24--24
- [][]\OT1/cmr/m/n/9 Rouet-Leduc Bertrand, Hul-bert Clau-dia, Lub-bers Nicholas,
- Bar-ros Kip-ton,
- []
-
-
-Overfull \hbox (6.73834pt too wide) in paragraph at lines 46--48
+Overfull \hbox (6.73834pt too wide) in paragraph at lines 26--27
 \OT1/cmr/m/n/10 Na-tional Lab-o-ra-tory: www.kaggle.com/c/LANL-Earthquake-Predi
 ction. The data
  []
 
 [1
 
-
-{C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(template_Article.aux) )
+{C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(template_Article.bbl) [2] (template_Article.aux) )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 40 ({)
+### simple group (level 1) entered at line 21 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 648 strings out of 492946
- 7591 string characters out of 3135527
+ 652 strings out of 492946
+ 7705 string characters out of 3135527
  75593 words of memory out of 3000000
- 4608 multiletter control sequences out of 15000+200000
+ 4609 multiletter control sequences out of 15000+200000
  7980 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,9n,21p,545b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,4n,21p,375b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Progr
@@ -188,7 +181,7 @@ ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on template_Article.pdf (2 pages, 140039 bytes).
+Output written on template_Article.pdf (2 pages, 141073 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
