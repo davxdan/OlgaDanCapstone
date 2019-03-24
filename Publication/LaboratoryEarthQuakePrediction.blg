@@ -3,6 +3,8 @@ The style file: splncs.bst
 Database file #1: OlgaDan.bib
 Warning--entry type for "Bertrand" isn't style-file defined
 --line 1 of file OlgaDan.bib
+Warning--entry type for "kaggle" isn't style-file defined
+--line 8 of file OlgaDan.bib
 Too many commas in name 1 of "Bertrand Rouet‐Leduc, Claudia Hulbert, Nicholas Lubbers, Kipton Barros, Colin J. Humphreys, Paul A. Johnson" for entry Bertrand
 while executing---line 1088 of file splncs.bst
 Too many commas in name 1 of "Bertrand Rouet‐Leduc, Claudia Hulbert, Nicholas Lubbers, Kipton Barros, Colin J. Humphreys, Paul A. Johnson" for entry Bertrand
