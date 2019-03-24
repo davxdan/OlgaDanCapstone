@@ -1,24 +1,49 @@
 \documentclass[]{llncs}
-%opening
-\title{EARTHQUAKE ANALYSIS}
-%\subtitle{Optional Subtitle Goes Here}
-\author{Olga Tanyuk\inst{1},Daniel Davieau\inst{2}, Dr. Charles South(tentative advisor){3} \and Daniel W. Engels} 
-\institute{Southern Methodist University, Dallas TX 75205, USA}
-
+%
+\usepackage{makeidx}
+%
 \begin{document}
+%
+\frontmatter          % for the preliminaries
+%
+\pagestyle{headings}  % switches on printing of running heads
+\addtocmark{Southern Methodist University} % additional mark in the TOC
+%
+\title{LABORATORY EARTHQUAKE ANALYSIS}
+%\subtitle{Optional Subtitle Goes Here}
+\author{Olga Tanyuk\inst{1}, Daniel Davieau\inst{1}, Dr. Michael L. Blanpied\inst{1}, Dr. Charles South\inst{1} \and Dr. Daniel W. Engels\inst1}
+
+\institute{Southern Methodist University, Dallas TX 75205, USA \and {\em Add Los Alamos, USGS and or Kaggle here?}}
+
+
 \maketitle
 %
 \begin{abstract}
-This work will analyze earthquake data provided by the Los Alamos National Laboratory. We will create a model to predict earthquakes and win a Kaggle competition.
+Earthquakes cause deaths and damage. \par
+
+Given improved data collection and processing technologies; predict the time remaining for imminent laboroatory earthquakes more precisely than {\em r2 .89 90 \% Confidence and other statistical facts} which was previously accomplished by Los Alamos National Laboratory\footnote{Rouet-Leduc Bertrand, Hulbert Claudia, Lubbers Nicholas, Barros Kipton, Humphreys Colin J., JohnsonPaul A. (2017, July 15). Machine Learning Predicts Laboratory Earthquakes. Retrieved from https://doi.org/10.1002/2017GL074677}
+
+
+We analyze the data for patterns using geological subject matter expertise, statistical methods and natural intuition. We design a statistical algorithm to model the patterns and predict the time remaining until a laboratory earthquake will occur for given test data. We compare predicted versus actual time remaining to determine our accuracy. \par
+
+The evidence of this experiment suggests  {\em null hypothesis, statistical results with pvalue or confidence interval and releven t scores} we can predict impending laboratory earthquakes
+
+{\em "Be careful not to accidentally plagurize. DO NOT use figures from other publications. Even if you cite it; you are getting into areas where copyright issues arise."}
+
+%
 \end{abstract}
 %
-\section{Problem Statement}
+
+\section{INTRODUCTION}
 %
-Earthquakes cause deaths and massive damage. They are difficult to predict relative to other natural disasters. This analysis aims to produce a model which will predict earthquakes more accurately than TBD   \dots
-%
-\subsection{Experiment Design}
-%
-Data will be attained from a Kaggle Competition sponsored by the Los Alamos National Laboratory:  www.kaggle.com/c/LANL-Earthquake-Prediction. Because the data in this competition is simulated we may need to pursue real data from an alternate source. This will be determined after consultation with our advisor and instructor.
+1 Paragraph Motivtion (Sets Genreral problem domain) \par
+1 Paragraph P{roblem Statement (Specific Problem solved by the work) \par
+2-3 paragraphs on solution \par
+1 Paragraph on main results (plural) \par
+1 Paragraph on main conclusions (plural) \par
+1 Paragraph on paper organization \par
+
+Data was attained from a Kaggle Competition sponsored by the Los Alamos National Laboratory:  www.kaggle.com/c/LANL-Earthquake-Prediction. The data in this competition is the result of a laboratory simulation.
 %
 \subsubsection*{This is another section.}
 %
@@ -26,4 +51,30 @@ We assume that $H$ is $\left(A_{\infty}, B_{\infty}\right)$-subqua\-dra\-tic at 
 %
 \paragraph{Notes and Comments.} The first results on subharmonics were \dots
 %
+\section{TUTORIAL MATERIAL}
+Paper should be tutorial in nature
+Audience is data scientists of varying levels of knowledge. Keep newer students in mind
+\section{DATA}
+Must have section that defines data
+Use tables and figures to illustrate data attributes
+\section{METHODS AND EXPERIMENTS}
+Define algorithms, methods and eperiments
+DO NOT give play by play of everything we did
+Dont put code in paper; if anything put in appendix.
+Put versions of software but nop one cares about how to use technology; just state what we did.
+\section{RESULTS}
+Results of experiments
+Use tables and graphs
+Use tables and graphs
+Use tables and graphs
+Don't forget explanations
+\section{ANALYSIS}
+Analyze results.
+These are NOT conclusions.
+\section{ETHICS}
+Discuss ethics of your problem
+You MUST have ethics section.
+\section{CONCLUSION}
+Draw conclusionS (plural, more than one conclusion- minimum of 3)
+This is NOT a summary section.
 \end{document}

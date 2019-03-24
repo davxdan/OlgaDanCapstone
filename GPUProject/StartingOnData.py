@@ -4,19 +4,21 @@ Created on Sun Mar 10 14:37:40 2019
 @author: danie
 """
 #%%
-from __future__ import print_function, division
-import os
-import torch
-import pandas as pd
-from skimage import io, transform
 import numpy as np
 import matplotlib.pyplot as plt
-from torch.utils.data import Dataset, DataLoader
+from sklearn.model_selection import cross_val_predict, GridSearchCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import MinMaxScaler
 #%%
 from os import chdir, getcwd
 chdir('C:\\Users\\danie\\Documents\\GitHub\\OlgaDanCapstone\\GPUProject')
 #getcwd()
 #%%
+"""Silly way to load data"""
+#data_type = {'acoustic_data': np.int16, 'time_to_failure': np.float64}
+#train = pd.read_csv('train.csv', dtype=data_type)
+#%%
+"""Full Data Load and Save"""
 def iter_loadtxt(filename, delimiter=',', skiprows=1, dtype=float):
     def iter_func():
         with open(filename, 'r') as infile:
@@ -32,57 +34,58 @@ def iter_loadtxt(filename, delimiter=',', skiprows=1, dtype=float):
     data = data.reshape((-1, iter_loadtxt.rowlength))
     return data
 #data = iter_loadtxt('train.csv')
-
+#np.save('data', data)
+train=np.load('data.npy')
+#acousticData=data[:,0].astype(np.int64)
+#timeToFailure=data[:,1].astype(np.float64)
+#np.save('acousticdata', acousticdata)
+#acousticdata=np.load('acousticdata.npy') 
+#np.save('timeToFailure', timeToFailure)
+#timeToFailure=np.load('timeToFailure.npy') 
+#acousticdata=acousticdata.reshape(-1, 1)
+#timeToFailure=timeToFailure.reshape(-1, 1)
 #%%
-#traindata=np.array(data[0:],dtype={'names': ('acoustic_data', 'time_to_failure'),'formats': (np.int64,np.float32)} )
-np.save('data', traindata) 
+"""Get sample for Experimentation""""
+idx = np.random.randint(629145480, size=100000)
+trainsample=train[idx,:]
+acousticData=trainsample[:,0].astype(np.int64)
+timeToFailure=trainsample[:,1].astype(np.float64)
+timeToFailure=np.ravel(timeToFailure)
+"""Data inspection"""
+len(train)
+train.ndim
+train.size
+train.dtype
+train.dtype.name
 
-#np.loadtxt('train.csv',dtype={'names': ('acoustic_data', 'time_to_failure'),'formats': (np.int,np.float64)},delimiter=',', skiprows=1)
-#%%
-if torch.cuda.is_available():
-
-    # creates a LongTensor and transfers it
-    # to GPU as torch.cuda.LongTensor
-    a = torch.full((10,), 3, device=torch.device("cuda"))
-    print(type(a))
-    b = a.to(torch.device("cpu"))
-    # transfers it to CPU, back to
-    # being a torch.LongTensor
-print("I am the law")
-#print(traindata)
-#len(a) """Length of array"""
-#b.ndim """Number of array dimensions"""
-#e.size """Number of array elements"""
-#b.dtype """Data type of array elements"""
-#b.dtype.name """Name of data type"""
+len(acousticdata)
+acousticdata.ndim
+acousticdata.size
+acousticdata.dtype
+acousticdata.dtype.name
 #b.astype(int) """Convert an array to a different type"""
+plt.scatter(acousticData, timeToFailure)
 #%%
-import numpy as np
-import matplotlib.pyplot as plt
-import glob
-#import cv2
-import random
-import os.path
-from datetime import datetime
-import pandas as pd
-np.random.seed(2016)
-random.seed(2016)
+"""Models"""
+#https://medium.com/datadriveninvestor/random-forest-regression-9871bc9a25eb
+from sklearn.model_selection import cross_val_predict, GridSearchCV
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import MinMaxScaler
+
+def rfr_model(X, y):
+# Perform Grid-Search
+    gsc = GridSearchCV(
+        estimator=RandomForestRegressor(),param_grid={'max_depth': range(3,7),
+                                       'n_estimators': (10, 50, 100, 1000),},
+                                       cv=5,scoring='neg_mean_squared_error',
+                                       verbose=0,n_jobs=-1)
+    grid_result = gsc.fit(X, y)
+    best_params = grid_result.best_params_
+    rfr = RandomForestRegressor(max_depth=best_params["max_depth"], 
+                                n_estimators=best_params["n_estimators"],
+                                random_state=False, verbose=False)
+# Perform K-Fold CV
+    scores = cross_val_predict(rfr, X, y, cv=10, scoring='neg_mean_absolute_error')
+    return scores
 #%%
-conf = dict()
-# Shape of image for CNN (Larger the better, but you need to increase CNN as well)
-conf['image_shape'] = (32,32)
-#%%
-print(str(datetime.now()))
-filepaths = []
-filepaths.append('../input/train/Type_1/')
-filepaths.append('../input/train/Type_2/')
-filepaths.append('../input/train/Type_3/')
-filepaths.append('../input/test/')
-print(str(datetime.now()))
-#%%
-print(str(datetime.now()))
-allFiles = []
-for i, filepath in enumerate(filepaths):
-    files = glob.glob(filepath + '*.jpg')
-    allFiles = allFiles + files
-print(str(datetime.now()))
+rfr_model(acousticData, timeToFailure)
