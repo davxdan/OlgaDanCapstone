@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.3)  24 MAR 2019 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.24)  24 MAR 2019 17:49
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -6,9 +6,9 @@ LaTeX2e <2018-12-01>
 (llncs.cls
 Document Class: llncs 2004/08/17 v2.14 
  LaTeX document class for Lecture Notes in Computer Science
-("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+("C:\Program Files\MiKTeX 2.9\tex/latex\base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+("C:\Program Files\MiKTeX 2.9\tex/latex\base\size10.clo"
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -22,9 +22,9 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) ("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.s
-ty"
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex\tools\multicol.sty"
+Package: multicol 2018/11/09 v1.8u multicolumn formatting (FMi)
 \c@tracingmulticols=\count88
 \mult@box=\box27
 \multicol@leftmargin=\dimen103
@@ -123,9 +123,10 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 370.
 \c@remark=\count116
 \headlineindent=\dimen124
 )
-("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\makeidx.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex\base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-) (LaboratoryEarthQuakePrediction.aux)
+)
+(LaboratoryEarthQuakePrediction.aux)
 \openout1 = `LaboratoryEarthQuakePrediction.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -141,15 +142,15 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 16.
+(Font)              <7> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 16.
+(Font)              <5> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 16.
+(Font)              <9> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 16.
+(Font)              <6> on input line 15.
 
-Overfull \hbox (6.73834pt too wide) in paragraph at lines 40--41
+Overfull \hbox (6.73834pt too wide) in paragraph at lines 43--44
 \OT1/cmr/m/n/10 Na-tional Lab-o-ra-tory: www.kaggle.com/c/LANL-Earthquake-Predi
 ction. The data
  []
@@ -158,32 +159,26 @@ ction. The data
 
 {C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (LaboratoryEarthQuakePrediction.bbl) [2] (LaboratoryEarthQuakePrediction.aux) )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 35 ({)
-### bottom level 
+ 
 Here is how much of TeX's memory you used:
- 651 strings out of 492946
- 8045 string characters out of 3126267
- 75588 words of memory out of 3000000
- 4608 multiletter control sequences out of 15000+200000
+ 653 strings out of 492946
+ 7881 string characters out of 3135527
+ 75593 words of memory out of 3000000
+ 4610 multiletter control sequences out of 15000+200000
  7980 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,4n,21p,804b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danie/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/danie/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/da
-nie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-<C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr6.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr7.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/danie/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/danie/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (2 pages, 148616 bytes).
+ 29i,4n,21p,778b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on LaboratoryEarthQuakePrediction.pdf (2 pages, 144967 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
