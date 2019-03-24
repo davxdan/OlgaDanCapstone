@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.3)  24 MAR 2019 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.3)  24 MAR 2019 14:51
 entering extended mode
-**./template_Article.tex
-(template_Article.tex
+**./LaboratoryEarthQuakePrediction.tex
+(LaboratoryEarthQuakePrediction.tex
 LaTeX2e <2018-12-01>
 (llncs.cls
 Document Class: llncs 2004/08/17 v2.14 
@@ -125,8 +125,8 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 370.
 )
 ("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-) (template_Article.aux)
-\openout1 = `template_Article.aux'.
+) (LaboratoryEarthQuakePrediction.aux)
+\openout1 = `LaboratoryEarthQuakePrediction.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -157,19 +157,19 @@ ction. The data
 [1
 
 {C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(template_Article.bbl) [2] (template_Article.aux) )
+(LaboratoryEarthQuakePrediction.bbl) [2] (LaboratoryEarthQuakePrediction.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 21 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  650 strings out of 492946
- 7869 string characters out of 3126267
+ 8037 string characters out of 3126267
  75588 words of memory out of 3000000
  4607 multiletter control sequences out of 15000+200000
  7980 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,4n,21p,375b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,4n,21p,389b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmbx10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danie/AppData/Local/Program
@@ -183,7 +183,7 @@ ype1/public/amsfonts/cm/cmr9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX
 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/danie/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/danie/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on template_Article.pdf (2 pages, 141073 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (2 pages, 141073 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
