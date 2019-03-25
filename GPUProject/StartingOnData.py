@@ -61,11 +61,15 @@ print(train.dtype.name)
 #acousticData.min(axis=0)#-5515
 fig, ax = plt.subplots(figsize=(11, 8.5))
 ax.plot(train[:,1],train[:,0])
-ax.set(xlabel='Time to Failure(s)', ylabel='Acoustic Signal',
-       title='LANL Acoustic Signal by Time To Failure: 629,145,480 Observations')
+ax.set(xlabel='Time to Failure(seconds)', ylabel='Siesmic Signals',
+       title='LANL Siesmic Signals by Time To Failure: 629,145,480 Observations')
 ax.grid()
 fig.savefig("allDataDefaultPlot.png")
 plt.show()
+
+fig, ax = plt.subplots(figsize=(11, 8.5))
+sns.distplot(train[:,0],axlabel='Siesmic Signals:629,145,480 Observations',label='LANL Siesmic Signals Distribution:629,145,480 Observations')
+fig.savefig("acousticRand60000DistPlot.png")
 #%%
 """Sample Data Inspection"""
 #Rows,Columns
@@ -75,9 +79,9 @@ trainsample=train[idx,:]
 #timeToFailure=trainsample[:,1].astype(np.float64)
 #timeToFailure=np.ravel(timeToFailure)
 #train=train[0:100000,:] 
-fig, ax = plt.subplots(figsize=(11.7, 8.27))
-sns.distplot(trainsample[:,0])
-fig.savefig("acousticRand60000DistPlot.png")
+
+
+
 #Enormous outliers presumably siesmic failure or major slip.
 #%%
 

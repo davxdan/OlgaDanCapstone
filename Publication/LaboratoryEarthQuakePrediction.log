@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.24)  25 MAR 2019 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.24)  25 MAR 2019 17:29
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -243,13 +243,13 @@ File: ../GPUProject/allDataDefaultPlot.png Graphic file (type png)
 <use ../GPUProject/allDataDefaultPlot.png>
 Package pdftex.def Info: ../GPUProject/allDataDefaultPlot.png  used on input li
 ne 63.
-(pdftex.def)             Requested size: 242.98541pt x 187.75806pt.
-<../GPUProject/acousticRand60000DistPlot.png, id=15, 845.1575pt x 597.23125pt>
+(pdftex.def)             Requested size: 277.69987pt x 214.59404pt.
+<../GPUProject/acousticRand60000DistPlot.png, id=15, 794.97pt x 614.295pt>
 File: ../GPUProject/acousticRand60000DistPlot.png Graphic file (type png)
 <use ../GPUProject/acousticRand60000DistPlot.png>
 Package pdftex.def Info: ../GPUProject/acousticRand60000DistPlot.png  used on i
 nput line 70.
-(pdftex.def)             Requested size: 242.98541pt x 171.7072pt.
+(pdftex.def)             Requested size: 277.69987pt x 214.59404pt.
  [2 <../GPUProject/allDataDefaultPlot.png>] (LaboratoryEarthQuakePrediction.bbl
  [3 <../GPUProject/acousticRand60000DistPlot.png>]) [4] (LaboratoryEarthQuakePr
 ediction.aux) ) 
@@ -260,7 +260,7 @@ Here is how much of TeX's memory you used:
  5749 multiletter control sequences out of 15000+200000
  7672 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,25p,619b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,5n,25p,619b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
@@ -269,7 +269,7 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmti9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (4 pages, 165340 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (4 pages, 171951 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
