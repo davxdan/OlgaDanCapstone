@@ -8,4 +8,9 @@ Bertrand~Rouet‐Leduc, Claudia~Hulbert, N.L.K.B.C.J.H.P.A.J.:
 Kaggle, R.:
 \newblock Lanl earthquake prediction
 
+\bibitem{Hunter:2007}
+Hunter, J.D.:
+\newblock Matplotlib: A 2d graphics environment.
+\newblock Computing In Science \& Engineering \textbf{9}(3) (2007)  90--95
+
 \end{thebibliography}
