@@ -46,6 +46,49 @@ train=np.load('data.npy')
 #%%
 #acousticdata=acousticdata.reshape(-1, 1)
 #timeToFailure=timeToFailure.reshape(-1, 1)
+
+#%%
+"""Big Data inspection"""
+print(len(train))
+print(train.ndim)
+print(train.size)
+print(train.dtype)
+print(train.dtype.name)
+print(max(train[0]))
+
+fig, ax = plt.subplots(figsize=(11, 8.5))
+ax.plot(train[:,1],train[:,0])
+ax.set(xlabel='Time to Failure(s)', ylabel='Acoustic Signal',
+       title='LANL Acoustic Signal by Time To Failure: 629,145,480 Observations')
+ax.grid()
+fig.savefig("allDataDefaultPlot.png")
+plt.show()
+#%%
+num_bins = 100
+fig, ax = plt.subplots()
+# the histogram of the data
+n, bins, patches = ax.hist(train[:,0], num_bins, density=1)
+# add a 'best fit' line
+#y = ((1 / (np.sqrt(2 * np.pi) * sigma)) * np.exp(-0.5 * (1 / sigma * (bins - mu))**2))
+y=12
+ax.plot(bins, y, '--')
+ax.set_xlabel('Smarts')
+ax.set_ylabel('Probability density')
+ax.set_title(r'Histogram of IQ: $\mu=100$, $\sigma=15$')
+# Tweak spacing to prevent clipping of ylabel
+fig.tight_layout()
+plt.show()
+#%%
+
+
+
+
+
+#derp=sns.distplot(acousticSample)
+#a4_dims = (11.7, 8.27)
+
+#sns.scatterplot(acousticSample,timeToFailureSample,size=acousticSample[0])
+#sns.scatterplot(train[:,0],train[:,1])
 #%%
 """Get sample for Experimentation""""
 #Rows,Columns
@@ -54,33 +97,18 @@ train=np.load('data.npy')
 #acousticData=trainsample[:,0].astype(np.int64)
 #timeToFailure=trainsample[:,1].astype(np.float64)
 #timeToFailure=np.ravel(timeToFailure)
-acousticSample=train[0:100000,0]
-timeToFailureSample=train[0:100000,1]
-#%%
-"""Data inspection"""
-#len(train)
-#train.ndim
-#train.size
-#train.dtype
-#train.dtype.name
-#len(acousticdata)
-#acousticdata.ndim
-#acousticdata.size
-#acousticdata.dtype
-#acousticdata.dtype.name
-#b.astype(int) """Convert an array to a different type"""
-#derp=sns.distplot(acousticSample)
-#a4_dims = (11.7, 8.27)
-#plt.subplots(figsize=(11.7, 8.27))
-#sns.scatterplot(acousticSample,timeToFailureSample,size=acousticSample[0])
-#sns.scatterplot(train[:,0],train[:,1])
+#acousticSample=train[0:100000,0]
+#timeToFailureSample=train[0:100000,1]
+train=train[0:100000,:]
 
-plt.plot(train[:,0],train[:,1])
-#axs[0].set_xlim(0, 2)
-#axs[0].set_xlabel('time')
-#axs[0].set_ylabel('s1 and s2')
-#axs[0].grid(True)
-plt.show()
+
+#b.astype(int) """Convert an array to a different type"""
+
+
+
+
+
+
 
 
 acousticSample.mean
