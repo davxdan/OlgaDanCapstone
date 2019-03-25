@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 pd.set_option("display.precision", 15)
 import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
 import seaborn as sns
 sns.set(color_codes=True)
 from sklearn.model_selection import cross_val_predict, GridSearchCV
@@ -37,8 +38,8 @@ def iter_loadtxt(filename, delimiter=',', skiprows=1, dtype=float):
 #data = iter_loadtxt('train.csv')
 #np.save('data', data)
 train=np.load('data.npy')
-#acousticData=data[:,0].astype(np.int64)
-#timeToFailure=data[:,1].astype(np.float64)
+#acousticData=train[:,0].astype(np.int64)
+#timeToFailure=train[:,1].astype(np.float64)
 #np.save('acousticdata', acousticdata)
 #acousticdata=np.load('acousticdata.npy') 
 #np.save('timeToFailure', timeToFailure)
@@ -54,8 +55,10 @@ print(train.ndim)
 print(train.size)
 print(train.dtype)
 print(train.dtype.name)
-print(max(train[0]))
-
+#print(max(train[:,1])) #16.1074
+#print(min(train[:,1])) #9.5503......
+#acousticData.max(axis=0)#5444
+#acousticData.min(axis=0)#-5515
 fig, ax = plt.subplots(figsize=(11, 8.5))
 ax.plot(train[:,1],train[:,0])
 ax.set(xlabel='Time to Failure(s)', ylabel='Acoustic Signal',
@@ -64,57 +67,27 @@ ax.grid()
 fig.savefig("allDataDefaultPlot.png")
 plt.show()
 #%%
-num_bins = 100
-fig, ax = plt.subplots()
-# the histogram of the data
-n, bins, patches = ax.hist(train[:,0], num_bins, density=1)
-# add a 'best fit' line
-#y = ((1 / (np.sqrt(2 * np.pi) * sigma)) * np.exp(-0.5 * (1 / sigma * (bins - mu))**2))
-y=12
-ax.plot(bins, y, '--')
-ax.set_xlabel('Smarts')
-ax.set_ylabel('Probability density')
-ax.set_title(r'Histogram of IQ: $\mu=100$, $\sigma=15$')
-# Tweak spacing to prevent clipping of ylabel
-fig.tight_layout()
-plt.show()
+"""Sample Data Inspection"""
+#Rows,Columns
+idx = np.random.randint(629145480, size=60000)
+trainsample=train[idx,:]
+#acousticData=trainsample[:,0].astype(np.int64)
+#timeToFailure=trainsample[:,1].astype(np.float64)
+#timeToFailure=np.ravel(timeToFailure)
+#train=train[0:100000,:] 
+fig, ax = plt.subplots(figsize=(11.7, 8.27))
+sns.distplot(trainsample[:,0])
+fig.savefig("acousticRand60000DistPlot.png")
+#Enormous outliers presumably siesmic failure or major slip.
 #%%
 
-
-
-
-
-#derp=sns.distplot(acousticSample)
-#a4_dims = (11.7, 8.27)
 
 #sns.scatterplot(acousticSample,timeToFailureSample,size=acousticSample[0])
 #sns.scatterplot(train[:,0],train[:,1])
 #%%
-"""Get sample for Experimentation""""
-#Rows,Columns
-#idx = np.random.randint(629145480, size=100000)
-#trainsample=train[idx,:]
-#acousticData=trainsample[:,0].astype(np.int64)
-#timeToFailure=trainsample[:,1].astype(np.float64)
-#timeToFailure=np.ravel(timeToFailure)
-#acousticSample=train[0:100000,0]
-#timeToFailureSample=train[0:100000,1]
-train=train[0:100000,:]
-
-
-#b.astype(int) """Convert an array to a different type"""
 
 
 
-
-
-
-
-
-acousticSample.mean
-df = pd.DataFrame(train)
-df.describe
-df.dtypes
 #%%
 ###########################Keras Experimientation##############################
 #IMPORTANT TO SEE LINK BELOW FOR HOW TO ADD TIME TO DATA
