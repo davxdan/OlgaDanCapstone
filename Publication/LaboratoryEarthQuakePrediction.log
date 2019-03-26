@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.24)  25 MAR 2019 21:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.24)  26 MAR 2019 18:59
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -237,42 +237,84 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 15.
  [1
 
-{C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<../GPUProject/allDataDefaultPlot.png, id=13, 794.97pt x 614.295pt>
+{C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+<../GPUProject/allDataDefaultPlot.png, id=17, 794.97pt x 614.295pt>
 File: ../GPUProject/allDataDefaultPlot.png Graphic file (type png)
 <use ../GPUProject/allDataDefaultPlot.png>
 Package pdftex.def Info: ../GPUProject/allDataDefaultPlot.png  used on input li
-ne 60.
+ne 68.
 (pdftex.def)             Requested size: 242.98541pt x 187.75806pt.
-<../GPUProject/acousticRand60000DistPlot.png, id=15, 794.97pt x 614.295pt>
+<../GPUProject/acousticRand60000DistPlot.png, id=19, 794.97pt x 614.295pt>
 File: ../GPUProject/acousticRand60000DistPlot.png Graphic file (type png)
 <use ../GPUProject/acousticRand60000DistPlot.png>
 Package pdftex.def Info: ../GPUProject/acousticRand60000DistPlot.png  used on i
-nput line 67.
+nput line 75.
 (pdftex.def)             Requested size: 277.69987pt x 214.59404pt.
- [2 <../GPUProject/allDataDefaultPlot.png>] [3 <../GPUProject/acousticRand60000
+ [3 <../GPUProject/allDataDefaultPlot.png>] [4 <../GPUProject/acousticRand60000
 DistPlot.png>]
-(LaboratoryEarthQuakePrediction.bbl) [4] (LaboratoryEarthQuakePrediction.aux) )
- 
+<../GPUProject/acousticFeatureIntegers.png, id=28, 471.26062pt x 254.45062pt>
+File: ../GPUProject/acousticFeatureIntegers.png Graphic file (type png)
+<use ../GPUProject/acousticFeatureIntegers.png>
+Package pdftex.def Info: ../GPUProject/acousticFeatureIntegers.png  used on inp
+ut line 142.
+(pdftex.def)             Requested size: 242.98541pt x 131.19688pt.
+<../GPUProject/timeToFailureDistribution.png, id=29, 460.72125pt x 254.45062pt>
+
+File: ../GPUProject/timeToFailureDistribution.png Graphic file (type png)
+<use ../GPUProject/timeToFailureDistribution.png>
+Package pdftex.def Info: ../GPUProject/timeToFailureDistribution.png  used on i
+nput line 175.
+(pdftex.def)             Requested size: 242.98541pt x 134.19814pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <../GPUProject/acousticFeatureIntegers.png>]
+<../GPUProject/timeSeries.png, id=34, 593.21625pt x 364.36125pt>
+File: ../GPUProject/timeSeries.png Graphic file (type png)
+<use ../GPUProject/timeSeries.png>
+Package pdftex.def Info: ../GPUProject/timeSeries.png  used on input line 186.
+(pdftex.def)             Requested size: 277.69987pt x 170.57152pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../GPUProject/zoomedInTimePlot.png, id=35, 593.21625pt x 364.36125pt>
+File: ../GPUProject/zoomedInTimePlot.png Graphic file (type png)
+<use ../GPUProject/zoomedInTimePlot.png>
+Package pdftex.def Info: ../GPUProject/zoomedInTimePlot.png  used on input line
+ 193.
+(pdftex.def)             Requested size: 242.98541pt x 149.24452pt.
+<../GPUProject/moreThan90percent.png, id=36, 455.45157pt x 254.45062pt>
+File: ../GPUProject/moreThan90percent.png Graphic file (type png)
+<use ../GPUProject/moreThan90percent.png>
+Package pdftex.def Info: ../GPUProject/moreThan90percent.png  used on input lin
+e 229.
+(pdftex.def)             Requested size: 242.98541pt x 135.75117pt.
+[6 <../GPUProject/timeToFailureDistribution.png>]
+(LaboratoryEarthQuakePrediction.bbl) [7 <../GPUProject/timeSeries.png>]
+[8 <../GPUProject/zoomedInTimePlot.png> <../GPUProject/moreThan90percent.png>]
+(LaboratoryEarthQuakePrediction.aux) ) 
 Here is how much of TeX's memory you used:
- 1859 strings out of 492946
- 26159 string characters out of 3135527
- 98276 words of memory out of 3000000
- 5750 multiletter control sequences out of 15000+200000
+ 1893 strings out of 492946
+ 27256 string characters out of 3135527
+ 100322 words of memory out of 3000000
+ 5779 multiletter control sequences out of 15000+200000
  7980 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,25p,619b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (4 pages, 186143 bytes).
+ 41i,7n,25p,671b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on LaboratoryEarthQuakePrediction.pdf (8 pages, 334011 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

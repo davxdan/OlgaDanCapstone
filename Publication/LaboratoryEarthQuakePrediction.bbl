@@ -16,4 +16,13 @@ Ikari Matt~J, Marone~Chris, S.D.M.K.A.J.:
 Baptiste~Rousset, Roland~Burgmann, M.C.:
 \newblock Slow slip events in the roots of the san andreas fault
 
+\bibitem{USGSfaqs}
+USGS:
+\newblock What is an earthquake and what causes them to happen? (March 2019)
+
+\bibitem{LANLNews}
+Rouet-Leduc, B.:
+\newblock Los alamos machine learning discovers patterns that reveal earthquake
+  fault behavior
+
 \end{thebibliography}

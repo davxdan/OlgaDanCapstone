@@ -53,6 +53,14 @@ Another type of earthquake we refer to in this study is a {\em slow slip earthqu
 There is evidence to suggest that there is a relationship between slow slip earthquakes and more noticeable regular earthquakes\cite{SlowSlip}. \par
 
 This study analyzes the relationship between slow slip and regular earthquakes. We use this relationship information to predict regular laboratory earthquakes. \par
+\subsection{temporary}
+An earthquake is caused by a sudden slip on a fault. The tectonic plates are always slowly moving, but they get stuck at their edges due to friction. When the stress on the edge overcomes the friction, there is an earthquake that releases energy in waves that travel through the earth's crust and cause the shaking that we feel.\cite{USGSfaqs}
+Los Alamos National Laboratory researchers discovered a way to successfully predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017, this team discovered a way to train a computer to pinpoint and analyze seismic and acoustic signals emitted during the movements along the fault to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times.\cite{LANLNews}
+In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers.\cite{LANLNews}
+For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy.\cite{LANLNews}
+The team’s lab results reveal that the fault does not fail randomly but in a highly predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state.\cite{LANLNews}
+So far seismologists and Earth scientists have relied exclusively on catalogues of historical data to try to characterize the state of faults. These catalogues contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that hidden in this noise-like data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues.\cite{LANLNews}
+“Our work shows that machine learning can be used to extract new meaningful physics from a very well studied system,” said Bertrand Rouet-Leduc, Los Alamos Earth and Environmental Sciences Division scientist and the paper’s lead author. “It also shows that seismogenic faults are continuously broadcasting a signal that precisely informs us of their physical state and how close they are to rupture, at least in the laboratory.”
 
 \section{DATA} Data is provided by LANL via a Kaggle competition\cite{kaggle}. Is consists of 629,143,480 seismic signal measurements and a record of the time remaining before the next laboratory earthquake occurred. We use these observations to train and test a model.\par
 \begin{figure}[h]
@@ -71,6 +79,163 @@ This study analyzes the relationship between slow slip and regular earthquakes. 
 
 \subsection{Seismic Signal Data}
 The only feature we have is the seismic signal (acoustic data) which has integer values in a limited range.
+
+\subsection{temporary}
+The data comes from an experimental set-up used to study earthquake physics. The only features we had were the seismic signal (acoustic data), which has integer values in a limited range, and time remaining before the next laboratory earthquake.  Training data: single, continuous segment of experimental data.
+Test data: consisted of a folder containing many small segments. The data within each test file was continuous, but the test files did not represent a continuous segment of the experiment.
+The test folder had 2624 csv files (segments).Each segment contained 150,000 acoustic records. \par
+
+\begin{tabular}{|c|c|}
+	\hline 
+	 & acoustic data \\ 
+	\hline 
+	0 & 3 \\ 
+	\hline 
+	1 & 10 \\ 
+	\hline 
+	2 & 4 \\ 
+	\hline 
+	3 & 4 \\ 
+	\hline 
+	4 & 1 \\ 
+	\hline 
+\end{tabular} 
+
+There was one file in the test folder for each prediction (seg id) in sample submission: \par
+\begin{tabular}{|c|c|c|}
+	\hline 
+	& seg id & time to failure \\ 
+	\hline 
+	0 & seg 00030f & 0 \\ 
+	\hline 
+	1 & seg 0012b5 & 0 \\ 
+	\hline 
+	2 & seg 00184e & 0 \\ 
+	\hline 
+	3 & seg 003339 & 0 \\ 
+	\hline 
+	4 & seg 0042cc & 0 \\ 
+	\hline 
+\end{tabular} 
+
+One huge csv file had all the training data, which is a single continuous experiment. There were only two columns in this file:
+Acoustic data (int16): the seismic signal; Time to failure (float64): the time until the next laboratory earthquake (in seconds). There were no missing values for both columns. \par
+
+\begin{tabular}{|c|c|c|}
+	\hline 
+	\rule[-1ex]{0pt}{2.5ex} 0 & 12 & 1.469099998474121 \\ 
+	\hline 
+	\rule[-1ex]{0pt}{2.5ex} 1 & 6 & 1.469099998474121 \\ 
+	\hline 
+	\rule[-1ex]{0pt}{2.5ex} 2 & 8 & 1.469099998474121 \\ 
+	\hline 
+	\rule[-1ex]{0pt}{2.5ex} 3 & 5 & 1.469099998474121 \\ 
+	\hline 
+	\rule[-1ex]{0pt}{2.5ex} 4 & 8 & 1.469099998474121 \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Acoustic Data}
+The acoustic feature were integers in the range [-5515, 5444] with mean 4.52. The plot below is using a 1 percent random sample (~6M rows):
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../GPUProject/acousticFeatureIntegers}
+	\caption[]{1\% random sample from 629,143,480 observations}
+	\label{fig:acousticfeatureintegers}
+\end{figure}
+
+\subsubsection{Time to Failure}
+
+The target variable was given in seconds:
+
+
+
+\begin{tabular}{|c|c|}
+	\hline 
+	count &  6.29145480\\ 
+	\hline 
+	mean & 4.47708428 \\ 
+	\hline 
+	std &  2.61278939\\ 
+	\hline 
+	min &  9.55039650\\ 
+	\hline 
+	25 & 2.62599707 \\ 
+	\hline 
+	50 &  5.34979773\\ 
+	\hline 
+	75 &  8.17339516\\ 
+	\hline 
+	max & 1.61074009 \\ 
+	\hline 
+\end{tabular} 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../GPUProject/timeToFailureDistribution}
+	\caption[]{The min value was very close to zero (around 10\^-5) and the max was 16 seconds. The distribution for the random sample}
+	\label{fig:timetofailuredistribution}
+\end{figure}
+\subsubsection{Timeseries}
+\begin{itemize}
+	\item We can see that usually acoustic data shows huge fluctuations just before the failure and the nature of data is cyclical
+	\item Another important point: visually failures can be predicted as cases when huge fluctuations in signal are follows by small signal values. This could be useful for predicting "time\_to\_failure" changes from 0 to high values;
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../GPUProject/timeSeries}
+	\caption{We checked how both variables changed over time. The red line is the acoustic data and the blue one is the time to failure. On a plot above we can see, that training data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7seconds for the 7th, while the longest is around 16 seconds.}
+	\label{fig:timeseries}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../GPUProject/zoomedInTimePlot}
+	\caption{On this zoomed-in-time plot we can see that actually the large oscillation before the failure is not quite in the last moment. There are also trains of intense oscillations proceeding the large one and also some oscillations with smaller peaks after the large one. Then, after some minor oscillations, the failure occurs. Interesting thing to check is the time between high levels of seismic signal and the earthquakes. We are considering any acoustic data with absolute value greater than 1000 as a high level}
+	\label{fig:zoomedintimeplot}
+\end{figure}
+
+\begin{tabular}{|c|c|}
+	\hline 
+	count & 11325 \\ 
+	\hline 
+	mean & 0.64454830 \\ 
+	\hline 
+	std & 1.32147193 \\ 
+	\hline 
+	min & 0.31079626 \\ 
+	\hline 
+	25 & 0.31549615 \\ 
+	\hline 
+	50 & 0.31689683 \\ 
+	\hline 
+	75 & 0.32029617 \\ 
+	\hline 
+	max & 8.86059952 \\ 
+	\hline 
+\end{tabular} 
+
+
+
+
+
+
+
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{../GPUProject/moreThan90percent}
+	\caption{More than 90\% of high acoustic values are around 0.31 seconds before an earthquake}
+		\label{fig:morethan90percent}
+	\end{figure}
+
+
+
+
+
+
 \section{METHODS AND EXPERIMENTS}
 
 \subsection{Algorithms}
