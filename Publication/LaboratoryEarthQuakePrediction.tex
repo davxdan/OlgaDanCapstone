@@ -52,28 +52,25 @@ Another type of earthquake we refer to in this study is a {\em slow slip earthqu
 
 There is evidence to suggest that there is a relationship between slow slip earthquakes and more noticeable regular earthquakes\cite{SlowSlip}. \par
 
-This study analyzes the relationship between slow slip and regular earthquakes. We use this relationship information to predict regular laboratory earthquakes.
+This study analyzes the relationship between slow slip and regular earthquakes. We use this relationship information to predict regular laboratory earthquakes. \par
 
-\section{DATA}
-Must have section that defines data
-Use tables and figures to illustrate data attributes
-
-\begin{figure}
+\section{DATA} Data is provided by LANL via a Kaggle competition\cite{kaggle}. Is consists of 629,143,480 seismic signal measurements and a record of the time remaining before the next laboratory earthquake occurred. We use these observations to train and test a model.\par
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{../GPUProject/allDataDefaultPlot}
-	\caption{}
+	\includegraphics[width=0.7\linewidth]{../GPUProject/allDataDefaultPlot}
+	\caption{The magnitude of each seismic signal and its related time remaining before the next laboratory earthquake.}
 	\label{fig:alldatadefaultplot}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{../GPUProject/acousticRand60000DistPlot}
-	\caption{Distribution of Seismic Signal Measurements by LANL}
+	\includegraphics[width=.8\linewidth]{../GPUProject/acousticRand60000DistPlot}
+	\caption{The distribution of seismic signal measurements by LANL}
 	\label{fig:acousticRand60000DistPlot}
 \end{figure}
 
-
-
+\subsection{Seismic Signal Data}
+The only feature we have is the seismic signal (acoustic data) which has integer values in a limited range.
 \section{METHODS AND EXPERIMENTS}
 
 \subsection{Algorithms}
