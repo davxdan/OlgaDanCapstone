@@ -57,14 +57,19 @@ This study analyzes the relationship between slow slip and regular earthquakes. 
 \subsection{Temporary Title}
 Regular earthquakes are caused by a sudden slip on a fault. Tectonic plates are always slowly moving, but they get stuck at their edges due to friction. When the stress on the edge overcomes the friction, there is an earthquake that releases energy in waves that travel through the earth's crust and cause the shaking that we feel.\cite{USGSfaqs}\par
 
-Los Alamos National Laboratory researchers discovered a way to successfully predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017, this team discovered a way to train a computer to pinpoint and analyze seismic and acoustic signals emitted during the movements along the fault to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times.\cite{LANLNews}
-In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers.\cite{LANLNews}
-For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy.\cite{LANLNews}
-The team’s lab results reveal that the fault does not fail randomly but in a highly predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state.\cite{LANLNews}
-So far seismologists and Earth scientists have relied exclusively on catalogues of historical data to try to characterize the state of faults. These catalogues contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that hidden in this noise-like data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues.\cite{LANLNews}
-“Our work shows that machine learning can be used to extract new meaningful physics from a very well studied system,” said Bertrand Rouet-Leduc, Los Alamos Earth and Environmental Sciences Division scientist and the paper’s lead author. “It also shows that seismogenic faults are continuously broadcasting a signal that precisely informs us of their physical state and how close they are to rupture, at least in the laboratory.”
+Los Alamos National Laboratory researchers discovered a way to successfully predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017, this team discovered a way to train a computer to pinpoint and analyze seismic and acoustic signals emitted during the movements along the fault to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times.\cite{LANLNews} \par
+In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers.\cite{LANLNews}\par
 
-\section{DATA} Data is provided by LANL via a Kaggle competition\cite{kaggle}. Is consists of 629,143,480 seismic signal measurements and a record of the time remaining before the next laboratory earthquake occurred. We use these observations to train and test a model.\par
+For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy.\cite{LANLNews}\par
+
+The team’s lab results reveal that the fault does not fail randomly but in a highly predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state.\cite{LANLNews}\par
+
+So far seismologists and Earth scientists have relied exclusively on catalogues of historical data to try to characterize the state of faults. These catalogues contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that hidden in this noise-like data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues.\cite{LANLNews}\par
+\begin{quote}
+“Our work shows that machine learning can be used to extract new meaningful physics from a very well studied system,” said Bertrand Rouet-Leduc, Los Alamos Earth and Environmental Sciences Division scientist and the paper’s lead author. “It also shows that seismogenic faults are continuously broadcasting a signal that precisely informs us of their physical state and how close they are to rupture, at least in the laboratory.”
+\end{quote}
+
+\section{DATA} The data we use was provided by LANL via a Kaggle competition\cite{kaggle}. It consists of 629,143,480 seismic signal observations with an accompanying record of the time remaining before the next laboratory earthquake occurred. We use these observations to train and test a model.\par
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../GPUProject/allDataDefaultPlot}
@@ -79,13 +84,19 @@ So far seismologists and Earth scientists have relied exclusively on catalogues 
 	\label{fig:acousticRand60000DistPlot}
 \end{figure}
 
-\subsection{Seismic Signal Data}
-The only feature we have is the seismic signal (acoustic data) which has integer values in a limited range.
+\subsection{Temporary Title}
+The data comes from an experimental set-up used to study earthquake physics. 
 
-\subsection{temporary}
-The data comes from an experimental set-up used to study earthquake physics. The only features we had were the seismic signal (acoustic data), which has integer values in a limited range, and time remaining before the next laboratory earthquake.  Training data: single, continuous segment of experimental data.
-Test data: consisted of a folder containing many small segments. The data within each test file was continuous, but the test files did not represent a continuous segment of the experiment.
-The test folder had 2624 csv files (segments).Each segment contained 150,000 acoustic records. \par
+It is a single large continuous segment.
+
+The seismic signals are signed integer values ranging from \emph{(min to max)}
+ 
+\subsubsection{Kaggle Competition}
+Additional seismic signal data is provided with the time remaining excluded. The intention is to use these observations to predict the time remaining and submit to Kaggle for scoring in the competition.\par
+
+It is a collection of 2624 smaller segments in .csv files. The data \em{within} in each test segment is continuous but not \em{between}.
+
+Each segment contains 150,000 acoustic records. \par
 
 \begin{tabular}{|c|c|}
 	\hline 
@@ -241,9 +252,7 @@ The target variable was given in seconds:
 \section{METHODS AND EXPERIMENTS}
 
 \subsection{Algorithms}
- \par
- \par
-Linear Regression \par
+
 \begin{itemize}
 	\item Recursive Neural Network (RNN)
 	\item Random Forest
