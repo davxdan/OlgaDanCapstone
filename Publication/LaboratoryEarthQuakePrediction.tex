@@ -152,31 +152,25 @@ The acoustic feature were integers in the range [-5515, 5444] with mean 4.52. Th
 \end{figure}
 
 \subsubsection{Time to Failure}
-
 The target variable was given in seconds:
-
-
-
-\begin{tabular}{|c|c|}
-	\hline 
-	count &  6.29145480\\ 
-	\hline 
-	mean & 4.47708428 \\ 
-	\hline 
-	std &  2.61278939\\ 
-	\hline 
-	min &  9.55039650\\ 
-	\hline 
-	25 & 2.62599707 \\ 
-	\hline 
-	50 &  5.34979773\\ 
-	\hline 
-	75 &  8.17339516\\ 
-	\hline 
-	max & 1.61074009 \\ 
-	\hline 
-\end{tabular} 
-
+\begin{table}[h!]
+	\begin{center}
+		\caption{Sample of Data Provided}
+		\label{tab:table1}
+		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+			\textbf{Index} & \textbf{Seismic Signal} & \textbf{Time to Failure}\\
+			\hline
+			count &  6.29145480\\ 
+			mean & 4.47708428 \\ 
+			std &  2.61278939\\ 
+			min &  9.55039650\\ 
+			25 & 2.62599707 \\ 
+			50 &  5.34979773\\ 
+			75 &  8.17339516\\ 
+			max & 1.61074009 \\ 
+		\end{tabular}
+	\end{center}
+\end{table}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../GPUProject/timeToFailureDistribution}
@@ -201,25 +195,26 @@ The target variable was given in seconds:
 	\caption{On this zoomed-in-time plot we can see that actually the large oscillation before the failure is not quite in the last moment. There are also trains of intense oscillations proceeding the large one and also some oscillations with smaller peaks after the large one. Then, after some minor oscillations, the failure occurs. Interesting thing to check is the time between high levels of seismic signal and the earthquakes. We are considering any acoustic data with absolute value greater than 1000 as a high level}
 	\label{fig:zoomedintimeplot}
 \end{figure}
-
+\begin{table}[h!]
+	\begin{center}
+		\caption{Sample of Data Provided}
+		\label{tab:table1}
+		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+			\textbf{Index} & \textbf{Seismic Signal} & \textbf{Time to Failure}\\
+			\hline
+			count & 11325 \\ 
+			mean & 0.64454830 \\ 
+			std & 1.32147193 \\ 
+			min & 0.31079626 \\ 
+			25 & 0.31549615 \\ 
+			50 & 0.31689683 \\ 
+			75 & 0.32029617 \\ 
+			max & 8.86059952 \\ 
+		\end{tabular}
+	\end{center}
+\end{table}
 \begin{tabular}{|c|c|}
-	\hline 
-	count & 11325 \\ 
-	\hline 
-	mean & 0.64454830 \\ 
-	\hline 
-	std & 1.32147193 \\ 
-	\hline 
-	min & 0.31079626 \\ 
-	\hline 
-	25 & 0.31549615 \\ 
-	\hline 
-	50 & 0.31689683 \\ 
-	\hline 
-	75 & 0.32029617 \\ 
-	\hline 
-	max & 8.86059952 \\ 
-	\hline 
+	
 \end{tabular} 
 
 
