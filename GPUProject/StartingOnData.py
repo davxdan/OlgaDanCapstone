@@ -6,7 +6,7 @@ Created on Sun Mar 10 14:37:40 2019
 #%%
 import numpy as np
 import pandas as pd
-pd.set_option("display.precision", 15)
+#pd.set_option("display.precision", 15)
 import matplotlib.pyplot as plt
 import matplotlib.mlab as mlab
 import seaborn as sns
