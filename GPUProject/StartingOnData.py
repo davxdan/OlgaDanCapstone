@@ -102,18 +102,59 @@ acousticDataScaled = scaler.fit_transform(acousticData)
 #    features_set.append(acousticDataScaled[i:i+150000, 0])
 #    labels.append(trainTimeToFailureScaled[i, 0])
 
-features_set = []  
+trainfeatures_set = []  
 labels = []  
 for i in range(150000,629100000,150000):  
-    features_set.append(acousticDataScaled[i-150000:i, 0])
+    trainfeatures_set.append(acousticDataScaled[i-150000:i, 0])
     labels.append(acousticDataScaled[i, 0])
 
-features_set, labels = np.array(features_set), np.array(labels)  
-print(features_set.shape)
+trainfeatures_set, labels = np.array(trainfeatures_set), np.array(labels)  
+print(trainfeatures_set.shape)
+
+
+test_features = []  
+
+for i in range(150000, 4500000, 150000):  
+    test_features.append(acousticDataScaled[i-150000:i, 0])
+
+
+test_features = np.array(test_features)  
+
+
+trainfeatures_set = np.reshape(trainfeatures_set, (trainfeatures_set.shape[0], trainfeatures_set.shape[1], 1))  
+
+test_features = np.reshape(test_features, (test_features.shape[0], test_features.shape[1], 1))  
 
 
 
+model = Sequential()  
+#Note that 50 is the number of hidden units, return sequences is required to add subsequent LSTM layers
+model.add(LSTM(units=500, return_sequences=True, input_shape=(trainfeatures_set.shape[1], 1)))  
+model.add(Dropout(0.2))  
+model.add(LSTM(units=500, return_sequences=True))  
+model.add(Dropout(0.2))
+model.add(LSTM(units=500, return_sequences=True))  
+model.add(Dropout(0.2))
+model.add(LSTM(units=500))  
+model.add(Dropout(0.2))  
+model.add(Dense(units = 1))  
 
+#Since this is a time-based regression problem, mean_squared_error is chosen for our loss function
+#adam will automatically update the learning rate for us.
+model.compile(optimizer = 'adam', loss = 'mean_squared_error')  
+
+#We fit the LSTM model with the input features, labels, 100 epochs, and a batch size of 32
+#Note that the batch size is very important in an LSTM. A larger batch size might not be appropriate.
+#Experimentation is recommended to find a reasonable batch size for your data.
+
+#This will take a long time to fit... For me, it was about 40 minutes, but I didn't time it precisely.
+model.fit(trainfeatures_set, labels, epochs = 10, batch_size = 500)  
+
+#Then, then predictions with the scaled test features occur quickly
+predictions = model.predict(test_features)  
+
+#Then, predictions should be scaled back to the original scale.
+predictions = scaler.inverse_transform(predictions)  
 
 
 #%%
@@ -312,7 +353,7 @@ model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 #Experimentation is recommended to find a reasonable batch size for your data.
 
 #This will take a long time to fit... For me, it was about 40 minutes, but I didn't time it precisely.
-model.fit(features_set, labels, epochs = 100, batch_size = 5000)  
+model.fit(features_set, labels, epochs = 10, batch_size = 5000)  
 
 #Then, then predictions with the scaled test features occur quickly
 predictions = model.predict(test_features)  
