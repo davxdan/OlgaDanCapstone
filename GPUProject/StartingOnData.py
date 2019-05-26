@@ -115,6 +115,8 @@ from keras.layers import LSTM
 from keras.layers import Dropout  
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
+from os import chdir, getcwd
+chdir('C:\\Users\\danie\\Documents\\GitHub\\OlgaDanCapstone\\GPUProject')
 
 #For background on LSTMs, read the following: http://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
@@ -275,7 +277,7 @@ model.add(Dense(units = 1))
 model.compile(optimizer = 'adam', loss = 'mean_squared_error')  
 
 #Here we change the batch size from 32 to 100.
-model.fit(features_set, labels, epochs = 100, batch_size = 100)  
+model.fit(features_set, labels, epochs = 100, batch_size = 5000)  
 
 #name these predictions a differently to plot both them and the previous against the actuals
 predictions2 = model.predict(test_features)  
