@@ -4,13 +4,27 @@ Created on Sun Mar 10 14:37:40 2019
 @author: danie
 """
 #%%
+import pandas as pd
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-sns.set(color_codes=True)
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.layers import Dropout  
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import mean_squared_error
 from os import chdir, getcwd
 chdir('C:\\Users\\danie\\Documents\\GitHub\\OlgaDanCapstone\\GPUProject')
-getcwd()
+import seaborn as sns
+sns.set(color_codes=True)
+#getcwd()
+np.set_printoptions(threshold=sys.maxsize)
+pd.set_option("display.precision", 15)
+
+
+
+
 """Silly way to load data"""
 #data_type = {'acoustic_data': np.int16, 'time_to_failure': np.float64}
 #train = pd.read_csv('train.csv', dtype=data_type)
@@ -33,20 +47,79 @@ getcwd()
 #data = iter_loadtxt('seg_00a37e.csv')
 #np.save('seg_00a37e', data)
 #data=np.load('data.npy')
-predict=np.load('seg_00a37e.npy')
+#print(min(data[:,0])) #-5515.0
+#print(min(data[:,1])) #9.5503963166e-05
+#dataFirst10000000=data[:10000000]
+#np.savetxt("dataFirst10000000.csv", dataFirst10000000, delimiter=",")
+#predict=np.load('seg_00a37e.npy')
 #acousticData=data[:,0].astype(np.int64)
 #timeToFailure=data[:,1].astype(np.float64)
+#acousticData=acousticData.reshape(-1, 1)
+#timeToFailure=timeToFailure.reshape(-1, 1)
+#timeToFailure=timeToFailure[:155000]
 #np.save('acousticdata', acousticData)
-acousticData=np.load('acousticData.npy') 
 #np.save('timeToFailure', timeToFailure)
+
+acousticData=np.load('acousticData.npy') 
+#acousticData=acousticData[:155000]
 timeToFailure=np.load('timeToFailure.npy') 
-#%%
-acousticData=acousticData.reshape(-1, 1)
-timeToFailure=timeToFailure.reshape(-1, 1)
+
+#Split Train from Time to Failure
+trainTimeToFailure=timeToFailure[0:150000]
+testTimeToFailure=timeToFailure[150000:155000]
+
+#stack test data
+total_data = np.vstack((trainTimeToFailure,testTimeToFailure,))
+
+#Create test input (Get the last 5000 records from total data)
+test_inputs = total_data[len(total_data) - len(testTimeToFailure):]
+
+#reshape data
+trainTimeToFailure=trainTimeToFailure.reshape(-1, 1)
+testTimeToFailure=testTimeToFailure.reshape(-1,1)
+acousticData=acousticData.reshape(-1,1)
+
+#scale data
+scaler = MinMaxScaler(feature_range = (0, 1))
+trainTimeToFailureScaled = scaler.fit_transform(trainTimeToFailure)  
+testTimeToFailureScaled = scaler.fit_transform(testTimeToFailure)
+acousticDataScaled = scaler.fit_transform(acousticData)
+
+
+
+
+#for i in range(60, 1259):  
+#    features_set.append(train_data_scaled[i-60:i, 0])
+#    labels.append(train_data_scaled[i, 0])
+#
+#features_set, labels = np.array(features_set), np.array(labels)  
+#features_set.shape
+
+
+#features_set = []  
+#labels = []  
+#for i in range(0,4194):  
+#    features_set.append(acousticDataScaled[i:i+150000, 0])
+#    labels.append(trainTimeToFailureScaled[i, 0])
+
+features_set = []  
+labels = []  
+for i in range(150000,629100000,150000):  
+    features_set.append(acousticDataScaled[i-150000:i, 0])
+    labels.append(acousticDataScaled[i, 0])
+
+features_set, labels = np.array(features_set), np.array(labels)  
+print(features_set.shape)
+
+
+
+
+
 
 #%%
 """Big Data inspection"""
-
+#print(max(predict[:,0])) #162.0
+#print(min(predict[:,0])) #-138
 #print(max(train[:,1])) #16.1074
 #print(min(train[:,1])) #9.5503......
 #acousticData.max(axis=0)#5444
@@ -68,22 +141,11 @@ timeToFailure=timeToFailure.reshape(-1, 1)
 #idx = np.random.randint(629145480, size=60000)
 #trainsample=train[idx,:]
 
-#Get the first 150000 records fomr the train data
-train= train[0:150000]
-
-
 #Split the trainsample into 2 arrays
 #acousticData = np.delete(trainsample, np.s_[1],axis=1)
 #acousticData.shape
 #timeToFailure = np.delete(trainsample, np.s_[0],axis=1)
 #timeToFailure.shape
-
-#Try prediction using only time to failure as input
-train=np.delete(train, np.s_[1],axis=1)
-
-#Stack like Chris did
-total_data = np.vstack((train,test,))
-
 #timeToFailure=np.ravel(timeToFailure)
 #Enormous outliers presumably siesmic failure or major slip.
 #%%

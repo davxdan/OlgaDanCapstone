@@ -3,3 +3,4 @@ GPUProject/data.npy
 GPUProject/train.csv
 GPUProject/timeToFailure.npy
 GPUProject/acousticdata.npy
+GPUProject/dataFirst10000000.csv
