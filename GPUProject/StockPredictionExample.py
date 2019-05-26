@@ -74,7 +74,7 @@ regressor.add(LSTM(units = 50))
 regressor.add(Dropout(0.2))
 regressor.add(Dense(units = 1))
 regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
-regressor.fit(X_train, y_train, epochs = 100, batch_size = 32)
+regressor.fit(X_train, y_train, epochs = 5, batch_size = 32)
 
 #Predicting Future Stock using the Test Set
 #First we need to import the test set that we’ll use to make our predictions on
