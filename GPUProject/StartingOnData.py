@@ -11,7 +11,7 @@ import seaborn as sns
 sns.set(color_codes=True)
 from os import chdir, getcwd
 chdir('C:\\Users\\danie\\Documents\\GitHub\\OlgaDanCapstone\\GPUProject')
-#getcwd()
+getcwd()
 """Silly way to load data"""
 #data_type = {'acoustic_data': np.int16, 'time_to_failure': np.float64}
 #train = pd.read_csv('train.csv', dtype=data_type)
