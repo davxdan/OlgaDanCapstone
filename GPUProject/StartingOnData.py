@@ -5,7 +5,6 @@ Created on Sun Mar 10 14:37:40 2019
 """
 #%%
 import numpy as np
-#pd.set_option("display.precision", 15)
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(color_codes=True)
@@ -16,57 +15,53 @@ getcwd()
 #data_type = {'acoustic_data': np.int16, 'time_to_failure': np.float64}
 #train = pd.read_csv('train.csv', dtype=data_type)
 """Full Data Load and Save"""
-def iter_loadtxt(filename, delimiter=',', skiprows=1, dtype=float):
-    def iter_func():
-        with open(filename, 'r') as infile:
-            for _ in range(skiprows):
-                next(infile)
-            for line in infile:
-                line = line.rstrip().split(delimiter)
-                for item in line:
-                    yield dtype(item)
-        iter_loadtxt.rowlength = len(line)
-
-    data = np.fromiter(iter_func(), dtype=dtype)
-    data = data.reshape((-1, iter_loadtxt.rowlength))
-    return data
+#def iter_loadtxt(filename, delimiter=',', skiprows=1, dtype=float):
+#    def iter_func():
+#        with open(filename, 'r') as infile:
+#            for _ in range(skiprows):
+#                next(infile)
+#            for line in infile:
+#                line = line.rstrip().split(delimiter)
+#                for item in line:
+#                    yield dtype(item)
+#        iter_loadtxt.rowlength = len(line)
+#
+#    data = np.fromiter(iter_func(), dtype=dtype)
+#    data = data.reshape((-1, iter_loadtxt.rowlength))
+#    return data
 #data = iter_loadtxt('train.csv')
 #data = iter_loadtxt('seg_00a37e.csv')
 #np.save('seg_00a37e', data)
-train=np.load('data.npy')
-test=np.load('seg_00a37e.npy')
-#acousticData=train[:,0].astype(np.int64)
-#timeToFailure=train[:,1].astype(np.float64)
-#np.save('acousticdata', acousticdata)
-#acousticdata=np.load('acousticdata.npy') 
+#data=np.load('data.npy')
+predict=np.load('seg_00a37e.npy')
+#acousticData=data[:,0].astype(np.int64)
+#timeToFailure=data[:,1].astype(np.float64)
+#np.save('acousticdata', acousticData)
+acousticData=np.load('acousticData.npy') 
 #np.save('timeToFailure', timeToFailure)
-#timeToFailure=np.load('timeToFailure.npy') 
+timeToFailure=np.load('timeToFailure.npy') 
 #%%
-#acousticdata=acousticdata.reshape(-1, 1)
-#timeToFailure=timeToFailure.reshape(-1, 1)
+acousticData=acousticData.reshape(-1, 1)
+timeToFailure=timeToFailure.reshape(-1, 1)
 
 #%%
 """Big Data inspection"""
-print(len(train))
-print(train.ndim)
-print(train.size)
-print(train.dtype)
-print(train.dtype.name)
+
 #print(max(train[:,1])) #16.1074
 #print(min(train[:,1])) #9.5503......
 #acousticData.max(axis=0)#5444
 #acousticData.min(axis=0)#-5515
-fig, ax = plt.subplots(figsize=(11, 8.5))
-ax.plot(train[:,1],train[:,0])
-ax.set(xlabel='Time to Failure(seconds)', ylabel='Siesmic Signals',
-       title='LANL Siesmic Signals by Time To Failure: 629,145,480 Observations')
-ax.grid()
-fig.savefig("allDataDefaultPlot.png")
-plt.show()
-
-fig, ax = plt.subplots(figsize=(11, 8.5))
-sns.distplot(train[:,0],axlabel='Siesmic Signals:629,145,480 Observations',label='LANL Siesmic Signals Distribution:629,145,480 Observations')
-fig.savefig("acousticRand60000DistPlot.png")
+#fig, ax = plt.subplots(figsize=(11, 8.5))
+#ax.plot(train[:,1],train[:,0])
+#ax.set(xlabel='Time to Failure(seconds)', ylabel='Siesmic Signals',
+#       title='LANL Siesmic Signals by Time To Failure: 629,145,480 Observations')
+#ax.grid()
+#fig.savefig("allDataDefaultPlot.png")
+#plt.show()
+#
+#fig, ax = plt.subplots(figsize=(11, 8.5))
+#sns.distplot(train[:,0],axlabel='Siesmic Signals:629,145,480 Observations',label='LANL Siesmic Signals Distribution:629,145,480 Observations')
+#fig.savefig("acousticRand60000DistPlot.png")
 #%%
 """Sample Data Inspection"""
 #Rows,Columns
@@ -74,13 +69,20 @@ fig.savefig("acousticRand60000DistPlot.png")
 #trainsample=train[idx,:]
 
 #Get the first 150000 records fomr the train data
-trainsample= train[0:150000]
+train= train[0:150000]
+
 
 #Split the trainsample into 2 arrays
-acousticData = np.delete(trainsample, np.s_[1],axis=1)
-acousticData.shape
-timeToFailure = np.delete(trainsample, np.s_[0],axis=1)
-timeToFailure.shape
+#acousticData = np.delete(trainsample, np.s_[1],axis=1)
+#acousticData.shape
+#timeToFailure = np.delete(trainsample, np.s_[0],axis=1)
+#timeToFailure.shape
+
+#Try prediction using only time to failure as input
+train=np.delete(train, np.s_[1],axis=1)
+
+#Stack like Chris did
+total_data = np.vstack((train,test,))
 
 #timeToFailure=np.ravel(timeToFailure)
 #Enormous outliers presumably siesmic failure or major slip.
@@ -248,7 +250,7 @@ model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 #Experimentation is recommended to find a reasonable batch size for your data.
 
 #This will take a long time to fit... For me, it was about 40 minutes, but I didn't time it precisely.
-model.fit(features_set, labels, epochs = 100, batch_size = 32)  
+model.fit(features_set, labels, epochs = 100, batch_size = 5000)  
 
 #Then, then predictions with the scaled test features occur quickly
 predictions = model.predict(test_features)  
