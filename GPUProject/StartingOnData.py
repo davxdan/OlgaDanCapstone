@@ -67,8 +67,9 @@ timeToFailure=np.load('timeToFailure.npy')
 #Split Train from Time to Failure
 trainTimeToFailure=timeToFailure[0:150000]
 testTimeToFailure=timeToFailure[150000:155000]
-
+del timeToFailure
 #stack test data
+
 total_data = np.vstack((trainTimeToFailure,testTimeToFailure,))
 
 #Create test input (Get the last 5000 records from total data)
@@ -84,58 +85,49 @@ scaler = MinMaxScaler(feature_range = (0, 1))
 trainTimeToFailureScaled = scaler.fit_transform(trainTimeToFailure)  
 testTimeToFailureScaled = scaler.fit_transform(testTimeToFailure)
 acousticDataScaled = scaler.fit_transform(acousticData)
+del acousticData
+del testTimeToFailure
+del trainTimeToFailure
+del test_inputs
+del total_data
 
 
-
-
-#for i in range(60, 1259):  
-#    features_set.append(train_data_scaled[i-60:i, 0])
-#    labels.append(train_data_scaled[i, 0])
-#
-#features_set, labels = np.array(features_set), np.array(labels)  
-#features_set.shape
-
-
-#features_set = []  
-#labels = []  
-#for i in range(0,4194):  
-#    features_set.append(acousticDataScaled[i:i+150000, 0])
-#    labels.append(trainTimeToFailureScaled[i, 0])
-
-trainfeatures_set = []  
-labels = []  
-for i in range(150000,629100000,150000):  
+##For bigtime
+trainfeatures_set = []
+labels = []
+for i in range(150000,629100000,150000):
     trainfeatures_set.append(acousticDataScaled[i-150000:i, 0])
     labels.append(acousticDataScaled[i, 0])
+trainfeatures_set, labels = np.array(trainfeatures_set), np.array(labels)
 
-trainfeatures_set, labels = np.array(trainfeatures_set), np.array(labels)  
-print(trainfeatures_set.shape)
-
+#trainfeatures_set = []
+#labels = []
+#trainfeatures_set.append(acousticDataScaled[:150000])
+#labels.append(acousticDataScaled[0, 0])
+#trainfeatures_set, labels = np.array(trainfeatures_set), np.array(labels)  
 
 test_features = []  
-
-for i in range(150000, 4500000, 150000):  
-    test_features.append(acousticDataScaled[i-150000:i, 0])
-
-
+test_features.append(acousticDataScaled[150000:])
 test_features = np.array(test_features)  
-
 
 trainfeatures_set = np.reshape(trainfeatures_set, (trainfeatures_set.shape[0], trainfeatures_set.shape[1], 1))  
 
 test_features = np.reshape(test_features, (test_features.shape[0], test_features.shape[1], 1))  
 
-
+del data
+del acousticDataScaled 
+del testTimeToFailureScaled
+del trainTimeToFailureScaled
 
 model = Sequential()  
 #Note that 50 is the number of hidden units, return sequences is required to add subsequent LSTM layers
-model.add(LSTM(units=500, return_sequences=True, input_shape=(trainfeatures_set.shape[1], 1)))  
+model.add(LSTM(units=50, return_sequences=True, input_shape=(trainfeatures_set.shape[1], 1)))  
 model.add(Dropout(0.2))  
-model.add(LSTM(units=500, return_sequences=True))  
+model.add(LSTM(units=50, return_sequences=True))  
 model.add(Dropout(0.2))
-model.add(LSTM(units=500, return_sequences=True))  
+model.add(LSTM(units=50, return_sequences=True))  
 model.add(Dropout(0.2))
-model.add(LSTM(units=500))  
+model.add(LSTM(units=50))  
 model.add(Dropout(0.2))  
 model.add(Dense(units = 1))  
 
@@ -148,7 +140,7 @@ model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 #Experimentation is recommended to find a reasonable batch size for your data.
 
 #This will take a long time to fit... For me, it was about 40 minutes, but I didn't time it precisely.
-model.fit(trainfeatures_set, labels, epochs = 10, batch_size = 500)  
+model.fit(trainfeatures_set, labels, epochs = 2, batch_size = 500)  
 
 #Then, then predictions with the scaled test features occur quickly
 predictions = model.predict(test_features)  
