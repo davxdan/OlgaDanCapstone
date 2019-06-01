@@ -21,30 +21,49 @@ sns.set(color_codes=True)
 #getcwd()
 np.set_printoptions(threshold=sys.maxsize)
 pd.set_option("display.precision", 15)
-
+"""Full Data Load and Save"""
+#def iter_loadtxt(filename, delimiter=',', skiprows=1, dtype=float):
+#    def iter_func():
+#        with open(filename, 'r') as infile:
+#            for _ in range(skiprows):
+#                next(infile)
+#            for line in infile:
+#                line = line.rstrip().split(delimiter)
+#                for item in line:
+#                    yield dtype(item)
+#        iter_loadtxt.rowlength = len(line)
+#
+#    data = np.fromiter(iter_func(), dtype=dtype)
+#    data = data.reshape((-1, iter_loadtxt.rowlength))
+#    return data
+#data = iter_loadtxt('train.csv')
+#data = iter_loadtxt('seg_00a37e.csv')
+#np.save('seg_00a37e', data)
 data=np.load('data.npy')
-acousticData=data[:,0].astype(np.int64)
-timeToFailure=data[:,1].astype(np.float64)
+trainAcousticData=data[:627222016,0].astype(np.int64)
+trainTimeToFailure=data[:627222016,1].astype(np.float64)
+trainAcousticData=trainAcousticData.reshape(-1, 1)
+trainTimeToFailure=trainTimeToFailure.reshape(-1, 1)
+testAcousticData=data[627222016:,0].astype(np.int64)
+testTimeToFailure=data[627222016:,1].astype(np.float64)
+testAcousticData=testAcousticData.reshape(-1, 1)
+testTimeToFailure=testTimeToFailure.reshape(-1, 1)
 del data
-acousticData=acousticData.reshape(-1, 1)
-timeToFailure=timeToFailure.reshape(-1, 1)
-acousticData=acousticData[:627222016]
-timeToFailure=timeToFailure[:627222016]
 
 #np.save('acousticdata', acousticData)
 #np.save('timeToFailure', timeToFailure)
 
 #scale data
 scaler = MinMaxScaler(feature_range = (0, 1))
-acousticData = scaler.fit_transform(acousticData)  
-timeToFailure = scaler.fit_transform(timeToFailure)
-#testacousticData = scaler.fit_transform(testacousticData)  
-#testtimeToFailure = scaler.fit_transform(testtimeToFailure)
+trainAcousticData = scaler.fit_transform(trainAcousticData)  
+trainTimeToFailure = scaler.fit_transform(trainTimeToFailure)
+testAcousticData = scaler.fit_transform(testAcousticData)  
+testTimeToFailure = scaler.fit_transform(testTimeToFailure)
 
 
 testData = []
 for i in range(856,8560,856):  
-    testData.append(acousticData[i-856:i, 0])
+    testData.append(testAcousticData[i-856:i, 0])
 
 testData = np.array(testData)  
 testData = np.reshape(testData, (testData.shape[0], testData.shape[1], 1))
@@ -54,20 +73,10 @@ testData = np.reshape(testData, (testData.shape[0], testData.shape[1], 1))
 trainData = []  
 labels = []  
 for i in range(856, 732737,856):  
-    trainData.append(acousticData[i-856:i, 0])
-    labels.append(timeToFailure[i, 0])
+    trainData.append(trainAcousticData[i-856:i, 0])
+    labels.append(trainTimeToFailure[i, 0])
 trainData, labels = np.array(trainData), np.array(labels)  
 trainData = np.reshape(trainData, (trainData.shape[0], trainData.shape[1], 1))
-
-
-
-
-
-
-
-
-
-
 
 #model.fit(x_train, y_train, batch_size=16, epochs=10)
 #score = model.evaluate(x_test, y_test, batch_size=16)
@@ -89,9 +98,6 @@ model.fit(trainData, labels, epochs = 2, batch_size = 5000)
 
 predictions = model.predict(testData)
 predictions = scaler.inverse_transform(predictions)
-
-
-
 
 
 plt.figure()  
