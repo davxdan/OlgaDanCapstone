@@ -61,12 +61,12 @@ pd.set_option("display.precision", 15)
 #np.save('timeToFailure', timeToFailure)
 
 acousticData=np.load('acousticData.npy') 
-#acousticData=acousticData[:155000]
+#acousticData=acousticData[:1000]
 timeToFailure=np.load('timeToFailure.npy') 
 
 #Split Train from Time to Failure
-trainTimeToFailure=timeToFailure[0:150000]
-testTimeToFailure=timeToFailure[150000:155000]
+trainTimeToFailure=timeToFailure[0:500]
+testTimeToFailure=timeToFailure[500:1000]
 del timeToFailure
 #stack test data
 
@@ -95,8 +95,8 @@ del total_data
 ##For bigtime
 trainfeatures_set = []
 labels = []
-for i in range(150000,629100000,150000):
-    trainfeatures_set.append(acousticDataScaled[i-150000:i, 0])
+for i in range(500,1000,500):
+    trainfeatures_set.append(acousticDataScaled[i-500:i, 0])
     labels.append(acousticDataScaled[i, 0])
 trainfeatures_set, labels = np.array(trainfeatures_set), np.array(labels)
 
@@ -107,14 +107,14 @@ trainfeatures_set, labels = np.array(trainfeatures_set), np.array(labels)
 #trainfeatures_set, labels = np.array(trainfeatures_set), np.array(labels)  
 
 test_features = []  
-test_features.append(acousticDataScaled[150000:])
-test_features = np.array(test_features)  
+test_features.append(acousticDataScaled[500:])
+test_features = np.array(test_features)
 
 trainfeatures_set = np.reshape(trainfeatures_set, (trainfeatures_set.shape[0], trainfeatures_set.shape[1], 1))  
 
 test_features = np.reshape(test_features, (test_features.shape[0], test_features.shape[1], 1))  
 
-del data
+
 del acousticDataScaled 
 del testTimeToFailureScaled
 del trainTimeToFailureScaled
@@ -129,7 +129,7 @@ model.add(LSTM(units=50, return_sequences=True))
 model.add(Dropout(0.2))
 model.add(LSTM(units=50))  
 model.add(Dropout(0.2))  
-model.add(Dense(units = 1))  
+model.add(Dense(units = 1))
 
 #Since this is a time-based regression problem, mean_squared_error is chosen for our loss function
 #adam will automatically update the learning rate for us.
@@ -146,7 +146,7 @@ model.fit(trainfeatures_set, labels, epochs = 2, batch_size = 500)
 predictions = model.predict(test_features)  
 
 #Then, predictions should be scaled back to the original scale.
-predictions = scaler.inverse_transform(predictions)  
+predictions = scaler.inverse_transform(predictions)
 
 
 #%%
@@ -320,8 +320,6 @@ features_set.shape
 
 test_features = np.reshape(test_features, (test_features.shape[0], test_features.shape[1], 1))  
 test_features.shape
-
-
 
 #32 batch size
 model = Sequential()  
