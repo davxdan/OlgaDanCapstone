@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  2 JUN 2019 09:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.2)  2 JUN 2019 10:43
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -272,86 +272,90 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: ../GPUProject/allDataDefaultPlot.png Graphic file (type png)
 <use ../GPUProject/allDataDefaultPlot.png>
 Package pdftex.def Info: ../GPUProject/allDataDefaultPlot.png  used on input li
-ne 75.
+ne 78.
 (pdftex.def)             Requested size: 242.98541pt x 187.75806pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <../GPUProject/acousticRand60000DistPlot.png, id=19, 794.97pt x 614.295pt>
 File: ../GPUProject/acousticRand60000DistPlot.png Graphic file (type png)
 <use ../GPUProject/acousticRand60000DistPlot.png>
 Package pdftex.def Info: ../GPUProject/acousticRand60000DistPlot.png  used on i
-nput line 98.
+nput line 101.
 (pdftex.def)             Requested size: 277.69987pt x 214.59404pt.
-[3 <../GPUProject/allDataDefaultPlot.png>] [4 <../GPUProject/acousticRand60000D
-istPlot.png>]
-<../GPUProject/acousticFeatureIntegers.png, id=28, 471.26062pt x 254.45062pt>
+[3]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <../GPUProject/allDataDefaultPlot.png>]
+<../GPUProject/acousticFeatureIntegers.png, id=27, 471.26062pt x 254.45062pt>
 File: ../GPUProject/acousticFeatureIntegers.png Graphic file (type png)
 <use ../GPUProject/acousticFeatureIntegers.png>
 Package pdftex.def Info: ../GPUProject/acousticFeatureIntegers.png  used on inp
-ut line 149.
+ut line 152.
 (pdftex.def)             Requested size: 242.98541pt x 131.19688pt.
-<../GPUProject/timeToFailureDistribution.png, id=29, 460.72125pt x 254.45062pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../GPUProject/timeToFailureDistribution.png, id=28, 460.72125pt x 254.45062pt>
 
 File: ../GPUProject/timeToFailureDistribution.png Graphic file (type png)
 <use ../GPUProject/timeToFailureDistribution.png>
 Package pdftex.def Info: ../GPUProject/timeToFailureDistribution.png  used on i
-nput line 176.
+nput line 179.
 (pdftex.def)             Requested size: 242.98541pt x 134.19814pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <../GPUProject/acousticFeatureIntegers.png>]
-<../GPUProject/timeSeries.png, id=34, 593.21625pt x 364.36125pt>
+[5 <../GPUProject/acousticRand60000DistPlot.png>]
+<../GPUProject/timeSeries.png, id=33, 593.21625pt x 364.36125pt>
 File: ../GPUProject/timeSeries.png Graphic file (type png)
 <use ../GPUProject/timeSeries.png>
-Package pdftex.def Info: ../GPUProject/timeSeries.png  used on input line 187.
+Package pdftex.def Info: ../GPUProject/timeSeries.png  used on input line 190.
 (pdftex.def)             Requested size: 277.69987pt x 170.57152pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../GPUProject/zoomedInTimePlot.png, id=35, 593.21625pt x 364.36125pt>
+<../GPUProject/zoomedInTimePlot.png, id=34, 593.21625pt x 364.36125pt>
 File: ../GPUProject/zoomedInTimePlot.png Graphic file (type png)
 <use ../GPUProject/zoomedInTimePlot.png>
 Package pdftex.def Info: ../GPUProject/zoomedInTimePlot.png  used on input line
- 194.
+ 197.
 (pdftex.def)             Requested size: 242.98541pt x 149.24452pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../GPUProject/moreThan90percent.png, id=36, 455.45157pt x 254.45062pt>
+<../GPUProject/moreThan90percent.png, id=35, 455.45157pt x 254.45062pt>
 File: ../GPUProject/moreThan90percent.png Graphic file (type png)
 <use ../GPUProject/moreThan90percent.png>
 Package pdftex.def Info: ../GPUProject/moreThan90percent.png  used on input lin
-e 231.
+e 234.
 (pdftex.def)             Requested size: 242.98541pt x 135.75117pt.
-[6 <../GPUProject/timeToFailureDistribution.png>]
-Overfull \hbox (4.32181pt too wide) in paragraph at lines 260--263
+[6 <../GPUProject/acousticFeatureIntegers.png>]
+Overfull \hbox (4.32181pt too wide) in paragraph at lines 259--262
 \OT1/cmr/m/n/10 http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explaine
 d/ mean ab-
  []
 
-[7 <../GPUProject/timeSeries.png>] [8 <../GPUProject/zoomedInTimePlot.png> <../
-GPUProject/moreThan90percent.png>] (LaboratoryEarthQuakePrediction.bbl)
-[9] (LaboratoryEarthQuakePrediction.aux)
+[7 <../GPUProject/timeToFailureDistribution.png>]
+(LaboratoryEarthQuakePrediction.bbl [8 <../GPUProject/timeSeries.png>] [9 <../G
+PUProject/zoomedInTimePlot.png> <../GPUProject/moreThan90percent.png>])
+[10] (LaboratoryEarthQuakePrediction.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1891 strings out of 492895
- 28242 string characters out of 3123736
- 100829 words of memory out of 3000000
- 5796 multiletter control sequences out of 15000+200000
+ 1892 strings out of 492895
+ 28259 string characters out of 3123736
+ 99829 words of memory out of 3000000
+ 5797 multiletter control sequences out of 15000+200000
  7980 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,25p,671b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,8n,25p,672b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/f
@@ -363,9 +367,9 @@ sers/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (9 pages, 343368 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (10 pages, 346933 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

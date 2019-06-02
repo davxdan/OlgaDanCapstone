@@ -15,17 +15,20 @@
 \maketitle
 
 \begin{abstract}
-The technologies used in the laboratory to simulate and collect earthquake data have improved over time. In this study we predict the remaining time before {\em laboratory} earthquakes occur more accurately(hopefully) than a 2017 Los Alamos National Laboratory study\cite{Bertrand}.  We analyze data patterns using geophysical subject matter expertise, statistical methods and the latest technology available. We design a statistical algorithm to model the patterns and make a prediction. We compare predicted versus actual time remaining to determine our accuracy.
-Our results prove that our model predicted impending laboratory earthquakes with {\em TBD accuracy, null hypothesis, statistical results with pvalue or confidence interval and relevent scores}.
-The evidence of this experiment suggests {\em depends on final results}
+The technologies used in the laboratory to simulate and collect earthquake data have improved over time. In this study we use data collected using these improved technologies to predict the remaining time before {\em laboratory} earthquakes occur. This is an improvement over a 2017 Los Alamos National Laboratory study\cite{Bertrand}.  We analyze data patterns using geophysical subject matter expertise, statistical methods and the latest technology available. We design a statistical algorithm to model the patterns and make a prediction. We compare predicted versus actual time remaining to determine our accuracy.
+Our results prove that our model predicted impending laboratory earthquakes with 0.5680 Mean Absolute Error {\em null hypothesis, pvalue or confidence interval to be added}.
+The evidence of this experiment suggests {\em We have to find a way to measure against the prior study. We have to state the fact that we cannot prove that the technology improvements are better or that out algorithm is better because they confound each other}
 
 \end{abstract}
 \section{INTRODUCTION}
 %1 Paragraph Motivtion (Sets General problem domain)
-In August 2017 LANL conducted an experiment\cite{Bertrand} which predicted the remaining time until \emph{laboratory} earthquakes occur with 90\% accuracy. Subsequently there have been improvements in the technology used to collect and measure laboratory seismic signal data{\em (additional facts to be added?)}. There have also been improvements in computing power including the software and hardware required for GPU computing. LANL is now providing data collected by more advanced technology to the public via a competition.
+In August 2017 LANL conducted an experiment\cite{Bertrand} which predicted the remaining time until \emph{laboratory} earthquakes occur with 90\% accuracy. This was accomplished using a random forest algorithm and data collected using {\em (additional facts to be gathered.)} \par 
+There have been improvements in the technology used to collect and measure laboratory seismic signal data since the 2017 experiment. The instruments used are ... {\em (additional facts to be gathered.)} LANL is now providing data collected with this improved technology to the public via a competition. \par
 \begin{quote}
 	“For this challenge we selected an experiment that exhibits a very aperiodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly.\cite{kaggle}" 
 \end{quote}
+
+There have also been improvements in computing power. There are now publicly available software packages Keras, Tensorflow and Nvidia CUDA. Also the Nvidia Turing™ GPU architecture \par
 
 The results of this experiment are potentially applicable to the field of real world earthquakes. Other potential applications include avalanche prediction or failure of machine parts.
 \begin{quote}
@@ -33,7 +36,7 @@ The results of this experiment are potentially applicable to the field of real w
 \end{quote}
 
 %1 Paragraph Problem Statement (Specific Problem solved by the work)
-Given seismic signal data with considerably more a-periodic laboratory earthquake failures and modern computing hardware; we improve on the Los Alamos study\cite{Bertrand} to determine when laboratory earthquakes will occur.
+Given seismic signal data with considerably more a-periodic laboratory earthquake failures improved computing hardware and software; we improve on the Los Alamos study\cite{Bertrand} to determine when laboratory earthquakes will occur.
 
 %2-3 paragraphs on solution \par
 
@@ -277,8 +280,12 @@ These are NOT conclusions.
 \section{ETHICS}
 If people believe us and we are wrong; bad things can happen. If people believe us and we are right; good and bad things can happen.
 \section{CONCLUSION}
-Draw conclusionS (plural, more than one conclusion- minimum of 3)
-This is NOT a summary section.
+{\em Draw a minimum of 3 conclusions  This is NOT a summary section.} 
+\par
+
+We are able to predict with Mean absolute Error = 0.5680 however we  only know milliseconds before failure. Therefore practical applications may bee limited. This may prove useful but only applies to laboratory experiments. How to collect data for real world earthquakes?This could be used in industry perhaps researching materials for wallboard, machine parts.
+\par
+
 \bibliographystyle{splncs}
 \bibliography{OlgaDan}
 \end{document}
