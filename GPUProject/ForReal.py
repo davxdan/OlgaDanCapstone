@@ -60,6 +60,23 @@ del data
 #testAcousticData = scaler.fit_transform(testAcousticData)  
 #testTimeToFailure = scaler.fit_transform(testTimeToFailure)
 
+###############################################################################
+#Try this from Kaggle
+#num_seg = len(train)//100000
+#train_X = []
+#train_y = []
+#for i in tqdm_notebook(range(num_seg)):
+##     train_X.append(fft_process(train['acoustic_data'].iloc[150000 * i:150000 * i + 150000]))
+#    if 100000 * i + 150000 < len(train):
+#        train_X.append(train['acoustic_data'].iloc[100000 * i:100000 * i + 150000])
+#        train_y.append(train['time_to_failure'].iloc[100000 * i + 149999])
+#del train
+#gc.collect()
+#train_X = np.array(train_X,dtype = np.float32)
+#train_y = np.array(train_y,dtype = np.float32)
+
+#LSTM cannot handle data with 150000 sequence length, so I decide to use wavenet in the earlier layers as feature extraction and reduce the sequence length to 150.
+###############################################################################
 
 testData = []
 for i in range(500,10000,20):  

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  1 JUN 2019 13:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  2 JUN 2019 09:44
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -331,10 +331,15 @@ File: ../GPUProject/moreThan90percent.png Graphic file (type png)
 Package pdftex.def Info: ../GPUProject/moreThan90percent.png  used on input lin
 e 231.
 (pdftex.def)             Requested size: 242.98541pt x 135.75117pt.
-[6 <../GPUProject/timeToFailureDistribution.png>] [7 <../GPUProject/timeSeries.
-png>] [8 <../GPUProject/zoomedInTimePlot.png> <../GPUProject/moreThan90percent.
-png>] (LaboratoryEarthQuakePrediction.bbl) [9]
-(LaboratoryEarthQuakePrediction.aux)
+[6 <../GPUProject/timeToFailureDistribution.png>]
+Overfull \hbox (4.32181pt too wide) in paragraph at lines 260--263
+\OT1/cmr/m/n/10 http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explaine
+d/ mean ab-
+ []
+
+[7 <../GPUProject/timeSeries.png>] [8 <../GPUProject/zoomedInTimePlot.png> <../
+GPUProject/moreThan90percent.png>] (LaboratoryEarthQuakePrediction.bbl)
+[9] (LaboratoryEarthQuakePrediction.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -358,7 +363,7 @@ sers/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (9 pages, 341860 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (9 pages, 343368 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

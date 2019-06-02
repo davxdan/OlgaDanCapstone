@@ -241,6 +241,9 @@ The target variable was given in seconds:
 \section{METHODS AND EXPERIMENTS}
 
 \subsection{Recursive Neural Network}
+Mean absolute = 0.5680
+Patrick Yam: LSTM cannot handle data with 150000 sequence length therefore we wavenet in the earlier layers as feature extraction and reduce the sequence length to 150.\par
+
 \subsection{Auto Regressive integrated Moving Average (ARIMA)}
 Because our data show evidence of non-stationarity (the mean, variance change over time) we use ARMIA mode. It accounts for the changing Mean/Variance by something somthing.
 Particularly we use this model to remove white noise. An ARIMA(0,0,0) model is a white noise model.
@@ -249,13 +252,10 @@ Check WIKIPEDIA
 
 Multi Variate Time Series Forecasting.
 
-
-
-
-
-\subsection{Random Forest}
-
-
+\subsection{Gradient Boosting Decision Tree}
+http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explained/
+mean absolute error: 2.230923263623967
+r2 score: 0.42923076680297423
 
 
 %Define algorithms, methods and experiments
@@ -263,6 +263,9 @@ Multi Variate Time Series Forecasting.
 %Dont put code in paper; if anything put in appendix.
 %Put versions of software but no one cares about how to use technology; just state what we did.
 \section{RESULTS}
+
+It is clear that the LSTM + Wavenet algorythms are superior performers.
+This is because...
 Results of experiments
 Use tables and graphs
 Use tables and graphs
