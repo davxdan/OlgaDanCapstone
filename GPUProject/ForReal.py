@@ -40,12 +40,12 @@ pd.set_option("display.precision", 15)
 #data = iter_loadtxt('seg_00a37e.csv')
 #np.save('seg_00a37e', data)
 data=np.load('data.npy')
-trainAcousticData=data[:627222016,0].astype(np.int64)
-trainTimeToFailure=data[:627222016,1].astype(np.float64)
+trainAcousticData=data[:10000,0].astype(np.int64)
+trainTimeToFailure=data[:10000,1].astype(np.float64)
 trainAcousticData=trainAcousticData.reshape(-1, 1)
 trainTimeToFailure=trainTimeToFailure.reshape(-1, 1)
-testAcousticData=data[627222016:,0].astype(np.int64)
-testTimeToFailure=data[627222016:,1].astype(np.float64)
+testAcousticData=data[10000:20000,0].astype(np.int64)
+testTimeToFailure=data[10000:20000,1].astype(np.float64)
 testAcousticData=testAcousticData.reshape(-1, 1)
 testTimeToFailure=testTimeToFailure.reshape(-1, 1)
 del data
@@ -54,16 +54,16 @@ del data
 #np.save('timeToFailure', timeToFailure)
 
 #scale data
-scaler = MinMaxScaler(feature_range = (0, 1))
-trainAcousticData = scaler.fit_transform(trainAcousticData)  
-trainTimeToFailure = scaler.fit_transform(trainTimeToFailure)
-testAcousticData = scaler.fit_transform(testAcousticData)  
-testTimeToFailure = scaler.fit_transform(testTimeToFailure)
+#scaler = MinMaxScaler(feature_range = (0, 1))
+#trainAcousticData = scaler.fit_transform(trainAcousticData)  
+#trainTimeToFailure = scaler.fit_transform(trainTimeToFailure)
+#testAcousticData = scaler.fit_transform(testAcousticData)  
+#testTimeToFailure = scaler.fit_transform(testTimeToFailure)
 
 
 testData = []
-for i in range(856,8560,856):  
-    testData.append(testAcousticData[i-856:i, 0])
+for i in range(500,10000,20):  
+    testData.append(testAcousticData[i-500:i, 0])
 
 testData = np.array(testData)  
 testData = np.reshape(testData, (testData.shape[0], testData.shape[1], 1))
@@ -72,9 +72,9 @@ testData = np.reshape(testData, (testData.shape[0], testData.shape[1], 1))
 #whew made a cube 
 trainData = []  
 labels = []  
-for i in range(856, 732737,856):  
-    trainData.append(trainAcousticData[i-856:i, 0])
-    labels.append(trainTimeToFailure[i, 0])
+for i in range(1,10000,1):  
+    trainData.append(trainAcousticData[i-1:i, 0])
+    labels.append(trainTimeToFailure[i-1:i, 0])
 trainData, labels = np.array(trainData), np.array(labels)  
 trainData = np.reshape(trainData, (trainData.shape[0], trainData.shape[1], 1))
 

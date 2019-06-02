@@ -1,6 +1,0 @@
-Install Cuda 10.0,  and Ignore Windows Visual Studio Requirements
-
-From https://pytorch.org/get-started/locally/
-Run Anaconda Prompt as Administrator
-Run this Command in the Anaconda Prompt: conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
-
