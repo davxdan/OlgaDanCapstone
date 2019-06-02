@@ -15,18 +15,19 @@
 \maketitle
 
 \begin{abstract}
-In 2017 the Los Alamos National Laboratory conducted an experiment  which proved that laboratory earthquakes can be predicted with 90percent accuracy.\cite{Bertrand}.
+In 2017 the Los Alamos National Laboratory conducted an experiment which predicted the remaining time before {\em laboratory} earthquakes occured with 90 percent accuracy.\cite{Bertrand}
 The technologies used in the laboratory to simulate and collect earthquake data have since improved.\par
-In this observational study we predict the remaining time before {\em laboratory} earthquakes occur using data collected with these improved technologies. We analyze data patterns using geophysical subject matter expertise, statistical methods and the latest technology available. We design a statistical algorithm to model the patterns and make a prediction. We compare predicted versus actual time remaining to determine our accuracy. \par
+Given greater volume and complex data collected with these improved technologies; in this {\em new} study we predict the remaining time before laboratory earthquakes occur. We analyze data patterns using geophysical subject matter expertise, statistical methods and the latest technology available. We design a statistical algorithm to model the patterns and make a prediction. We compare predicted versus actual time remaining to determine our accuracy. \par
 
-Our results prove that our model predicted impending laboratory earthquakes with 0.5680 Mean Absolute Error {\em null hypothesis, pvalue or confidence interval to be added}. The results are an improvement over the 2017 Los Alamos National Laboratory experiment\cite{Bertrand}.
-The evidence in this observational study suggests {\em We have to find a way to measure against the prior study. We have to state the fact that we cannot prove that the technology improvements are better or that out algorithm is better because of confounding variables such as different collection methods and unavailble details about the 2017 model.} \par
+Our results prove that our model predicts impending laboratory earthquakes with 0.5680 Mean Absolute Error {\em null hypothesis, pvalue or confidence interval to be added}. The results are an improvement over the 2017 Los Alamos National Laboratory experiment\cite{Bertrand}.
+The evidence in this new {\em(observational)} study suggests that {\em We have to find a way to measure against the prior study. We have to state the fact that we cannot prove that the technology improvements are better or that out algorithm is better because of confounding variables such as different collection methods and unavailable details about the 2017 model.} \par
 
 \end{abstract}
 \section{INTRODUCTION}
 %1 Paragraph Motivtion (Sets General problem domain)
-In August 2017 LANL conducted an experiment\cite{Bertrand} which predicted the remaining time until \emph{laboratory} earthquakes occur with 90\% accuracy. This was accomplished using a random forest algorithm and data collected using {\em (additional facts to be gathered.)} \par 
-There have been improvements in the technology used to collect and measure laboratory seismic signal data since the 2017 experiment. The instruments used are ... {\em (additional facts to be gathered.)} LANL is now providing data collected with this improved technology to the public via a competition. \par
+In August 2017 LANL conducted an experiment\cite{Bertrand} which predicted the remaining time until \emph{laboratory} earthquakes occur with 90\% accuracy. The team imitated a real earthquake in the laboratory using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic acoustic signals. An accelerometer recorded the acoustic signals emanating from the sheared layers. A random forest algorithm was trained with the acoustic signals and stick‐slip frictional failures (actual laboratory earthquakes). It was then used to generate predictions which were measured against actuals.\cite{LANLNews}\par
+
+There have been improvements in the technology used to collect and measure laboratory seismic signal data since the 2017 experiment. The instruments used are ... {\em (additional facts to be gathered)} and LANL is now providing data collected with this improved technology to the public via a competition. \par
 \begin{quote}
 	“For this challenge we selected an experiment that exhibits a very aperiodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly.\cite{kaggle}" 
 \end{quote}
@@ -39,15 +40,17 @@ The results of this experiment are potentially applicable to the field of real w
 \end{quote}
 
 %1 Paragraph Problem Statement (Specific Problem solved by the work)
-Given seismic signal data with considerably more a-periodic laboratory earthquake failures improved computing hardware and software can we improve on the Los Alamos study\cite{Bertrand} to determine when laboratory earthquakes will occur?\par
+\subsection{Problem Statement}
+Given seismic signal data with considerably more a-periodic laboratory earthquake failures,  improved computing hardware and software can we improve on the Los Alamos study\cite{Bertrand} to determine when laboratory earthquakes will occur?\par
 
 
 %2-3 paragraphs on solution \par
-
+\subsection{Solution}
 %1 Paragraph on main results (plural) \par
-A recurrent neural network (LSTM) in combination with wave-net algorithm predicts impending laboratory earthquakes with {\em (Mean absolute Error = 0.5680 additional facts to be gathered)} accuracy.
+We employ a long-short term memory (LSTM) recurrent neural network (RNN) in combination with a wave-net algorithm and predict impending laboratory earthquakes with {\em (Mean absolute Error = 0.5680 additional facts to be gathered)} accuracy.
 %1 Paragraph on main conclusions (plural) \par
-The data, hardware and software allows us to predict impending earthquakes more accurately. However we only know milliseconds before failure. Therefore practical applications may bee limited. This may prove useful but only applies to laboratory experiments. {\em (How to collect data for real world earthquakes?)}  This could be used in industry perhaps researching materials for wallboard, machine parts.\par
+\subsection{Conclusions}
+The data, hardware and software allows us to predict impending earthquakes more accurately. However we only know milliseconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. {\em (How to collect data for real world earthquakes?)}  This could be used in industry perhaps researching materials for wallboard, machine parts.\par
 
 %1 Paragraph on paper organization \par
 
@@ -66,7 +69,6 @@ This study analyzes the relationship between slow slip and regular earthquakes. 
 Regular earthquakes are caused by a sudden slip on a fault. Tectonic plates are always slowly moving, but they get stuck at their edges due to friction. When the stress on the edge overcomes the friction, there is an earthquake that releases energy in waves that travel through the earth's crust and cause the shaking that we feel.\cite{USGSfaqs}\par
 
 Los Alamos National Laboratory researchers discovered a way to successfully predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017, this team discovered a way to train a computer to pinpoint and analyze seismic and acoustic signals emitted during the movements along the fault to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times.\cite{LANLNews} \par
-In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers.\cite{LANLNews}\par
 
 For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy.\cite{LANLNews}\par
 
