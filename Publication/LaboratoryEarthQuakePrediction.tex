@@ -15,9 +15,12 @@
 \maketitle
 
 \begin{abstract}
-The technologies used in the laboratory to simulate and collect earthquake data have improved over time. In this study we use data collected using these improved technologies to predict the remaining time before {\em laboratory} earthquakes occur. This is an improvement over a 2017 Los Alamos National Laboratory study\cite{Bertrand}.  We analyze data patterns using geophysical subject matter expertise, statistical methods and the latest technology available. We design a statistical algorithm to model the patterns and make a prediction. We compare predicted versus actual time remaining to determine our accuracy.
-Our results prove that our model predicted impending laboratory earthquakes with 0.5680 Mean Absolute Error {\em null hypothesis, pvalue or confidence interval to be added}.
-The evidence of this experiment suggests {\em We have to find a way to measure against the prior study. We have to state the fact that we cannot prove that the technology improvements are better or that out algorithm is better because they confound each other}
+In 2017 the Los Alamos National Laboratory conducted an experiment  which proved that laboratory earthquakes can be predicted with 90percent accuracy.\cite{Bertrand}.
+The technologies used in the laboratory to simulate and collect earthquake data have since improved.\par
+In this observational study we predict the remaining time before {\em laboratory} earthquakes occur using data collected with these improved technologies. We analyze data patterns using geophysical subject matter expertise, statistical methods and the latest technology available. We design a statistical algorithm to model the patterns and make a prediction. We compare predicted versus actual time remaining to determine our accuracy. \par
+
+Our results prove that our model predicted impending laboratory earthquakes with 0.5680 Mean Absolute Error {\em null hypothesis, pvalue or confidence interval to be added}. The results are an improvement over the 2017 Los Alamos National Laboratory experiment\cite{Bertrand}.
+The evidence in this observational study suggests {\em We have to find a way to measure against the prior study. We have to state the fact that we cannot prove that the technology improvements are better or that out algorithm is better because of confounding variables such as different collection methods and unavailble details about the 2017 model.} \par
 
 \end{abstract}
 \section{INTRODUCTION}
@@ -28,7 +31,7 @@ There have been improvements in the technology used to collect and measure labor
 	“For this challenge we selected an experiment that exhibits a very aperiodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly.\cite{kaggle}" 
 \end{quote}
 
-There have also been improvements in computing power. There are now publicly available software packages Keras, Tensorflow and Nvidia CUDA. Also the Nvidia Turing™ GPU architecture \par
+There have also been improvements in computing capabilities. There are now publicly available software packages Keras, Tensorflow, Nvidia CUDA™ and Turing™ GPU architecture. These improvements enable us to apply complex deep learning algorithms which were more difficult or impossible to employ in the past.\par
 
 The results of this experiment are potentially applicable to the field of real world earthquakes. Other potential applications include avalanche prediction or failure of machine parts.
 \begin{quote}
@@ -244,7 +247,7 @@ The target variable was given in seconds:
 
 
 \section{METHODS AND EXPERIMENTS}
-
+Describe the solution approach here.
 \subsection{Data Transformations}
 Explain what we did to the data here.
 Explain our train and test data here.
@@ -269,12 +272,7 @@ https://www.youtube.com/watch?v=2GNbIKTKCfE
 https://www.youtube.com/watch?v=8HyCNIVRbSU
 
 \subsection{Auto Regressive integrated Moving Average (ARIMA)}
-Because our data show evidence of non-stationarity (the mean, variance change over time) we use ARMIA model. It accounts for the changing Mean/Variance by something somthing.
-Particularly we use this model to remove white noise. An ARIMA(0,0,0) model is a white noise model.
-
-Check WIKIPEDIA
-
-Multi Variate Time Series Forecasting.
+The data shows evidence of non-stationarity (the mean, variance change over time). We use an ARMIA model to analyze the changing means and variance. This this model also accounts for white noise.\par ARIMA(0,0,0). Check Wikipedia.
 
 \subsection{Gradient Boosting Decision Tree}
 http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explained/
@@ -287,10 +285,11 @@ r2 score: 0.42923076680297423
 %Dont put code in paper; if anything put in appendix.
 %Put versions of software but no one cares about how to use technology; just state what we did.
 \section{RESULTS}
-{\em the solution approach and evaluation methodology}
+{\em Include evaluation methodology}
+We measure this by Abolute Mean Square error
 
-It is clear that the LSTM + Wavenet algorythms are superior performers.
-This is because...
+It is clear that the LSTM + Wave-net algorithms are superior performers.
+This is because it handles extreme variations in the slope (gradient descent) and we can tune it to remember not only the common signals but the extreme signals which occur only when failure is imminent.
 Results of experiments
 Use tables and graphs
 Use tables and graphs
