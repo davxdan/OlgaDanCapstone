@@ -30,9 +30,9 @@ import scipy.signal as sg
 from scipy.signal import hann
 from scipy.signal import hilbert
 from scipy.signal import convolve
-
-%%time
-train = pd.read_csv('../input/train.csv', dtype={'acoustic_data': np.int16, 'time_to_failure': np.float32})
+from os import chdir, getcwd
+chdir('C:\\Users\\danie\\Documents\\GitHub\\OlgaDanCapstone\\GPUProject')
+train = pd.read_csv('train.csv', dtype={'acoustic_data': np.int16, 'time_to_failure': np.float32})
 
 # NY_FREQ_IDX = 75000  # the test signals are 150k samples long, Nyquist is thus 75k.
 # CUTOFF = 18000
@@ -62,7 +62,7 @@ train = pd.read_csv('../input/train.csv', dtype={'acoustic_data': np.int16, 'tim
 num_seg = len(train)//100000
 train_X = []
 train_y = []
-for i in tqdm_notebook(range(num_seg)):
+for i in range(num_seg):
 #     train_X.append(fft_process(train['acoustic_data'].iloc[150000 * i:150000 * i + 150000]))
     if 100000 * i + 150000 < len(train):
         train_X.append(train['acoustic_data'].iloc[100000 * i:100000 * i + 150000])
