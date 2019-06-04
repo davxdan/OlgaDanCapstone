@@ -1,0 +1,82 @@
+Text messaging is the best way to contact Dr. Enmgels. Feel free to text him at 817-676-1031
+
+
+DONT PLAGURIZE - be careful not to accidentally plagurize
+
+"Be careful not to accidentally plagurize"
+DO NOT use figures from other publications. Even if you cite it; you are getting into areas where copyright issues arise.
+
+Final Paper will be public on SMU Data Science review and viewable to anyone for a long time. Take it seriously.
+
+Write a clear engaging story
+
+Remember Reproducible research
+
+"Style" Lessons in Clarity and Grace - good book
+
+Iterate; just get something written down. Iterations will improve our own understanding of our work.
+
+Write in present tense
+
+No opinion words
+"We did experiments" is ok but the paper is present tense
+
+Define or Remind reader of important words (i.e linear regression)
+
+Short sentences
+
+Negative results are ok - "this doesn't work because". 
+
+Use tables instead of bullets - all bullets and lists should be tables.
+
+Visualizations should explain a lot. Viewer should get the point without having to read.
+
+Paper Structure:
+
+ABSTRACT
+Problem sentence
+Motivation Sentence
+2=3 what you did to solve the problem
+1 sentence main result(singular with a number)
+1 sentence main conclusion (singular)
+
+INTRODUCTION
+1 Paragraph Motivtion (Sets Genreral problem domain)
+1 Paragraph P{roblem Statement (Specific Problem solved by the work)
+2-3 paragraphs on solution
+1 Paragraph on main results (plural)
+1 Paragraph on main conclusions (plural)
+1 Paragraph on paper organization
+
+<TUTORIAL MATERIAL>
+Paper should be tutorial in nature
+Audience is data scientists of varying levels of knowledge. Keep newer students in mind
+
+(DATA SET)
+Must have section that defines data
+Use tables and figures to illustrate data attributes
+
+<METHODS AND EXPERIMENTS>
+Define algorithms, methods and eperiments
+DO NOT give play by play of everything we did
+Dont put code in paper; if anything put in appendix.
+Put versions of software but nop one cares about how to use technology; just state what we did.
+
+RESULTS
+Results of experiments
+Use tables and graphs
+Use tables and graphs
+Use tables and graphs
+Don't forget explanations
+
+ANALYSIS
+Analyze results.
+These are NOT conclusions.
+
+ETHICS
+Discuss ethics of your problem
+You MUST have ethics section.
+
+CONCLUSION (and future work)
+Draw conclusionS (plural, more than one conclusion- minimum of 3)
+This is NOT a summary section.
