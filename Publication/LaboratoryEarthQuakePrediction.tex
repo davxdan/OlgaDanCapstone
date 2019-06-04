@@ -15,20 +15,27 @@
 \maketitle
 
 \begin{abstract}
-In 2017 the Los Alamos National Laboratory (LANL) conducted an experiment which predicted the remaining time before {\em laboratory} earthquakes occured with 90 percent accuracy.\cite{Bertrand}
-LANL has since collected data with improved technologies and made it available to the public.\par 
+In 2017 the Los Alamos National Laboratory (LANL) conducted an experiment which predicted the remaining time before {\em laboratory} earthquakes occured with 90 percent accuracy\cite{Bertrand}.
+LANL has since collected additional data with improved technologies and made it available to the public.\par 
 
-In this {\em new} study we predict the remaining time before laboratory earthquakes occur using the data provided by LANL. We apply machine learning to analyze data patterns, design statistical models and make predictions. We compare predicted versus actual time remaining to determine our accuracy. \par
+In this {\em new} study we apply machine learning to analyze patterns in the public LANL data. We design statistical models to predict the remaining time before laboratory earthquakes occur.  We compare predicted versus actual time remaining to determine our accuracy.\par
 
-The results prove that impending laboratory earthquakes can be predicted with 0.5680 Mean Absolute Error {\em null hypothesis, pvalue or confidence interval to be added}. The predictions are based solely on the characteristics of recorded acoustical signals; they are not based on time intervals between prior laboratory earthquakes. The results are an improvement over the prior 2017 LANL experiment.
-The evidence in this new {\em(observational)} study suggests that {\em We have to find a way to measure against the prior study. We have to state the fact that we cannot prove that the technology improvements are better or that out algorithm is better because of confounding variables such as different collection methods and unavailable details about the 2017 model.}\par
+The results prove that impending laboratory earthquakes can be predicted with {\em(temporary 0.5680)} Mean Absolute Error {\em (Null Hypothesis, P-Value or Confidence Interval to be added)}. The predictions are based solely on the characteristics of recorded acoustical signals; they are not based on time intervals between prior laboratory earthquakes. The results are an improvement over the prior 2017 LANL experiment.\par
+
+The evidence in this new {\em observational} study suggests that {\em (Measure against prior study TBD. We have to state the fact that we cannot prove that the data collection technology improvements are better or that our algorithm is better unless we can accurately reproduce the prior model's results. Consider confounding variables such as different collection methods and unavailable details about the 2017 model.)}\par
 
 \end{abstract}
 \section{INTRODUCTION}
 %1 Paragraph Motivtion (Sets General problem domain)
-In August 2017 LANL conducted an experiment\cite{Bertrand} which predicted the remaining time until \emph{laboratory} earthquakes occur with 90\% accuracy. The team imitated a real earthquake in the laboratory using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic acoustic signals. An accelerometer recorded the acoustic signals emanating from the sheared layers. A random forest algorithm was trained with the acoustic signals and stick‐slip frictional failures (actual laboratory earthquakes). It was then used to generate predictions which were measured against actuals.\cite{LANLNews}\par
+Earthquakes were traditionally predicted based on the recurrence interval of past earthquakes. Because earthquake recurrence is not constant for a given fault, predictions can only be made within broad time windows.\par 
 
-There have been improvements in the technology used to collect and measure laboratory seismic signal data since the 2017 experiment. The instruments used are ... {\em (additional facts to be gathered)} and LANL is now providing data collected with this improved technology to the public via a competition. \par
+In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment\cite{Bertrand} which predicted the remaining time until \emph{laboratory} earthquakes occur with 90\% accuracy. The team imitated an earthquake in the laboratory using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic acoustic signals. An accelerometer was used to record the signals. A random forest algorithm was trained with the signals and stick‐slip frictional failures (laboratory earthquakes). The algorithm was then used to generate predictions from acoustic signals alone. The predictions were measured against actual failures to determine the accuracy.\cite{LANLNews}\par
+
+\begin{quote}“Over the last 15 years, there has been renewed hope that progress can be made regarding forecasting owing to tremendous advances in instrumentation quality and density."\cite{Bertrand}\end{quote}
+
+There have been improvements in the technology used to collect and measure laboratory seismic signal data since the 2017 experiment.\par
+
+Since 2017 LANL has collected additional data and made it available via a public competition. \par
 \begin{quote}
 	“For this challenge we selected an experiment that exhibits a very aperiodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly.\cite{kaggle}" 
 \end{quote}
