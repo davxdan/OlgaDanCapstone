@@ -43,11 +43,11 @@
 \begin{abstract}
 In 2017 the Los Alamos National Laboratory (LANL) conducted an experiment which predicted the remaining time before {\em laboratory} earthquakes occured with .89 coefficient of determination\cite{Bertrand}. LANL has since collected additional data with considerably more a-periodic laboratory earthquake failures and made it available to the public in 2019.
 
-Given the considerably more a-periodic data can laboratory earthquakes be predicted more accurately?
+Can laboratory earthquakes be predicted more accurately given this considerably more a-periodic data?
 
-In this {\em new} study we apply machine learning to analyze patterns in the public LANL data. We design statistical models to predict the remaining time before laboratory earthquakes occur.  We compare predicted versus actual time remaining to determine our accuracy.\par
+In this {\em new} study we apply machine learning to analyze patterns in the a-periodic data. We design statistical models to predict the remaining time before laboratory earthquakes occur.  We compare predicted versus actual time remaining to determine our accuracy.\par
 
-The result proves that impending laboratory earthquakes can be predicted with {\em(temporary 0.5680)} Mean Absolute Error. The predictions are based solely on the characteristics of recorded acoustical signals; they are not based on time intervals between prior laboratory earthquakes.\par
+The result proves that impending laboratory earthquakes can be predicted with {\em(TBD coefficient of determination)}. The predictions are based solely on the characteristics of recorded acoustical signals; they are not based on time intervals between prior laboratory earthquakes.\par
 
 
 
@@ -64,9 +64,9 @@ The result proves that impending laboratory earthquakes can be predicted with {\
 % 1 Paragraph on main conclusions (plural)
 % 1 Paragraph on paper organization
 
-Earthquakes were traditionally predicted based on the recurrence interval of past earthquakes. Because earthquake recurrence is not constant for a given fault, predictions can only be made within broad time windows.\par 
+Earthquakes cause mass destruction and loss of life. A traditional method to predict earthquakes is to look to past recurrence intervals. Because the recurrences are not constant, predictions can only be made within broad time windows.\par 
 
-In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment\cite{Bertrand} which predicted the remaining time until \emph{laboratory} earthquakes occur with 90\% accuracy. The team imitated an earthquake in the laboratory using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted acoustic seismic signals. An accelerometer was used to record the signals. A random forest algorithm was trained using the signals and stick‐slip frictional failures (laboratory earthquakes). The algorithm was then used to generate predictions from acoustic signals alone. The predictions were measured against actual failures to determine the accuracy\cite{LANLNews}.\par
+In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment\cite{Bertrand} which predicted \emph{laboratory} earthquakes with 90\% accuracy. The team imitated an earthquake using steel blocks interacting with rocky material to induce slipping that emitted seismic signals. An accelerometer was used to record them. A random forest algorithm was trained on the signals and stick‐slip failures (laboratory earthquakes). The trained algorithm was then used to generate predictions from separate signals (not used in the training). The predictions were measured against actual failures to determine the accuracy of the predictions\cite{LANLNews}.\par
 
 \begin{quote}“Over the last 15 years, there has been renewed hope that progress can be made regarding forecasting owing to tremendous advances in instrumentation quality and density\cite{Bertrand}."\end{quote}
 
@@ -76,22 +76,20 @@ There have been improvements in the technology used to measure and collect labor
 	“For this challenge we selected an experiment that exhibits a very a-periodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly\cite{kaggle}." 
 \end{quote}
 
-There have also been improvements in computing capabilities. There are now publicly available software packages Keras, Tensorflow, Nvidia CUDA™ and Turing™ GPU architecture. These improvements enable us to apply complex deep learning algorithms which were more difficult or impossible to employ in the past.\par
-
-The results of this experiment are potentially applicable to the field of real world earthquakes. Other potential applications include avalanche prediction or failure of machine parts.
-
 \begin{quote}
 	“If this challenge is solved and the physics are ultimately shown to scale from the laboratory to the field, researchers will have the potential to improve earthquake hazard assessments that could save lives and billions of dollars in infrastructure\cite{kaggle}."
 \end{quote}
 
-\subsection{Problem Statement}
+There have also been improvements in computing capabilities. There are now publicly available software packages Keras, Tensorflow, Nvidia CUDA™ and Turing™ GPU architecture. These improvements enable us to apply complex deep learning algorithms which were more difficult or impossible to employ in the past.\par
+
+%Problem Statement
 Given seismic signal data with considerably more a-periodic laboratory earthquake failures, improved computing hardware and software can we improve on the Los Alamos study\cite{Bertrand} to determine when laboratory earthquakes will occur?\par
 
-\subsection{Solution}
-We employ a long-short term memory (LSTM) recurrent neural network (RNN) in combination with a wave-net algorithm and predict impending laboratory earthquakes with {\em (Mean absolute Error = 0.5680 additional facts to be gathered)} accuracy.
+%Solution
+In this {\em new} observational study we employ a series of algorithms and predict impending laboratory earthquakes with {\em (additional facts to be gathered)} accuracy.
 
-\subsection{Conclusions}
-The data, hardware and software allows us to predict impending earthquakes more accurately. However we only know milliseconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. {\em (How to collect data for real world earthquakes?)}  This could be used in industry perhaps researching materials for wallboard, machine parts.\par
+%Conclusion
+The a-periodic data, hardware and software allows us to predict impending earthquakes more accurately. However we only know milliseconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. {\em (How to collect data for real world earthquakes?)}  This could be used in industry perhaps researching materials for wallboard, machine parts.\par
 
 \section{TUTORIAL MATERIAL}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
