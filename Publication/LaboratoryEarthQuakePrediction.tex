@@ -215,16 +215,16 @@ The acoustic data are integers ranging from -5515 to 5444 and have mean of 4.52.
 % Don't put code in paper; if anything put in appendix.
 % Put versions of software but no one cares about how to use technology; just state what we did.
 
-Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divided our data by windows that contains 150,000 observations each (0.0375 seconds of seismic data), so our new data set is 4194 windows. From each time window, we compute a set of 98 potentially relevant statistical features (e.g., mean, variance, kurtosis). 
-We apply a machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor, Extra Trees Regressor to the new continuous values that we got, analysing acoustic time series data.\par
-Similarly to the LANL study we created new features can be separated into two main classes: 
+Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divide our data into windows containing 150,000 observations each (0.0375 seconds of seismic data)therefore 4194 windows. From each time window, we compute a set of 98 potentially relevant statistical features (e.g., mean, variance, kurtosis). 
+We apply machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor, Extra Trees Regressor to the new continuous windows of values.\par
+Similarly to the LANL study we create new features separated into two main classes: 
 Distribution of signal’s energy: we use couple of higher order moments of the acoustic data to capture the evolution of the signal’s energy. Within each time window we compute the signal’s normalized mean, minimum, maximum and higher moments  (variance, skewness, kurtosis).\par
 Precursors: the system enters a critical state when close to failure. We rely on different percentiles and thresholds to monitor this precursory activity. We use the 1st - 9th and 91th - 99th percentiles. Our thresholds measure the count of observations that the acoustic signal spends over a threshold value f0 and under a threshold value f1.
 
-In order to avoid correlation between new features we applied principal component analysis.  Instead of using 98 features, we created just 10 that represented 99.9% of the full data variation.
-We use a 70/30 random split of the full time series for use as training and testing data sets respectively. We computed regularization hyper-parameters for each machine learning predicting techniques by random grid search based on a 3-fold cross-validation.
+In order to avoid correlation between new features we applied principal component analysis.  Instead of using 98 features, we created just 10 that represented 99.9 percent of the full data variation.
+We use a 70/30 random split of the full time series as training and testing data sets respectively. We compute regularization hyper-parameters for each machine learning predicting technique by random grid search based on a 3-fold cross-validation.
 \subsection{Data Transformations}
-The distribution of time to failure is right skewed. We apply a square root transformation to normalize it and improve the prediction models. It is still not ideally normal, but looks much more better after the transformation.
+The distribution of time to failure is right skewed. We apply a square root transformation to normalize it and improve the prediction models. It is still not ideally normal, but has improved.
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{../GPUProject/transform1}
