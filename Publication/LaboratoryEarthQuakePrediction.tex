@@ -217,7 +217,7 @@ The acoustic data are integers ranging from -5515 to 5444 and have mean of 4.52.
 
 Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divide our data into windows containing 150,000 observations each (0.0375 seconds of seismic data)therefore 4194 windows. From each time window, we compute a set of 98 potentially relevant statistical features (e.g., mean, variance, kurtosis). 
 We apply machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor, Extra Trees Regressor to the new continuous windows of values.\par
-Similarly to the LANL study we create new features separated into two main classes: 
+Similar to the LANL study we create new features separated into two main classes: 
 Distribution of signal’s energy: we use couple of higher order moments of the acoustic data to capture the evolution of the signal’s energy. Within each time window we compute the signal’s normalized mean, minimum, maximum and higher moments  (variance, skewness, kurtosis).\par
 Precursors: the system enters a critical state when close to failure. We rely on different percentiles and thresholds to monitor this precursory activity. We use the 1st - 9th and 91th - 99th percentiles. Our thresholds measure the count of observations that the acoustic signal spends over a threshold value f0 and under a threshold value f1.
 
@@ -310,27 +310,13 @@ The most accurate results with coefficient of determination 0.5 and mean absolut
 \end{figure}
 
 \section{ETHICS}
-If people believe us and we are wrong; bad things can happen. If people believe us and we are right; good and bad things can happen.
+If people believe us and we are wrong; bad things can happen. If people believe us and we are right; good and bad things can happen.\par
 
 Scientists’ responsibility to inform the public about their results may conflict with their responsibility not to cause social disturbance by the communication of these results. A study of the well-known Brady-Spence and Iben Browning earthquake predictions illustrates this conflict in the publication of scientifically unwarranted predictions. Furthermore, a public policy that considers public sensitivity caused by such publications as an opportunity to promote public awareness is ethically problematic from (i) a refined consequentialist point of view that any means cannot be justified by any ends, and (ii) a rights view according to which individuals should never be treated as a mere means to ends\cite{Ayhan}.
-
-
 \section{CONCLUSION}
-{\em Draw a minimum of 3 conclusions  This is NOT a summary section.} 
-\par
-
 The evidence in this new {\em observational} study suggests that {\em (Measure against prior study TBD. We have to state the fact that we cannot prove that the data collection technology improvements are better or that our algorithm is better unless we can accurately reproduce the prior model's results. Consider confounding variables such as different collection methods and unavailable details about the 2017 model.)}\par
-
-We are able to predict with Mean absolute Error = 0.5680 however we  only know 8-16 seconds before failure.
- Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. 
- 
- Our application of machine learning predicts failures with 2.03 seconds mean absolute error and 0.5 coefficient of determination. This is based on the analysis of the acoustic signal every moment in the slip cycle. 
- 
- Machine learning searches for patterns that humans may not easily perceive. This method may be useful if LANL can scale it from the lab to the field. It can also be useful in researching industrial and natural materials.
- 
- 
- 
- 
+Our application of machine learning predicts laboratory earthquakes with 2.03 seconds mean absolute error and 0.5 coefficient of determination. This is based on the analysis of the acoustic signal every moment in the slip cycle. However this is only 8-16 seconds in advance therefore practical applications may be limited. This only applies to laboratory experiments and not real life threatening earthquakes.\par
+Machine learning searches for patterns that humans may not easily perceive. This method may be useful if LANL can scale it from the lab to the field. It can also be useful in researching industrial and natural materials.
 \par
 
 \bibliographystyle{splncs}
