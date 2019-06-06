@@ -125,16 +125,15 @@ The data is 157.275 seconds of seismic data recorded at 4MHz hence 629,143,480 o
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../GPUProject/allDataDefaultPlot}
-	\caption{The magnitude of each seismic signal and the time remaining before the next laboratory earthquake. There are 16 lab earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds. There are large Acoustic Signal fluctuations just before the failure.}
+	\includegraphics[width=1\linewidth]{../GPUProject/allDataDefaultPlot}
+	\caption{The magnitude of each seismic signal and the time remaining before the next laboratory earthquake. There are 16 lab earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds.}
 	\label{fig:alldatadefaultplot}
 \end{figure}
-
 \begin{table}[h!]
 	\begin{center}
 		\caption{Sample of Data Provided}
 		\label{tab:table1}
-		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+		\begin{tabular}{l|c|r} 
 			\textbf{Index} & \textbf{Seismic Signal} & \textbf{Time to Failure}\\
 			\hline
 			0 & 12 & 1.469099998474121 \\ 
@@ -145,34 +144,13 @@ The data is 157.275 seconds of seismic data recorded at 4MHz hence 629,143,480 o
 		\end{tabular}
 	\end{center}
 \end{table}
-
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\linewidth]{../GPUProject/acousticRand60000DistPlot}
 	\caption{The distribution of seismic signal measurements by LANL}
 	\label{fig:acousticRand60000DistPlot}
 \end{figure}
-
-\begin{table}[h!]
-	\begin{center}
-		\caption{Seismic Signal Sample}
-		\label{tab:table1}
-		\begin{tabular}{c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-			\textbf{Index} & \textbf{Signal}\\
-			\hline
-			0 & 3 \\
-			1 & 10 \\ 
-			2 & 4 \\
-			3 & 4 \\
-			4 & 1 \\
-		\end{tabular}
-	\end{center}
-\end{table}
-
-
-
-\subsubsection{Acoustic Data}
-The acoustic features are integers, have a range from -5515 to 5444 and mean 4.52.
+The acoustic data are integers ranging from -5515 to 5444 and have mean of 4.52. The time to failure is in seconds. We can see that acoustic data shows large fluctuations just before the failure and recurs cyclically. Failures can be predicted visually as cases when huge fluctuations in the signal are followed by smaller signal values. This could be useful for predicting time to failure changes from 0 to high values.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../GPUProject/acousticFeatureIntegers}
@@ -180,14 +158,14 @@ The acoustic features are integers, have a range from -5515 to 5444 and mean 4.5
 	\label{fig:acousticfeatureintegers}
 \end{figure}
 
-\subsubsection{Time to Failure}
-The target variable was given in seconds:
+
+
 \begin{table}[h!]
 	\begin{center}
-		\caption{Sample of Data Provided}
+		\caption{Seismic Signal Stats}
 		\label{tab:table1}
-		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-			\textbf{Index} & \textbf{Seismic Signal} & \textbf{Time to Failure}\\
+		\begin{tabular}{l|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+			\textbf{Index} & \textbf{Seismic Signal} \\
 			\hline
 			count &  6.29145480\\ 
 			mean & 4.47708428 \\ 
@@ -203,11 +181,11 @@ The target variable was given in seconds:
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../GPUProject/timeToFailureDistribution}
-	\caption[]{The min value was very close to zero (around 10\^-5) and the max was 16 seconds. The distribution for the random sample}
+	\caption[]{The min value is very close to zero and the max is 16 seconds.}
 	\label{fig:timetofailuredistribution}
 \end{figure}
-\subsubsection{Timeseries}
-We can see that acoustic data shows large fluctuations just before the failure and recurs cyclically. Failures can be predicted visually as cases when huge fluctuations in the signal are followed by smaller signal values. This could be useful for predicting "time\_to\_failure" changes from 0 to high values.
+
+
 
 \begin{figure}[h]
 	\centering
@@ -222,27 +200,6 @@ We can see that acoustic data shows large fluctuations just before the failure a
 	\caption{On this zoomed-in-time plot we can see that actually the large oscillation before the failure is not quite in the last moment. There are also trains of intense oscillations proceeding the large one and also some oscillations with smaller peaks after the large one. Then, after some minor oscillations, the failure occurs. Interesting thing to check is the time between high levels of seismic signal and the earthquakes. We are considering any acoustic data with absolute value greater than 1000 as a high level}
 	\label{fig:zoomedintimeplot}
 \end{figure}
-\begin{table}[h!]
-	\begin{center}
-		\caption{Sample of Data Provided}
-		\label{tab:table1}
-		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-			\textbf{Index} & \textbf{Seismic Signal} & \textbf{Time to Failure}\\
-			\hline
-			count & 11325 \\ 
-			mean & 0.64454830 \\ 
-			std & 1.32147193 \\ 
-			min & 0.31079626 \\ 
-			25 & 0.31549615 \\ 
-			50 & 0.31689683 \\ 
-			75 & 0.32029617 \\ 
-			max & 8.86059952 \\ 
-		\end{tabular}
-	\end{center}
-\end{table}
-\begin{tabular}{|c|c|}
-	
-\end{tabular} 
 
 \begin{figure}
 	\centering
@@ -359,10 +316,11 @@ Scientists’ responsibility to inform the public about their results may confli
 The evidence in this new {\em observational} study suggests that {\em (Measure against prior study TBD. We have to state the fact that we cannot prove that the data collection technology improvements are better or that our algorithm is better unless we can accurately reproduce the prior model's results. Consider confounding variables such as different collection methods and unavailable details about the 2017 model.)}\par
 
 We are able to predict with Mean absolute Error = 0.5680 however we  only know milliseconds before failure.
- Therefore practical applications may bee limited. This may prove useful but only applies to laboratory experiments. How to collect data for real world earthquakes?This could be used in industry perhaps researching materials for wallboard, machine parts.
+ Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. 
  
- IMPORTANT TO CITE OR REWORD THIS!!!!!!!!!!!!!!!!!!!!!!!!!
- In our work we show that ML applied to this experiment provides failure forecasts with 2.03 sec mean absolute error and 0.5 coefficient of determination based on the instantaneous analysis of the acoustic signal at any time in the slip cycle, except beginning and end of the cycle. These results should suffice to encourage ML analysis of seismic signals in Earth. This is one of the first application of ML to continuous acoustic/seismic data with the goal of inferring failure times. These results suggest that previous analyses based exclusively on earthquake catalogs may be incomplete. In particular, ML‐based approaches mitigate human bias by automatically searching for patterns in a large space of potentially relevant variables. Our current approach is to progressively scale from the laboratory to the Earth by applying this approach to Earth problems that most resemble the laboratory system. An interesting analogy to the laboratory may be faults that exhibit small repeating earthquakes. For instance, fault patches located on the San Andreas Fault near Parkfield (Nadeau and McEvilly, 1999; Zechar and Nadeau, 2012) exhibit such behavior. Repeaters at these fault patches may be emitting chattering in analogy to the laboratory. If so, can this signal be recorded by borehole and surface instruments? Whether ML approaches applied to continuous seismic or other geophysical data succeed in providing information on timing of earthquakes (not to mention the challenge of predicting earthquake magnitude), this approach may reveal unidentified signals associated with undiscovered fault physics. Furthermore, this method may be useful for failure prediction in a broad spectrum of industrial and natural materials. Technology is at a confluence of dramatic advances in instrumentation, machine learning, the ability to handle massive data sets and faster computers. Thus, the stage has been set for potentially marked advances in earthquake science.
+ Our application of machine learning predicts failures with 2.03 seconds mean absolute error and 0.5 coefficient of determination. This is based on the analysis of the acoustic signal every moment in the slip cycle. 
+ 
+ Machine learning searches for patterns that humans may not easily perceive. This method may be useful if LANL can scale it from the lab to the field. It can also be useful in researching industrial and natural materials.
  
  
  
