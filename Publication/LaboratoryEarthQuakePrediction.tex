@@ -208,11 +208,6 @@ The acoustic data are integers ranging from -5515 to 5444 and have mean of 4.52.
 		\label{fig:morethan90percent}
 	\end{figure}
 
-
-
-
-
-
 \section{METHODS AND EXPERIMENTS}
 % Describe the solution approach here.
 % Define algorithms, methods and experiments
@@ -229,8 +224,25 @@ Precursors: the system enters a critical state when close to failure. We rely on
 In order to avoid correlation between new features we applied principal component analysis.  Instead of using 98 features, we created just 10 that represented 99.9% of the full data variation.
 We use a 70/30 random split of the full time series for use as training and testing data sets respectively. We computed regularization hyper-parameters for each machine learning predicting techniques by random grid search based on a 3-fold cross-validation.
 \subsection{Data Transformations}
-Explain what we did to the data here.
-Explain our train and test data here.
+The distribution of time to failure is right skewed. We apply a square root transformation to normalize it and improve the prediction models. It is still not ideally normal, but looks much more better after the transformation.
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{../GPUProject/transform1}
+	\caption{Distribution of Time to Failure showing right skew}
+	\label{fig:morethan90percent}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{../GPUProject/transform2}
+	\caption{Distribution of Time to Failure showing improved normality after applying square root}
+	\label{fig:morethan90percent}
+\end{figure}
+
+
+
+
+
 \subsection{Algorithms}
 \subsection{Recursive Neural Network}
 Mean absolute = 0.5680
