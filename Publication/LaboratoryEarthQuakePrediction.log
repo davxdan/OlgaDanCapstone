@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  5 JUN 2019 21:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  5 JUN 2019 21:41
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -359,55 +359,48 @@ File: ../GPUProject/transform2.png Graphic file (type png)
 Package pdftex.def Info: ../GPUProject/transform2.png  used on input line 237.
 (pdftex.def)             Requested size: 347.12354pt x 184.17795pt.
 
-Overfull \hbox (10.6539pt too wide) in paragraph at lines 253--257
+Overfull \hbox (10.6539pt too wide) in paragraph at lines 250--254
 \OT1/cmr/m/n/10 state= mem-ory from prior ob-ser-va-tions Typ-i-cal RNN in-put+
 priorhiddenstate>tanh
  []
 
 
-Overfull \hbox (119.22452pt too wide) in paragraph at lines 262--265
+Overfull \hbox (119.22452pt too wide) in paragraph at lines 260--263
 []\OT1/cmr/m/n/10 Forget gate de-cides what to in-clude 1, or ex-clude 0. https
 ://www.youtube.com/watch?v=2GNbIKTKCfE
  []
 
 [7 <../GPUProject/timeToFailureDistribution.png>]
-Overfull \hbox (4.32181pt too wide) in paragraph at lines 270--273
-\OT1/cmr/m/n/10 http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explaine
-d/ mean ab-
- []
-
 <../GPUProject/Results1.PNG, id=47, 780.29016pt x 575.14874pt>
 File: ../GPUProject/Results1.PNG Graphic file (type png)
 <use ../GPUProject/Results1.PNG>
-Package pdftex.def Info: ../GPUProject/Results1.PNG  used on input line 292.
+Package pdftex.def Info: ../GPUProject/Results1.PNG  used on input line 291.
 (pdftex.def)             Requested size: 347.12354pt x 255.85701pt.
 <../GPUProject/Results2.PNG, id=48, 513.41812pt x 450.9347pt>
 File: ../GPUProject/Results2.PNG Graphic file (type png)
 <use ../GPUProject/Results2.PNG>
-Package pdftex.def Info: ../GPUProject/Results2.PNG  used on input line 299.
+Package pdftex.def Info: ../GPUProject/Results2.PNG  used on input line 298.
 (pdftex.def)             Requested size: 347.12354pt x 304.88383pt.
 <../GPUProject/Analysis1.png, id=49, 1103.62312pt x 1065.22969pt>
 File: ../GPUProject/Analysis1.png Graphic file (type png)
 <use ../GPUProject/Analysis1.png>
-Package pdftex.def Info: ../GPUProject/Analysis1.png  used on input line 311.
+Package pdftex.def Info: ../GPUProject/Analysis1.png  used on input line 307.
 (pdftex.def)             Requested size: 347.12354pt x 335.04526pt.
-[8 <../GPUProject/timeSeries.png>] [9 <../GPUProject/zoomedInTimePlot.png> <../
-GPUProject/moreThan90percent.png>] [10 <../GPUProject/transform1.png> <../GPUPr
-oject/transform2.png>] [11 <../GPUProject/Results1.PNG>] [12 <../GPUProject/Res
-ults2.PNG>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13 <../GPUProject/Analysis1.png>] (LaboratoryEarthQuakePrediction.bbl) [14]
+ [8 <../GPUProject/timeSeries.png>] [9 <../GPUProject/zoomedInTimePlot.png> <..
+/GPUProject/moreThan90percent.png>] [10 <../GPUProject/transform1.png> <../GPUP
+roject/transform2.png>]
+[11 <../GPUProject/Results1.PNG>] [12 <../GPUProject/Results2.PNG>] [13 <../GPU
+Project/Analysis1.png>] (LaboratoryEarthQuakePrediction.bbl) [14]
 (LaboratoryEarthQuakePrediction.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1916 strings out of 492895
- 28937 string characters out of 3123736
- 100831 words of memory out of 3000000
- 5815 multiletter control sequences out of 15000+200000
+ 1917 strings out of 492895
+ 28944 string characters out of 3123736
+ 100834 words of memory out of 3000000
+ 5816 multiletter control sequences out of 15000+200000
  7980 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,25p,1030b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -422,7 +415,7 @@ sers/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (14 pages, 1309359 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (14 pages, 1309358 bytes).
 
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)

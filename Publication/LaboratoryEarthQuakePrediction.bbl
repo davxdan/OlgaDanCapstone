@@ -4,9 +4,18 @@
 Bertrand~Rouet‐Leduc, Claudia~Hulbert, N.L.K.B.C.J.H.P.A.J.:
 \newblock Machine learning predicts laboratory earthquakes
 
+\bibitem{LANLNews}
+Rouet-Leduc, B.:
+\newblock Los alamos machine learning discovers patterns that reveal earthquake
+  fault behavior
+
 \bibitem{kaggle}
 Kaggle, R.:
 \newblock Lanl earthquake prediction
+
+\bibitem{USGSfaqs}
+USGS:
+\newblock What is an earthquake and what causes them to happen? (March 2019)
 
 \bibitem{Slip}
 Ikari Matt~J, Marone~Chris, S.D.M.K.A.J.:
@@ -16,13 +25,8 @@ Ikari Matt~J, Marone~Chris, S.D.M.K.A.J.:
 Baptiste~Rousset, Roland~Burgmann, M.C.:
 \newblock Slow slip events in the roots of the san andreas fault
 
-\bibitem{USGSfaqs}
-USGS:
-\newblock What is an earthquake and what causes them to happen? (March 2019)
-
-\bibitem{LANLNews}
-Rouet-Leduc, B.:
-\newblock Los alamos machine learning discovers patterns that reveal earthquake
-  fault behavior
+\bibitem{Ayhan}
+Ayhan~Sol, H.T.:
+\newblock The ethics of earthquake prediction. 4 edn. Volume~10.
 
 \end{thebibliography}

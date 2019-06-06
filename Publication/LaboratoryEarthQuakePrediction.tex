@@ -245,10 +245,7 @@ The distribution of time to failure is right skewed. We apply a square root tran
 
 \subsection{Algorithms}
 \subsection{Recursive Neural Network}
-Mean absolute = 0.5680
-Patrick Yam: LSTM cannot handle data with 150000 sequence length therefore we wavenet in the earlier layers as feature extraction and reduce the sequence length to 150.\par
-
-LSTM is a type of RNN that helps us deal with vanishing or exploding gradients (incorrect slope). For example most of our observations are within x time to failure (insert zoomedInTimePlot.png) however more extreme occur just before failure. The extreme differences in the slope difference between these observations can skew the accuracy of more traditional RNN algorithms.
+LSTM is a type of RNN that helps us deal with vanishing or exploding gradients (incorrect slope). For example most of our acoustic signal observations are within x however more extreme signals occur just before failure. The extreme differences between these observations can skew the accuracy of more traditional RNN algorithms.
 
 LSTM separates the long term(fault slip) from short term (slow slip)
 Hidden state= memory from prior observations
@@ -258,18 +255,20 @@ LSTM is same but includes gates to determine what information is included in hid
 The gates are rnn's themselves.
 
 input+priorhiddenstate>sigmoid (0,1) activation function>new hidden state. 0, 1 allows us to forget or remmeber 
+Patrick Yam: LSTM cannot handle data with 150000 sequence length therefore we wavenet in the earlier layers as feature extraction and reduce the sequence length to 150.\par
 
 Forget gate decides what to include 1, or exclude 0. 
 https://www.youtube.com/watch?v=2GNbIKTKCfE
 https://www.youtube.com/watch?v=8HyCNIVRbSU
 
 \subsection{Auto Regressive integrated Moving Average (ARIMA)}
-The data shows evidence of non-stationarity (the mean, variance change over time). We use an ARMIA model to analyze the changing means and variance. This this model also accounts for white noise.\par ARIMA(0,0,0). Check Wikipedia.
+The data shows evidence of non-stationarity (the mean, variance change over time). We use an ARMIA model to analyze the changing means and variance. This this model also can also account for white noise.\par ARIMA(0,0,0)
 
 \subsection{Gradient Boosting Decision Tree}
-http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explained/
-mean absolute error: 2.230923263623967
-r2 score: 0.42923076680297423
+
+%http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explained/
+%mean absolute error: 2.230923263623967
+%r2 score: 0.42923076680297423
 
 \section{RESULTS}
 %Include evaluation methodology
@@ -290,40 +289,35 @@ When making a prediction (red curve), we emphasize that there is no past or futu
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{../GPUProject/Results1.PNG}
-	\caption{Add a caption here}
+	\caption{Results by Model}
 	\label{fig:morethan90percent}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{../GPUProject/Results2.PNG}
-	\caption{Add a caption here}
+	\caption{Results by Model}
 	\label{fig:morethan90percent}
 \end{figure}
 
 \section{ANALYSIS}
-Analyze results.
-These are NOT conclusions.
-
 The most accurate results with coefficient of determination 0.5 and mean absolute error 2.03 we got using Random Forest Regressor. The most important features, shown on Fig. 7, suggest to check our data for correlated features, since rolling standard deviations show the same patterns. Plus in order to improve our predicting model, we need to get rid of features that have importance equal to 0 or close to 0, such as hypermoment, minimum, maximum and some of the rolling means. Currently we are working on improving of the model to make prediction for the beginning and the end of the one quake cycle. As you can see on a Fig. 1, seismic waves with small voltage are in our interest. Random forest model accurately predicts failure across load level, but hardly can predict outliers. It means that we still need to think about new features that we missing. Precursors that we choose during feature engineering were not good enough when the system enters a critical state close to failure.
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{../GPUProject/Analysis1.png}
-	\caption{Add a caption here}
+	\caption{Predictions by Model}
 	\label{fig:morethan90percent}
 \end{figure}
 
 \section{ETHICS}
 If people believe us and we are wrong; bad things can happen. If people believe us and we are right; good and bad things can happen.
 
-Scientists’ responsibility to inform the public about their results may conflict with their responsibility not to cause social disturbance by the communication of these results. A study of the well-known Brady-Spence and Iben Browning earthquake predictions illustrates this conflict in the publication of scientifically unwarranted predictions. Furthermore, a public policy that considers public sensitivity caused by such publications as an opportunity to promote public awareness is ethically problematic from (i) a refined consequentialist point of view that any means cannot be justified by any ends, and (ii) a rights view according to which individuals should never be treated as a mere means to ends. [7]
+Scientists’ responsibility to inform the public about their results may conflict with their responsibility not to cause social disturbance by the communication of these results. A study of the well-known Brady-Spence and Iben Browning earthquake predictions illustrates this conflict in the publication of scientifically unwarranted predictions. Furthermore, a public policy that considers public sensitivity caused by such publications as an opportunity to promote public awareness is ethically problematic from (i) a refined consequentialist point of view that any means cannot be justified by any ends, and (ii) a rights view according to which individuals should never be treated as a mere means to ends\cite{Ayhan}.
 
-7.	Ayhan Sol, Halil Turan: The ethics of earthquake prediction.  Volume 10, Issue 4, pp 655–666 (December 2004)
+
 \section{CONCLUSION}
 {\em Draw a minimum of 3 conclusions  This is NOT a summary section.} 
 \par
-
-
 
 The evidence in this new {\em observational} study suggests that {\em (Measure against prior study TBD. We have to state the fact that we cannot prove that the data collection technology improvements are better or that our algorithm is better unless we can accurately reproduce the prior model's results. Consider confounding variables such as different collection methods and unavailable details about the 2017 model.)}\par
 
