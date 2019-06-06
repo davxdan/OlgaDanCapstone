@@ -97,43 +97,36 @@ The a-periodic data, hardware and software allows us to predict impending earthq
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Paper should be tutorial in nature
 %Audience is data scientists of varying levels of knowledge. Keep newer students in mind
-We hear about earthquakes mostly via news media when there is a large seismic event which is noticeable, causes death and destruction. These are stick–slip events that radiate seismic energy along the seams (fault lines) between tectonic plates. In this study we refer to these as {\em Regular Earthquakes}. Regular earthquakes are caused by a sudden slip on a fault. Tectonic plates are always slowly moving but get stuck at their edges due to friction. When the stress overcomes the friction, energy releases in waves that travel through the earth's crust and cause the shaking that we feel\cite{USGSfaqs}.\par
+We hear about earthquakes usually via news media when there is a large seismic event which is noticeable and causes death and destruction. These are stick–slip events that radiate seismic energy along the faults between tectonic plates. In this study we refer to these as {\em Regular Earthquakes}. Regular earthquakes are caused by a sudden slip on a fault. Tectonic plates move slowly but can get stuck at their edges due to friction. Stress builds gradually over time until it overcomes the friction resulting in a slip between the tectonic plates. Energy is released in waves that travel through the earth's crust. This is the shaking that we feel and know as an earthquake\cite{USGSfaqs}.\par
 
 Another type of earthquake we refer to in this study is a {\em Slow Slip Earthquake} (SSE). SSE's are fault behaviors that occur slowly enough to make them undetectable without instrumentation. They do not shake the ground and cause widespread destruction like regular earthquakes do. They occur near the boundaries of large earthquake rupture zones\cite{Slip}. \par
 
-LANL researchers discovered a way to successfully predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017, this team discovered a way to train a computer to pinpoint and analyze seismic and acoustic signals emitted during the movements along the fault to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times\cite{LANLNews}. \par
+LANL researchers discovered a way to predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017 they discovered a way to train a computer to pinpoint and analyze seismic signals emitted during movements along faults to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be just white noise that preceded an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times\cite{LANLNews}. \par
 
 %In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers[6].\par
 
-For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy\cite{LANLNews}.\par
+For the first time they discovered a pattern that accurately predicted when a laboratory earthquake would occur. The team acknowledged that the physical traits of the lab experiment differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy\cite{LANLNews}.\par
 
-The team’s lab results reveal that the fault does not fail randomly but in a highly predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state\cite{LANLNews}.\par
+The results revealed that the faults failed in a predictable manner. The observations also demonstrated that the fault’s critical stress state can be determined using exclusively an equation of state\cite{LANLNews}.\par
 
-So far seismologists and Earth scientists have relied exclusively on catalogues of historical data to try to characterize the state of faults. These catalogues contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that hidden in this noise-like data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues\cite{LANLNews}.\par
+Traditionally scientists have relied exclusively on historical data to  characterize the state of faults and predict regular earthquakes. Only a small fraction of seismic data had typically been collected and some was discarded during analysis as noise. The LANL team discovered that hidden in this noise are signals emitted by the fault that inform them of the state of the fault much more precisely\cite{LANLNews}.\par
 \begin{quote}
 “Our work shows that machine learning can be used to extract new meaningful physics from a very well studied system,” said Bertrand Rouet-Leduc, Los Alamos Earth and Environmental Sciences Division scientist and the paper’s lead author. “It also shows that seismogenic faults are continuously broadcasting a signal that precisely informs us of their physical state and how close they are to rupture, at least in the laboratory.”
 \end{quote}
 
 This suggests that there is a relationship between slow slip earthquakes and more noticeable regular earthquakes\cite{SlowSlip}. This study analyzes the relationship between slow slip and regular earthquakes. We use this relationship information to predict regular laboratory earthquakes. \par
 
-\subsection{Experimental Setup}
-%Reword and cite this entire section
-%A three-block assembly with two gouge layers is placed in a bi-axial stress configuration. Two 5 mm thick fault gouge layers are placed between the three blocks, which are held in place by a fixed normal load. The gouge material is comprised of Class IV beads with diameter 105-149 µm. The central block is sheared at constant displacement rate. The two data streams recorded for our purposes here are the shear stress and the acoustic signal. At some time while the gouge material is in a critical shear stress regime, the shear stress abruptly drops, indicating gouge failure. These large drops in shear stress are laboratory quakes. As applied load progressively increases, the inter-event time (recurrence) of laboratory earthquakes progressively decreases. At smaller applied loads the slips become aperiodic. In all cases, the rate of impulsive precursors accelerates as failure is approached. The acoustic particle acceleration Ü is measured on the central block and can be readily converted to dynamic strain  used in the ML analysis:
 
+\section{DATA} The data used in this study was provided by LANL's 2019 Kaggle competition\cite{kaggle}. It was collected using a three-block assembly with two gouge layers placed in a bi-axial stress configuration. Two 5mm thick fault gouge layers were placed between the three blocks, which were held in place by a fixed normal load. The gouge material was comprised of beads with diameter 105-149 mm. The central block was sheared at constant displacement rate. The two data streams recorded were the shear stress and the acoustic signal. While the gouge material was in a critical shear stress regime, the shear stress abruptly dropped which indicated gouge failure(a laboratory earthquake). As applied load progressively increased, the recurrence of laboratory earthquakes progressively decreased. At smaller applied loads the slips became a-periodic. The acoustic particle acceleration was measured on the central block.\par
 
-ADD MISSING FORMULA HERE
+LANL is certain the signal recorded for analysis is the acoustic signal emanating from the fault\cite{Bertrand}.\par
 
-
-%with c 700m/s the average measured wave speed in the granular material, and f ≈ 40.3kHz. The sampling rate of the acoustic data is 330kHz. We are band-limited by the 20 accelerometer (the frequency response is poor above about 50kHz). Therefore we select one of the system mechanical resonances within this band occurring at 44 kHz. Using this peak we improve our signal to noise ratio. The ‘noise’ is of very different character when the piston is stopped, and reflects primarily the mechanical resonances of the system. In short, we are certain the signal we analyze is the acoustic signal emanating from the fault, and the electromagnetic and system noise play no role in the predictions. [1]
-
-% Must have section that defines data
-% Use tables and figures to illustrate data attributes
-\section{DATA} The data used in this study was provided by LANL's 2019 Kaggle competition\cite{kaggle}. It is 157.275 seconds of seismic data recorded at 4MHz hence 629,143,480 observations. Each observation is accompanied by a record of the time remaining before the next laboratory earthquake occurred. It was generated by a standard laboratory earthquake physics set-up called {\em tbd}. The 629,143,480 observations are a continuous segment. The seismic signals are signed integer values ranging from -5515 to 5444. The time to failure recordings are floating point decimal ranging from {\em min max} in seconds. \par
+The data is 157.275 seconds of seismic data recorded at 4MHz hence 629,143,480 observations. Each observation is accompanied by a record of the time remaining before the next laboratory earthquake occurred. The observations are a continuous segment. The seismic signals are signed integer values ranging from -5515 to 5444. The time to failure recordings are floating point decimal ranging from {\em min max} in seconds. \par
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../GPUProject/allDataDefaultPlot}
-	\caption{The magnitude of each seismic signal and the time remaining before the next laboratory earthquake. The data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds.  We can see that usually acoustic data shows huge fluctuations just before the failure and the nature of data is cyclical. Another important point: visually failures can be predicted as cases when huge fluctuations in signal are followed by small signal values (Fig.2)}
+	\caption{The magnitude of each seismic signal and the time remaining before the next laboratory earthquake. There are 16 lab earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds. There are large Acoustic Signal fluctuations just before the failure.}
 	\label{fig:alldatadefaultplot}
 \end{figure}
 
@@ -175,6 +168,8 @@ ADD MISSING FORMULA HERE
 		\end{tabular}
 	\end{center}
 \end{table}
+
+
 
 \subsubsection{Acoustic Data}
 The acoustic features are integers, have a range from -5515 to 5444 and mean 4.52.
