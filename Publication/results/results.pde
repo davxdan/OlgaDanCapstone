@@ -1,6 +1,10 @@
+//I have a capstone project (which requires local files in .csv format) //<>//
+//I am demonstrating that I can get data from a live source using load data function but doing nothign with it.
+//I proceed to to fulful the curves assingment requirements with data from my capstone project. 
 
+JSONObject json;
 Table table;
-float[] ySignalCoordinates;
+int[] ySignalCoordinates;
 float xTime;
 
 void settings() {
@@ -8,28 +12,24 @@ void settings() {
 }
 
 void setup() {
+  //background(0,81,162);
   background(255);
-  fill(53,76,161,25);
-  //noFill();
-  //noStroke();
-  stroke(53,76,161);
-  strokeWeight(3);
-  strokeJoin(ROUND);
+  fill(53,76,161);
+  noStroke();
+  //stroke(3);
+
+
 
  
-  table = loadTable("y_nolog.csv", "header"); //Load data from my captsone project
+  table = loadTable("seg_00a37e.csv", "header"); //Load data from my captsone project
   int recordCount = table.getRowCount();
-  println(recordCount);
-  ySignalCoordinates = new float[recordCount];
-  //yNextSignalCoordinates = new float[recordCount];
+  ySignalCoordinates = new int[recordCount];
 
   beginShape();
-  for (int i=0;i<recordCount;i+=1,xTime+=.9155) { //<>//
-    ySignalCoordinates[i] = table.getFloat(i,"acoustic_data");
-    
-    //line(xTime, (ySignalCoordinates[i])+height/2, xTime+=.9155, ySignalCoordinates[i+1]+height/2);
-    curveVertex(xTime,((ySignalCoordinates[i]*10)+height/2));
-    //point(xTime,(ySignalCoordinates[i]*10)+height/2);
+  for (int i=0;i<recordCount;i+=1,xTime+=.0256) {
+    ySignalCoordinates[i] = table.getInt(i,"acoustic_data");
+    curveVertex(xTime,(ySignalCoordinates[i]*8)+height/2);
   }
   endShape();
+  save("samplevisual.jpg");
 }
