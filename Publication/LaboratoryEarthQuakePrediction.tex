@@ -50,24 +50,20 @@ In this paper we present a method for predicting the timing of laboratory earthq
 % 1 Paragraph on main conclusions (plural)
 % 1 Paragraph on paper organization
 
-Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence based models. Recurrence based predictions can only be made within decade spanning time windows and have not been successful. A recurrence based model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}.
- \par
+Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence interval based models. Recurrence based predictions can only be made within decade spanning time windows and have not been successful. One such model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
 
 %What is a "laboratory earthquake"?
-Natural earthquakes can be imitated in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. There have been improvements in the instruments \cite{Bertrand} researchers use to collect data. This enables data collection from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it  has become more difficult to work with. %What's your one sentence problem statement?
-In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes. \par
+Researchers imitate natural earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes.\par
 
 %Don't use quotes within your Introduction.
 
-We use realistic data which was collected by the Los Alamos National Laboratory and provided to the public via a Kaggle competition \cite{kaggle}. The data consists of 629 million acoustic signal observations and an accompanying record of the time remaining until a laboratory earthquake (failure) occurred \cite{Bertrand}. We calculate additional statistical measures for each observation such as variance, kurtosis and skew. We use half of the data to train a machine learning algorithm. Of the remaining half of the data, using the acoustic signal as input to the algorithm to calculate a prediction of the time remaining until failure. We measure the accuracy of the predictions by comparing to the actual remaining time to failure.
+We use data which was collected by the Los Alamos National Laboratory and provided to the public via a Kaggle competition \cite{kaggle}. The data consists of 629 million acoustic signal observations and an accompanying record of the time remaining until a laboratory earthquake (failure) occurred \cite{Bertrand}. We calculate additional statistical measures such as variance, kurtosis and skew for each observation. We use half of the data to train a machine learning algorithm. With the remaining half of the data, using only the acoustic signal as input we use the algorithm to calculate a prediction of the time remaining until failure. We measure the predictions accuracy by comparing to the actual remaining time to failure from the original data. \par
 
-
-In this paper we employ a series of algorithms and predict impending laboratory earthquakes with {\em (additional facts to be gathered)} accuracy.
+The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71 percent accuracy.\par
 
 %Conclusion
-The a-periodic data, hardware and software allows us to predict impending earthquakes accurately. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
+The data, hardware and software allows us to predict impending earthquakes accurately. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
 
-%"Tutorial Material" is a horrible title.  Make it descriptive. 
 
 \section{Background}
 
