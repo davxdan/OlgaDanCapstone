@@ -1,20 +1,20 @@
 \relax 
 \citation{Jackson}
 \citation{Bertrand}
-\citation{LANLNews}
+\citation{kaggle}
+\citation{Bertrand}
 \@writefile{toc}{\contentsline {chapter}{Southern Methodist University}{0}}
 \@writefile{toc}{\contentsline {title}{Laboratory Earthquake Prediction}{1}\protected@file@percent }
 \@writefile{toc}{\authcount {2}}
 \@writefile{toc}{\contentsline {author}{Olha Tanyuk\unskip {}, Daniel Davieau\unskip {}, Michael L. Blanpied\unskip {}, Charles South\unskip {} \and Daniel W. Engels\unskip {}}{1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}\protected@file@percent }
-\citation{kaggle}
-\citation{kaggle}
+\citation{Bertrand}
+\citation{LANLNews}
 \citation{USGSfaqs}
 \citation{Slip}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Problem Statement}{2}\protected@file@percent }
+\citation{LANLNews}
+\citation{LANLNews}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Background}{2}\protected@file@percent }
-\citation{LANLNews}
-\citation{LANLNews}
 \citation{LANLNews}
 \citation{LANLNews}
 \citation{SlowSlip}
@@ -22,22 +22,23 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Data}{3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The magnitude of each seismic signal and the time remaining before the next laboratory earthquake. There are 16 lab earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds.}}{4}\protected@file@percent }
 \newlabel{fig:alldatadefaultplot}{{1}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Sample of Data Provided}}{5}\protected@file@percent }
-\newlabel{tab:table1}{{1}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Sample of Data Provided}}{4}\protected@file@percent }
+\newlabel{tab:table1}{{1}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Methods and Experiments}{4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The distribution of seismic signal measurements by LANL}}{5}\protected@file@percent }
 \newlabel{fig:acousticRand60000DistPlot}{{2}{5}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Seismic Signal Stats}}{5}\protected@file@percent }
 \newlabel{tab:table2}{{2}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Methods and Experiments}{5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces }}{6}\protected@file@percent }
 \newlabel{fig:acousticfeatureintegers}{{3}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces }}{6}\protected@file@percent }
 \newlabel{fig:timetofailuredistribution}{{4}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Data Transformations}{6}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces We checked how both variables changed over time. The red line is the acoustic data and the blue one is the time to failure. On a plot above we can see, that training data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7seconds for the 7th, while the longest is around 16 seconds.}}{7}\protected@file@percent }
 \newlabel{fig:timeseries}{{5}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Data Transformations}{7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Algorithms}{7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Recursive Neural Network}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Auto Regressive integrated Moving Average (ARIMA)}{7}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces On this zoomed-in-time plot we can see that actually the large oscillation before the failure is not quite in the last moment. There are also trains of intense oscillations proceeding the large one and also some oscillations with smaller peaks after the large one. Then, after some minor oscillations, the failure occurs. Interesting thing to check is the time between high levels of seismic signal and the earthquakes. We are considering any acoustic data with absolute value greater than 1000 as a high level}}{8}\protected@file@percent }
 \newlabel{fig:zoomedintimeplot}{{6}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces More than 90\% of high acoustic values are around 0.31 seconds before an earthquake}}{8}\protected@file@percent }
@@ -46,16 +47,15 @@
 \newlabel{fig:morethan90percentb}{{8}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Distribution of Time to Failure showing improved normality after applying square root}}{9}\protected@file@percent }
 \newlabel{fig:morethan90percentc}{{9}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Auto Regressive integrated Moving Average (ARIMA)}{10}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Gradient Boosting Decision Tree}{10}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results}{10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Results by Model}}{10}\protected@file@percent }
+\newlabel{fig:morethan90percentd}{{10}{10}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Analysis}{10}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Results by Model}}{11}\protected@file@percent }
-\newlabel{fig:morethan90percentd}{{10}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Results by Model}}{12}\protected@file@percent }
-\newlabel{fig:morethan90percent}{{11}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Predictions by Model}}{13}\protected@file@percent }
-\newlabel{fig:morethan90percent}{{12}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Results by Model}}{11}\protected@file@percent }
+\newlabel{fig:morethan90percent}{{11}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Predictions by Model}}{12}\protected@file@percent }
+\newlabel{fig:morethan90percent}{{12}{12}}
 \citation{Ayhan}
 \bibstyle{splncs}
 \bibdata{myBibliography}
@@ -66,6 +66,6 @@
 \bibcite{USGSfaqs}{5}
 \bibcite{Slip}{6}
 \bibcite{SlowSlip}{7}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Ethics}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusions}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Ethics}{13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusions}{13}\protected@file@percent }
 \bibcite{Ayhan}{8}

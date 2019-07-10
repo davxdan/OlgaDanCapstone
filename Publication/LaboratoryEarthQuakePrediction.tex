@@ -50,43 +50,19 @@ In this paper we present a method for predicting the timing of laboratory earthq
 % 1 Paragraph on main conclusions (plural)
 % 1 Paragraph on paper organization
 
-Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence based models. Predictions can only be made within decade spanning time windows and have been unsuccessful. A recurrence based model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}.
+Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence based models. Recurrence based predictions can only be made within decade spanning time windows and have not been successful. A recurrence based model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}.
  \par
 
-%What is a "laboratory earthquake"?  You should start by defining this, including its relationship to real earthquakes, before you get to the LANL work. 
-Natural earthquakes can be imitated in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} to measure signals have allowed for more data with realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. \par
+%What is a "laboratory earthquake"?
+Natural earthquakes can be imitated in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. There have been improvements in the instruments \cite{Bertrand} researchers use to collect data. This enables data collection from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it  has become more difficult to work with. %What's your one sentence problem statement?
+In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes. \par
 
-In this paper we demonstrate that machine learning can be used to detect patterns and predict laboratory earthquakes with more realistic data. \par
+%Don't use quotes within your Introduction.
 
-%A three-block assembly with two gouge layers is placed in a bi-axial stress configuration. Two 5 mm thick fault gouge layers are placed between the three blocks, which are held in place by a fixed normal load. The gouge material is comprised of Class IV beads with diameter 105-149 µm. The central block is sheared at constant displacement rate. The two data streams recorded for our purposes here are the shear stress and the acoustic signal. At some time while the gouge material is in a critical shear stress regime, the shear stress abruptly drops, indicating gouge failure. These large drops in shear stress are laboratory quakes. As applied load progressively increases, the inter-event time (recurrence) of laboratory earthquakes progressively decreases. At smaller applied loads the slips become aperiodic. In all cases, the rate of impulsive precursors accelerates as failure is approached. 
-
-%What's your one sentence problem statement? I don't find any problem statements in your Introduction.
-
-In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment %\cite{Bertrand}
- which predicted \emph{laboratory} earthquakes with 90\% accuracy. The team imitated an earthquake using steel blocks interacting with rocky material to induce slipping that emitted seismic signals. An accelerometer was used to record them. A random forest algorithm was trained on the signals and stick‐slip failures (laboratory earthquakes). The trained algorithm was then used to generate predictions from separate signals (not used in the training). The predictions were measured against actual failures to determine the accuracy of the predictions \cite{LANLNews}.\par
-
-%Don't use quotes within your Introduction. These detract from the story you are trying to tell. They make it very hard to understand what you are doing. You don't even properly introduce the quotes.  They are simply presented without context.  Quotes are used only to show a point, not to be used as part of your story.
+We use realistic data which was collected by the Los Alamos National Laboratory and provided to the public via a Kaggle competition \cite{kaggle}. The data consists of 629 million acoustic signal observations and an accompanying record of the time remaining until a laboratory earthquake (failure) occurred \cite{Bertrand}. We calculate additional statistical measures for each observation such as variance, kurtosis and skew. We use half of the data to train a machine learning algorithm. Of the remaining half of the data, using the acoustic signal as input to the algorithm to calculate a prediction of the time remaining until failure. We measure the accuracy of the predictions by comparing to the actual remaining time to failure.
 
 
-
-There have been improvements in the technology used to measure and collect laboratory seismic signal data. LANL has collected additional data and made it available to the public for a 2019 Kaggle competition. \par
-
-\begin{quote}
-	“For this challenge we selected an experiment that exhibits a very a-periodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly" \cite{kaggle}. 
-\end{quote}
-
-\begin{quote}
-	“If this challenge is solved and the physics are ultimately shown to scale from the laboratory to the field, researchers will have the potential to improve earthquake hazard assessments that could save lives and billions of dollars in infrastructure" \cite{kaggle}.
-\end{quote}
-
-There have also been improvements in computing capabilities. There are now publicly available software packages Keras, Tensorflow, Nvidia CUDA™ and Turing™ GPU architecture. These improvements enable us to apply complex deep learning algorithms which were more difficult or impossible to employ in the past.\par
-
-\subsection{Problem Statement}
-
-Given seismic signal data with considerably more a-periodic laboratory earthquake failures, improved computing hardware and software can we improve on the Los Alamos study %\cite{Bertrand} to determine when laboratory earthquakes will occur?\par
-
-
-In this {\em new} observational study we employ a series of algorithms and predict impending laboratory earthquakes with {\em (additional facts to be gathered)} accuracy.
+In this paper we employ a series of algorithms and predict impending laboratory earthquakes with {\em (additional facts to be gathered)} accuracy.
 
 %Conclusion
 The a-periodic data, hardware and software allows us to predict impending earthquakes accurately. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
@@ -94,6 +70,19 @@ The a-periodic data, hardware and software allows us to predict impending earthq
 %"Tutorial Material" is a horrible title.  Make it descriptive. 
 
 \section{Background}
+
+%There have been improvements in the technology used to measure and collect laboratory seismic signal data. LANL has collected additional data and made it available to the public for a 2019 Kaggle competition. \par
+
+
+%“For this challenge we selected an experiment that exhibits a very a-periodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly" “If this challenge is solved and the physics are ultimately shown to scale from the laboratory to the field, researchers will have the potential to improve earthquake hazard assessments that could save lives and billions of dollars in infrastructure" \cite{kaggle}. 
+
+
+%There have also been improvements in computing capabilities. There are now publicly available software packages Keras, Tensorflow, Nvidia CUDA™ and Turing™ GPU architecture. These improvements enable us to apply complex deep learning algorithms which were more difficult or impossible to employ in the past.\par
+
+In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment \cite{Bertrand} which predicted \emph{laboratory} earthquakes with 90\% accuracy. The team imitated an earthquake using steel blocks interacting with rocky material to induce slipping that emitted seismic signals. An accelerometer was used to record them. A random forest algorithm was trained on the signals and stick‐slip failures (laboratory earthquakes). The trained algorithm was then used to generate predictions from separate signals (not used in the training). The predictions were measured against actual failures to determine the accuracy of the predictions \cite{LANLNews}.\par
+
+
+
 %Need more details on earthquakes and another section on the LANL experiment to get their data.
 
 %Use tables to summarize the information. 
