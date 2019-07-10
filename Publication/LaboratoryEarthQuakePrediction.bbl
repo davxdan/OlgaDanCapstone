@@ -1,32 +1,50 @@
 \begin{thebibliography}{1}
 
+\bibitem{Jackson}
+Jackson, D.D.:
+\newblock The 2004 parkfield earthquake, the 1985 prediction, and
+  characteristic earthquakes: Lessons for the future.
+\newblock Bulletin of the Seismological Society of America \textbf{96}(4B)
+  (2006)  397--409 https://doi.org/10.1785/0120050821.
+
 \bibitem{Bertrand}
-Bertrand~Rouet‐Leduc, Claudia~Hulbert, N.L.K.B.C.J.H.P.A.J.:
-\newblock Machine learning predicts laboratory earthquakes
+Rouet‐Leduc, B.:
+\newblock Machine learning predicts laboratory earthquakes.
+\newblock Geophysical Research Letters \textbf{44}(18) (August 2017)
 
 \bibitem{LANLNews}
 Rouet-Leduc, B.:
-\newblock Los alamos machine learning discovers patterns that reveal earthquake
-  fault behavior
+\newblock Los Alamos machine learning discovers patterns that reveal earthquake
+  fault behavior.
+\newblock Los Alamos National Laboratory, P.O. Box 1663 Los Alamos, NM 87545.
+  Science briefs 2018 edn. (March 2018)
 
 \bibitem{kaggle}
-Kaggle, R.:
-\newblock Lanl earthquake prediction
+Kaggle:
+\newblock Lanl earthquake prediction.
+\newblock https://www.kaggle.com/lanl (March 2019)
 
 \bibitem{USGSfaqs}
-USGS:
-\newblock What is an earthquake and what causes them to happen? (March 2019)
+Kious, W.J.:
+\newblock This dynamic earth: the story of plate tectonics.
+\newblock Rprt, U.S. Geological Survey,
+  http://pubs.er.usgs.gov/publication/7000097 (1996)
 
 \bibitem{Slip}
-Ikari Matt~J, Marone~Chris, S.D.M.K.A.J.:
-\newblock Slip weakening as a mechanism for slow earthquakes
+Ikari, M.J.:
+\newblock Slip weakening as a mechanism for slow earthquakes.
+\newblock Nature Geoscience \textbf{6} (May 2013)  468
+  https://doi.org/10.1038/ngeo1818.
 
 \bibitem{SlowSlip}
-Baptiste~Rousset, Roland~Burgmann, M.C.:
-\newblock Slow slip events in the roots of the san andreas fault
+Rousset, B., B{\"u}rgmann, R., Campillo, M.:
+\newblock Slow slip events in the roots of the san andreas fault.
+\newblock Science Advances \textbf{5}(2) (2019)
 
 \bibitem{Ayhan}
 Ayhan~Sol, H.T.:
-\newblock The ethics of earthquake prediction. 4 edn. Volume~10.
+\newblock The ethics of earthquake prediction.
+\newblock Science and Engineering Ethics \textbf{10}(4) (December 2004)
+  655--666
 
 \end{thebibliography}

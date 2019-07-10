@@ -17,8 +17,7 @@
 \institute{Southern Methodist University, Dallas TX 75205, USA \and United States Geological Survey, Fort Worth, TX 76115}
 
 \maketitle
-%"Be careful not to accidentally plagurize"
-% Do Not use figures from other publications. Even if you cite it; you are getting into areas where copyright issues arise.
+
 % Write a clear engaging story
 % Write in present tense
 % No opinion words
@@ -36,34 +35,38 @@
 %	1 sentence main conclusion (singular)
 
 \begin{abstract}
-In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. A similar approach may help to predict the timing of natural earthquakes. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train an algorithm using a portion of the data, then predict using a separate portion. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71 percent accuracy. The result is not practically helpful for natural earthquake prediction; however the method we use may be helpful to seismologists if it can be scaled. \par
+In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71 percent accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
 \end{abstract}
 
 \section{Introduction}
-%Your Introduction is a 2-4 page (6-7 paragraph) executive summary of your paper. Read and follow my presentation on how to write.
-
-%What's your one sentence problem statement? I don't find any problem statements in your Introduction.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%The Introduction section should be written with draft paragraphs for the results and conclusions. The Introduction should be 2 to 4 pages in length in the given format. Remember that both the Abstract and the Introduction are executive summaries of your work.
+%Remember that both the Abstract and the Introduction are executive summaries of your work.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %INTRODUCTION
-%1 Paragraph Motivtion (Sets Genreral problem domain)
-%1 Paragraph P{roblem Statement (Specific Problem solved by the work)
+%1 Paragraph Motivtion (Sets Generral problem domain)
+%1 Paragraph Problem Statement (Specific Problem solved by the work)
 %2-3 paragraphs on solution
 % 1 Paragraph on main results (plural)
 % 1 Paragraph on main conclusions (plural)
 % 1 Paragraph on paper organization
 
-Earthquakes cause mass destruction and loss of life. A traditional method to predict earthquakes is to look to past recurrence intervals. Because the recurrences are not constant, predictions can only be made within broad time windows.\par 
+Earthquakes cause mass destruction and loss of life. A traditional earthquake prediction methods rely on recurrence based models. With these type of models predictions can only be made within decade spanning time windows and have been unsuccessful. A recurrence based model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}.
+ \par
+
+In this paper we analyze laboratory earthquakes. Natural earthquakes are imitated by placing rocky material between steel blocks and applying shear stress to induce slipping. Acoustic emissions and the time each emmission occurrs are recorded \cite{Bertrand}.\par
 
 %What is a "laboratory earthquake"?  You should start by defining this, including its relationship to real earthquakes, before you get to the LANL work. 
 
-In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment \cite{Bertrand} which predicted \emph{laboratory} earthquakes with 90\% accuracy. The team imitated an earthquake using steel blocks interacting with rocky material to induce slipping that emitted seismic signals. An accelerometer was used to record them. A random forest algorithm was trained on the signals and stick‐slip failures (laboratory earthquakes). The trained algorithm was then used to generate predictions from separate signals (not used in the training). The predictions were measured against actual failures to determine the accuracy of the predictions \cite{LANLNews}.\par
+%A three-block assembly with two gouge layers is placed in a bi-axial stress configuration. Two 5 mm thick fault gouge layers are placed between the three blocks, which are held in place by a fixed normal load. The gouge material is comprised of Class IV beads with diameter 105-149 µm. The central block is sheared at constant displacement rate. The two data streams recorded for our purposes here are the shear stress and the acoustic signal. At some time while the gouge material is in a critical shear stress regime, the shear stress abruptly drops, indicating gouge failure. These large drops in shear stress are laboratory quakes. As applied load progressively increases, the inter-event time (recurrence) of laboratory earthquakes progressively decreases. At smaller applied loads the slips become aperiodic. In all cases, the rate of impulsive precursors accelerates as failure is approached. 
+
+%What's your one sentence problem statement? I don't find any problem statements in your Introduction.
+
+In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment %\cite{Bertrand}
+ which predicted \emph{laboratory} earthquakes with 90\% accuracy. The team imitated an earthquake using steel blocks interacting with rocky material to induce slipping that emitted seismic signals. An accelerometer was used to record them. A random forest algorithm was trained on the signals and stick‐slip failures (laboratory earthquakes). The trained algorithm was then used to generate predictions from separate signals (not used in the training). The predictions were measured against actual failures to determine the accuracy of the predictions \cite{LANLNews}.\par
 
 %Don't use quotes within your Introduction. These detract from the story you are trying to tell. They make it very hard to understand what you are doing. You don't even properly introduce the quotes.  They are simply presented without context.  Quotes are used only to show a point, not to be used as part of your story.
 
-\begin{quote}“Over the last 15 years, there has been renewed hope that progress can be made regarding forecasting owing to tremendous advances in instrumentation quality and density \cite{Bertrand}."\end{quote}
+Advances in the Over the last 15 years there has been renewed hope that progress can be made regarding forecasting owing to tremendous advances in instrumentation quality and density %\cite{Bertrand}.
 
 There have been improvements in the technology used to measure and collect laboratory seismic signal data. LANL has collected additional data and made it available to the public for a 2019 Kaggle competition. \par
 
@@ -79,9 +82,9 @@ There have also been improvements in computing capabilities. There are now publi
 
 \subsection{Problem Statement}
 
-Given seismic signal data with considerably more a-periodic laboratory earthquake failures, improved computing hardware and software can we improve on the Los Alamos study \cite{Bertrand} to determine when laboratory earthquakes will occur?\par
+Given seismic signal data with considerably more a-periodic laboratory earthquake failures, improved computing hardware and software can we improve on the Los Alamos study %\cite{Bertrand} to determine when laboratory earthquakes will occur?\par
 
-\subsection{}
+
 In this {\em new} observational study we employ a series of algorithms and predict impending laboratory earthquakes with {\em (additional facts to be gathered)} accuracy.
 
 %Conclusion
@@ -89,7 +92,7 @@ The a-periodic data, hardware and software allows us to predict impending earthq
 
 %"Tutorial Material" is a horrible title.  Make it descriptive. 
 
-\section{Tutorial Material}
+\section{Background}
 %Need more details on earthquakes and another section on the LANL experiment to get their data.
 
 %Use tables to summarize the information. 
@@ -107,12 +110,15 @@ The a-periodic data, hardware and software allows us to predict impending earthq
 
 %"We hear about..." Write formally and just the facts.  Start with your second sentence - Earthquakes are stick-slip events that ...  You understand that your definition of Regular Earthquakes applies to Slow Slip Earthquakes too ?  Slow slip earthquakes DO SHAKE THE GROUND! However, the shaking is generally not noticeable by humans or significant enough to cause damage. 
 
-We hear about earthquakes usually via news media when there is a large seismic event which is noticeable and causes death and destruction. These are stick–slip events that radiate seismic energy along the faults between tectonic plates. In this study we refer to these as {\em Regular Earthquakes}. Regular earthquakes are caused by a sudden slip on a fault. Tectonic plates move slowly but can get stuck at their edges due to friction. Stress builds gradually over time until it overcomes the friction resulting in a slip between the tectonic plates. Energy is released in waves that travel through the earth's crust. This is the shaking that we feel and know as an earthquake \cite{USGSfaqs}.\par
+We hear about earthquakes usually via news media when there is a large seismic event which is noticeable and causes death and destruction. These are stick–slip events that radiate seismic energy along the faults between tectonic plates. In this study we refer to these as {\em Regular Earthquakes}. Regular earthquakes are caused by a sudden slip on a fault. Tectonic plates move slowly but can get stuck at their edges due to friction. Stress builds gradually over time until it overcomes the friction resulting in a slip between the tectonic plates. Energy is released in waves that travel through the earth's crust. This is the shaking that we feel and know as an earthquake \cite{USGSfaqs}.
+\par
 %You really need to have better definitions and descriptions of earthquakes.  Your stick-slip definition does not appear to be correct on its face.
 
-Another type of earthquake we refer to in this study is a {\em Slow Slip Earthquake} (SSE). SSE's are fault behaviors that occur slowly enough to make them undetectable without instrumentation. We cannot feel slow slip earthquakes shake the ground. They occur near the boundaries of large earthquake rupture zones \cite{Slip}. \par
+Another type of earthquake we refer to in this study is a {\em Slow Slip Earthquake} (SSE). SSE's are fault behaviors that occur slowly enough to make them undetectable without instrumentation. We cannot feel slow slip earthquakes shake the ground. They occur near the boundaries of large earthquake rupture zones \cite{Slip}.
+ \par
 
-LANL researchers discovered a way to predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017 they discovered a way to train a computer to pinpoint and analyze seismic signals emitted during movements along faults to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be just white noise that preceded an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times \cite{LANLNews}. \par
+LANL researchers discovered a way to predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017 they discovered a way to train a computer to pinpoint and analyze seismic signals emitted during movements along faults to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be just white noise that preceded an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times \cite{LANLNews}.
+ \par
 
 %In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers[6].\par
 
@@ -162,9 +168,9 @@ This {\em new} study is an analysis of the relationship between slow slip and re
 %Fig 5 caption - "We checked how both..." Write formally. This is commentary and poor writing. "evaluated" and "analyzed" are both much better descriptions of what you did.
 
 
-LANL is certain the signal recorded for analysis is the acoustic signal emanating from the fault \cite{Bertrand}.\par
+LANL is certain the signal recorded for analysis is the acoustic signal emanating from the fault %\cite{Bertrand}.\par
 
-The data is 157.275 seconds of seismic data recorded at 4MHz hence 629,143,480 observations. Each observation is accompanied by a record of the time remaining before the next laboratory earthquake occurred. The observations are a continuous segment. The seismic signals are signed integer values ranging from -5515 to 5444. The time to failure recordings are floating point decimal ranging from {\em min max} in seconds. \par
+%The data is 157.275 seconds of seismic data recorded at 4MHz hence 629,143,480 observations. Each observation is accompanied by a record of the time remaining before the next laboratory earthquake occurred. The observations are a continuous segment. The seismic signals are signed integer values ranging from -5515 to 5444. The time to failure recordings are floating point decimal ranging from {\em min max} in seconds. \par
 
 \begin{figure}[h]
 	\centering
@@ -206,7 +212,7 @@ The acoustic data are integers ranging from -5515 to 5444 and have mean of 4.52.
 \begin{table}[h!]
 	\begin{center}
 		\caption{Seismic Signal Stats}
-		\label{tab:table1}
+		\label{tab:table2}
 		\begin{tabular}{l|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
 			\textbf{Index} & \textbf{Seismic Signal} \\
 			\hline
@@ -248,7 +254,7 @@ The acoustic data are integers ranging from -5515 to 5444 and have mean of 4.52.
 	\centering
 	\includegraphics[width=0.7\linewidth]{../GPUProject/moreThan90percent}
 	\caption{More than 90\% of high acoustic values are around 0.31 seconds before an earthquake}
-		\label{fig:morethan90percent}
+		\label{fig:morethan90percenta}
 	\end{figure}
 
 \section{Methods and Experiments}
@@ -280,14 +286,14 @@ The distribution of time to failure is right skewed. We apply a square root tran
 	\centering
 	\includegraphics[width=1\linewidth]{../GPUProject/transform1}
 	\caption{Distribution of Time to Failure showing right skew}
-	\label{fig:morethan90percent}
+	\label{fig:morethan90percentb}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{../GPUProject/transform2}
 	\caption{Distribution of Time to Failure showing improved normality after applying square root}
-	\label{fig:morethan90percent}
+	\label{fig:morethan90percentc}
 \end{figure}
 
 
@@ -346,7 +352,7 @@ When making a prediction (red curve), we emphasize that there is no past or futu
 	\centering
 	\includegraphics[width=1\linewidth]{../GPUProject/Results1.PNG}
 	\caption{Results by Model}
-	\label{fig:morethan90percent}
+	\label{fig:morethan90percentd}
 \end{figure}
 
 \begin{figure}
@@ -396,5 +402,6 @@ Machine learning searches for patterns that humans may not easily perceive. This
 %Your References are not correct as they are all missing significant information.  Use BibTeX for your references. It will force you to have all the information and put it in the correct format for you.
 
 \bibliographystyle{splncs}
-\bibliography{OlgaDan}
+\bibliography{myBibliography}
+
 \end{document}
