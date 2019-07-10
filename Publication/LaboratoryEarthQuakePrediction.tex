@@ -50,12 +50,13 @@ In this paper we present a method for predicting the timing of laboratory earthq
 % 1 Paragraph on main conclusions (plural)
 % 1 Paragraph on paper organization
 
-Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods rely on recurrence based models. With these models predictions can only be made within decade spanning time windows and have been unsuccessful. A recurrence based model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}.
+Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence based models. Predictions can only be made within decade spanning time windows and have been unsuccessful. A recurrence based model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}.
  \par
 
-Laboratory earthquakes are imitations of Natural earthquakes. They are imitated by placing rocky material between steel blocks and applying shear stress to induce slipping. Acoustic emissions and the time that each occurs are recorded \cite{Bertrand}.\par
-
 %What is a "laboratory earthquake"?  You should start by defining this, including its relationship to real earthquakes, before you get to the LANL work. 
+Natural earthquakes can be imitated in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} to measure signals have allowed for more data with realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. \par
+
+In this paper we demonstrate that machine learning can be used to detect patterns and predict laboratory earthquakes with more realistic data. \par
 
 %A three-block assembly with two gouge layers is placed in a bi-axial stress configuration. Two 5 mm thick fault gouge layers are placed between the three blocks, which are held in place by a fixed normal load. The gouge material is comprised of Class IV beads with diameter 105-149 µm. The central block is sheared at constant displacement rate. The two data streams recorded for our purposes here are the shear stress and the acoustic signal. At some time while the gouge material is in a critical shear stress regime, the shear stress abruptly drops, indicating gouge failure. These large drops in shear stress are laboratory quakes. As applied load progressively increases, the inter-event time (recurrence) of laboratory earthquakes progressively decreases. At smaller applied loads the slips become aperiodic. In all cases, the rate of impulsive precursors accelerates as failure is approached. 
 
@@ -66,7 +67,7 @@ In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment
 
 %Don't use quotes within your Introduction. These detract from the story you are trying to tell. They make it very hard to understand what you are doing. You don't even properly introduce the quotes.  They are simply presented without context.  Quotes are used only to show a point, not to be used as part of your story.
 
-Advances in the Over the last 15 years there has been renewed hope that progress can be made regarding forecasting owing to tremendous advances in instrumentation quality and density %\cite{Bertrand}.
+
 
 There have been improvements in the technology used to measure and collect laboratory seismic signal data. LANL has collected additional data and made it available to the public for a 2019 Kaggle competition. \par
 
