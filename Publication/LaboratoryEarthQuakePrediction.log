@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  14 JUL 2019 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.2)  14 JUL 2019 15:12
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -154,40 +154,54 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
-) (LaboratoryEarthQuakePrediction.aux
-
-LaTeX Warning: Label `fig:morethan90percent' multiply defined.
-
 )
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/makecell\makecell.
+sty"
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen127
+\ar@mcellbox=\box55
+\extrarowheight=\dimen128
+\NC@list=\toks19
+\extratabsurround=\skip45
+\backup@length=\skip46
+\ar@cellbox=\box56
+)
+\rotheadsize=\dimen129
+\c@nlinenum=\count117
+\TeXr@lab=\toks20
+) (LaboratoryEarthQuakePrediction.aux)
 \openout1 = `LaboratoryEarthQuakePrediction.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 ("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen127
-\scratchbox=\box55
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen128
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count118
+\scratchdimen=\dimen130
+\scratchbox=\box57
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen131
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks22
 )
 ("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
 base.sty"
@@ -248,147 +262,216 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
+(Font)              <7> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 18.
+(Font)              <5> on input line 19.
  [1
 
 {C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-<../GPUProject/allDataDefaultPlot.png, id=15, 794.97pt x 614.295pt>
-File: ../GPUProject/allDataDefaultPlot.png Graphic file (type png)
-<use ../GPUProject/allDataDefaultPlot.png>
-Package pdftex.def Info: ../GPUProject/allDataDefaultPlot.png  used on input li
-ne 86.
-(pdftex.def)             Requested size: 347.12354pt x 268.23785pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 94.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 94.
-
-[4 <../GPUProject/allDataDefaultPlot.png>]
-<../GPUProject/acousticRand60000DistPlot.png, id=21, 794.97pt x 614.295pt>
-File: ../GPUProject/acousticRand60000DistPlot.png Graphic file (type png)
-<use ../GPUProject/acousticRand60000DistPlot.png>
-Package pdftex.def Info: ../GPUProject/acousticRand60000DistPlot.png  used on i
-nput line 107.
-(pdftex.def)             Requested size: 277.69987pt x 214.59404pt.
-<../GPUProject/acousticFeatureIntegers.png, id=22, 471.26062pt x 254.45062pt>
-File: ../GPUProject/acousticFeatureIntegers.png Graphic file (type png)
-<use ../GPUProject/acousticFeatureIntegers.png>
-Package pdftex.def Info: ../GPUProject/acousticFeatureIntegers.png  used on inp
-ut line 114.
-(pdftex.def)             Requested size: 242.98541pt x 131.19688pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+<lab.png, id=9, 286.671pt x 271.61475pt>
+File: lab.png Graphic file (type png)
+<use lab.png>
+Package pdftex.def Info: lab.png  used on input line 46.
+(pdftex.def)             Requested size: 347.12354pt x 328.90765pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../GPUProject/timeToFailureDistribution.png, id=23, 460.72125pt x 254.45062pt>
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: ../GPUProject/timeToFailureDistribution.png Graphic file (type png)
-<use ../GPUProject/timeToFailureDistribution.png>
-Package pdftex.def Info: ../GPUProject/timeToFailureDistribution.png  used on i
-nput line 141.
-(pdftex.def)             Requested size: 242.98541pt x 134.19814pt.
+ [3 <./lab.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 75.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 75.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (28.15474pt too wide) in paragraph at lines 75--79
+ [] 
+ []
 
-<../GPUProject/timeSeries.png, id=24, 593.21625pt x 364.36125pt>
-File: ../GPUProject/timeSeries.png Graphic file (type png)
-<use ../GPUProject/timeSeries.png>
-Package pdftex.def Info: ../GPUProject/timeSeries.png  used on input line 150.
-(pdftex.def)             Requested size: 277.69987pt x 170.57152pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../GPUProject/zoomedInTimePlot.png, id=25, 593.21625pt x 364.36125pt>
-File: ../GPUProject/zoomedInTimePlot.png Graphic file (type png)
-<use ../GPUProject/zoomedInTimePlot.png>
-Package pdftex.def Info: ../GPUProject/zoomedInTimePlot.png  used on input line
- 157.
-(pdftex.def)             Requested size: 242.98541pt x 149.24452pt.
-<../GPUProject/moreThan90percent.png, id=26, 455.45157pt x 254.45062pt>
-File: ../GPUProject/moreThan90percent.png Graphic file (type png)
-<use ../GPUProject/moreThan90percent.png>
-Package pdftex.def Info: ../GPUProject/moreThan90percent.png  used on input lin
-e 164.
-(pdftex.def)             Requested size: 242.98541pt x 135.75117pt.
-[5 <../GPUProject/acousticRand60000DistPlot.png>] [6 <../GPUProject/acousticFea
-tureIntegers.png>]
-<../GPUProject/transform1.png, id=35, 460.72125pt x 241.65282pt>
-File: ../GPUProject/transform1.png Graphic file (type png)
-<use ../GPUProject/transform1.png>
-Package pdftex.def Info: ../GPUProject/transform1.png  used on input line 196.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<timeSeries.png, id=16, 586.44093pt x 368.1253pt>
+File: timeSeries.png Graphic file (type png)
+<use timeSeries.png>
+Package pdftex.def Info: timeSeries.png  used on input line 100.
+(pdftex.def)             Requested size: 347.12354pt x 217.8998pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<zoomedInTimePLot.png, id=18, 586.44093pt x 368.1253pt>
+File: zoomedInTimePLot.png Graphic file (type png)
+<use zoomedInTimePLot.png>
+Package pdftex.def Info: zoomedInTimePLot.png  used on input line 107.
+(pdftex.def)             Requested size: 347.12354pt x 217.8998pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<timeToFailureHistogram.png, id=19, 301.8778pt x 201.00093pt>
+File: timeToFailureHistogram.png Graphic file (type png)
+<use timeToFailureHistogram.png>
+Package pdftex.def Info: timeToFailureHistogram.png  used on input line 114.
+(pdftex.def)             Requested size: 347.12354pt x 231.12779pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<timeDistribution.png, id=20, 362.10281pt x 275.52937pt>
+File: timeDistribution.png Graphic file (type png)
+<use timeDistribution.png>
+Package pdftex.def Info: timeDistribution.png  used on input line 121.
+(pdftex.def)             Requested size: 347.12354pt x 264.13521pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<acousticDataDistribution.png, id=21, 465.99094pt x 254.45062pt>
+File: acousticDataDistribution.png Graphic file (type png)
+<use acousticDataDistribution.png>
+Package pdftex.def Info: acousticDataDistribution.png  used on input line 128.
+(pdftex.def)             Requested size: 347.12354pt x 189.55235pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<timeToFailureDistribution.png, id=22, 460.72125pt x 241.65282pt>
+File: timeToFailureDistribution.png Graphic file (type png)
+<use timeToFailureDistribution.png>
+Package pdftex.def Info: timeToFailureDistribution.png  used on input line 135.
+
 (pdftex.def)             Requested size: 347.12354pt x 182.0688pt.
-<../GPUProject/transform2.png, id=36, 455.45157pt x 241.65282pt>
-File: ../GPUProject/transform2.png Graphic file (type png)
-<use ../GPUProject/transform2.png>
-Package pdftex.def Info: ../GPUProject/transform2.png  used on input line 203.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<logTimeToFailureDistribution.png, id=23, 455.45157pt x 241.65282pt>
+File: logTimeToFailureDistribution.png Graphic file (type png)
+<use logTimeToFailureDistribution.png>
+Package pdftex.def Info: logTimeToFailureDistribution.png  used on input line 1
+42.
 (pdftex.def)             Requested size: 347.12354pt x 184.17795pt.
 
-Overfull \hbox (10.6539pt too wide) in paragraph at lines 216--220
-\OT1/cmr/m/n/10 state= mem-ory from prior ob-ser-va-tions Typ-i-cal RNN in-put+
-priorhiddenstate>tanh
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<sqrtTimeToFailureDistribution.png, id=24, 455.45157pt x 241.65282pt>
+File: sqrtTimeToFailureDistribution.png Graphic file (type png)
+<use sqrtTimeToFailureDistribution.png>
+Package pdftex.def Info: sqrtTimeToFailureDistribution.png  used on input line 
+149.
+(pdftex.def)             Requested size: 347.12354pt x 184.17795pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4]
+<rSquaredandMAE.png, id=28, 590.95781pt x 377.15906pt>
+File: rSquaredandMAE.png Graphic file (type png)
+<use rSquaredandMAE.png>
+Package pdftex.def Info: rSquaredandMAE.png  used on input line 159.
+(pdftex.def)             Requested size: 347.12354pt x 221.54356pt.
+ [5 <./timeSeries.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./zoomedInTimePLot.png>]
+Overfull \vbox (11.75171pt too high) has occurred while \output is active []
+
+
+[7 <./timeToFailureHistogram.png>]
+Overfull \hbox (1.26602pt too wide) in paragraph at lines 197--198
+[]\OT1/cmr/m/n/10 Hyper-parameters for this tech-nique are 'maxdepth': 25, 'max
+fea-tures': 'auto',
  []
 
 
-Overfull \hbox (119.22452pt too wide) in paragraph at lines 226--229
-[]\OT1/cmr/m/n/10 Forget gate de-cides what to in-clude 1, or ex-clude 0. https
-://www.youtube.com/watch?v=2GNbIKTKCfE
+Overfull \hbox (40.84962pt too wide) in paragraph at lines 197--198
+\OT1/cmr/m/n/10 'min-sam-plesleaf': 16, 'min-sam-p-less-plit': 30, 'min-weight-
+frac-tion-leaf': 0.06225661421078982,
  []
 
-[7 <../GPUProject/timeToFailureDistribution.png>]
-<../GPUProject/Results1.PNG, id=43, 780.29016pt x 575.14874pt>
-File: ../GPUProject/Results1.PNG Graphic file (type png)
-<use ../GPUProject/Results1.PNG>
-Package pdftex.def Info: ../GPUProject/Results1.PNG  used on input line 262.
-(pdftex.def)             Requested size: 347.12354pt x 255.85701pt.
-<../GPUProject/Results2.PNG, id=44, 513.41812pt x 450.9347pt>
-File: ../GPUProject/Results2.PNG Graphic file (type png)
-<use ../GPUProject/Results2.PNG>
-Package pdftex.def Info: ../GPUProject/Results2.PNG  used on input line 269.
-(pdftex.def)             Requested size: 347.12354pt x 304.88383pt.
-<../GPUProject/Analysis1.png, id=45, 1103.62312pt x 1065.22969pt>
-File: ../GPUProject/Analysis1.png Graphic file (type png)
-<use ../GPUProject/Analysis1.png>
-Package pdftex.def Info: ../GPUProject/Analysis1.png  used on input line 281.
-(pdftex.def)             Requested size: 347.12354pt x 335.04526pt.
- [8 <../GPUProject/timeSeries.png>] [9 <../GPUProject/zoomedInTimePlot.png> <..
-/GPUProject/moreThan90percent.png>] [10 <../GPUProject/transform1.png> <../GPUP
-roject/transform2.png>]
-[11 <../GPUProject/Results1.PNG>] [12 <../GPUProject/Results2.PNG>]
-Underfull \vbox (badness 4168) has occurred while \output is active []
+<results1.png, id=42, 1103.62312pt x 246.9225pt>
+File: results1.png Graphic file (type png)
+<use results1.png>
+Package pdftex.def Info: results1.png  used on input line 201.
+(pdftex.def)             Requested size: 347.12354pt x 77.66418pt.
 
- [13 <../GPUProject/Analysis1.png>] (LaboratoryEarthQuakePrediction.bbl) [14]
-(LaboratoryEarthQuakePrediction.aux)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Warning: There were multiply-defined labels.
+<results2.png, id=43, 1103.62312pt x 246.9225pt>
+File: results2.png Graphic file (type png)
+<use results2.png>
+Package pdftex.def Info: results2.png  used on input line 208.
+(pdftex.def)             Requested size: 347.12354pt x 77.66418pt.
 
- ) 
+Underfull \hbox (badness 2951) in paragraph at lines 211--211
+[]\OT1/cmr/bx/n/9 Fig.12. \OT1/cmr/m/n/9 Re-sults we achieved us-ing Ad-aBoost-
+Re-gres-sor: MAE: 1.67, r2score:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\OT1/cmr/m/n/9 0.62 (Fig.11). Hyper-parameters for this tech-nique are: 'learn-
+ingrate':
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+\OT1/cmr/m/n/9 0.018261985736355728, 'loss': 'square', nes-ti-ma-tors = 500, ba
+sees-ti-ma-
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<analysis.png, id=44, 1087.06125pt x 1056.94875pt>
+File: analysis.png Graphic file (type png)
+<use analysis.png>
+Package pdftex.def Info: analysis.png  used on input line 220.
+(pdftex.def)             Requested size: 347.12354pt x 337.50476pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+ [8 <./timeDistribution.png>] [9 <./acousticDataDistribution.png> <./timeToFail
+ureDistribution.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./logTimeToFailureDistribution.png> <./sqrtTimeToFailureDistribution.png>
+]
+(LaboratoryEarthQuakePrediction.bbl [11 <./rSquaredandMAE.png> <./results1.png>
+]
+Overfull \vbox (12.79286pt too high) has occurred while \output is active []
+
+
+[12 <./results2.png> <./analysis.png>]) [13]
+(LaboratoryEarthQuakePrediction.aux) ) 
 Here is how much of TeX's memory you used:
- 1919 strings out of 492895
- 29012 string characters out of 3123736
- 100881 words of memory out of 3000000
- 5820 multiletter control sequences out of 15000+200000
- 7289 words of font info for 26 fonts, out of 3000000 for 9000
+ 2121 strings out of 492895
+ 30808 string characters out of 3123736
+ 106528 words of memory out of 3000000
+ 6018 multiletter control sequences out of 15000+200000
+ 6981 words of font info for 25 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,25p,1603b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/danie/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (14 pages, 1261019 bytes).
-
+ 41i,8n,25p,1603b,248s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/danie/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danie/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/danie/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
+/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr7.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb>
+Output written on LaboratoryEarthQuakePrediction.pdf (13 pages, 880601 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

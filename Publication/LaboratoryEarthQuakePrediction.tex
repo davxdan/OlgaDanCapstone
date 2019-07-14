@@ -3,6 +3,7 @@
 \documentclass[]{llncs} % "you can ignore this hint if your document works"
 \usepackage{makeidx}
 \usepackage{graphicx}
+\usepackage{makecell}
 \begin{document}
 \addtocmark{Southern Methodist University} % additional mark in the TOC
 
@@ -40,6 +41,13 @@ In 2017 Los Alamos National Laboratory (LANL) researchers discovered a way to su
 
 In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers \cite{LANLNews}. For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy \cite{LANLNews}. The team’s lab results reveal that the fault does not fail randomly but in a predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state \cite{LANLNews}. So far seismologists and Earth scientists have mostly relied on catalogues of historical data to try to characterize the state of faults. These catalogs contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that—in the case of their laboratory faults--hidden in this noiselike data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues \cite{LANLNews}. \par
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=01\linewidth]{lab}
+	\caption{}
+	\label{fig:lab}
+\end{figure}
+
 The laboratory system is a two‐fault configuration that contains fault gouge material submitted to double direct shear \cite{kaggle}.
 %missing image
 Two fault gouge layers are sheared simultaneously while subjected to a constant normal load and a prescribed shear velocity \cite{kaggle}. The laboratory faults fail in repetitive cycles of stick and slip that is meant to mimic the cycle of loading and failure on tectonic faults \cite{kaggle}. While the experiment is considerably simpler than a fault in Earth, it shares many physical characteristics \cite{kaggle}. \par
@@ -48,244 +56,176 @@ The driving piston displaces at a very constant velocity during the inter-event 
 
 Experimental data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds. \par
 
-The Extra-Trees algorithm builds an ensemble of unpruned regression trees according to the classical top-down procedure. Its two main differences with other treebased ensemble methods are that it splits nodes by choosing cut-points fully at random and that it uses the whole learning sample (rather than a bootstrap replica) to grow the trees [12]. \par
+The Extra-Trees algorithm builds an ensemble of unpruned regression trees according to the classical top-down procedure. Its two main differences with other treebased ensemble methods are that it splits nodes by choosing cut-points fully at random and that it uses the whole learning sample (rather than a bootstrap replica) to grow the trees \cite{ExtremeRandomTrees}. \par
 
-The Extra-Trees splitting procedure uses two parameters: K (the number of attributes randomly selected at each node) and nmin (the minimum sample size for splitting a node). It is used several times with the (full) original learning sample to generate an ensemble model (we denote by M the number of trees of this ensemble) [12]. 
+The Extra-Trees splitting procedure uses two parameters: K (the number of attributes randomly selected at each node) and nmin (the minimum sample size for splitting a node). It is used several times with the (full) original learning sample to generate an ensemble model (we denote by M the number of trees of this ensemble) \cite{ExtremeRandomTrees}. 
 
-The predictions of the trees are aggregated to yield the final prediction, by majority vote in classification problems and arithmetic average in regression problems [12]. From the bias-variance point of view, the rationale behind the Extra-Trees method is that the explicit randomization of the cut-point and attribute combined with ensemble averaging should be able to reduce variance more strongly than the weaker randomization schemes used by other methods [12]. The usage of the full original learning sample rather than bootstrap replicas is motivated in order to minimize bias [12]. From a computational point of view, given the simplicity of the node splitting procedure we expect the constant factor to be much smaller than in other ensemble based methods which locally optimize cut-points [12]. The parameters K, nmin and M have different effects: K determines the strength of the attribute selection process, nmin the strength of averaging output noise, and M the strength of the variance reduction of the ensemble model aggregation. These parameters could be adapted to the problem specifics in a manual or an automatic way (e.g. by cross-validation) [12]. \par
+The predictions of the trees are aggregated to yield the final prediction, by majority vote in classification problems and arithmetic average in regression problems \cite{ExtremeRandomTrees}. From the bias-variance point of view, the rationale behind the Extra-Trees method is that the explicit randomization of the cut-point and attribute combined with ensemble averaging should be able to reduce variance more strongly than the weaker randomization schemes used by other methods \cite{ExtremeRandomTrees}. The usage of the full original learning sample rather than bootstrap replicas is motivated in order to minimize bias \cite{ExtremeRandomTrees}. From a computational point of view, given the simplicity of the node splitting procedure we expect the constant factor to be much smaller than in other ensemble based methods which locally optimize cut-points \cite{ExtremeRandomTrees}. The parameters K, nmin and M have different effects: K determines the strength of the attribute selection process, nmin the strength of averaging output noise, and M the strength of the variance reduction of the ensemble model aggregation. These parameters could be adapted to the problem specifics in a manual or an automatic way (e.g. by cross-validation) \cite{ExtremeRandomTrees}. \par
 
 The sklearn.ensemble module in Python programing language includes averaging algorithm based on randomized decision trees: Extra-Trees method. \par
 
-
-
-
-
-\section{Data} The data we analyze is provided by LANL's 2019 Kaggle competition \cite{kaggle}. It was collected using a three-block assembly with two gouge layers placed in a bi-axial stress configuration. Two 5mm thick fault gouge layers were placed between the three blocks, which were held in place by a fixed normal load. The gouge material was comprised of beads with diameter 105-149 mm. The central block was sheared at constant displacement rate. The two data streams recorded were the shear stress and the acoustic signal. While the gouge material was in a critical shear stress regime, the shear stress abruptly dropped which indicated gouge failure(a laboratory earthquake). As applied load progressively increased, the recurrence of laboratory earthquakes progressively decreased. At smaller applied loads the slips became a-periodic. The acoustic particle acceleration was measured on the central block.\par
-
-%Figure text is too small. Make it so it is readable when printed on 8.5x11 paper.
-
-%Should have a table that clearly identifies and defines the attributes, eg a two column table with Attribute and Definition of Attribute columns.
-
-%The figures are placed in all the wrong places.  You need to introduce the data before you start showing figures of data. The figures are likely valuable, but they are all placed without sufficient definition and description within the text.  You MUST tell the reader what you want them to understand from each figure and table.  Do not make the reader think or assume that they will look at a figure and pull the same information from it that you pull out of it.
-
-%Figures -
-
-%In general, your figures use fonts that are too small and too hard to read.  Use larger fonts and better figure visualization design approaches. Ask yourself what you want the reader to understand from each figure.  If that is not understandable within 1 second and without any thought, then your figure has likely failed to convey the desired information.  Similarly tables, although many tables are actually meant to be studied, so they have a different set of rules.
-
-%Your captions are generally too long and not useful for understanding what is being presented in the figures. If you have to put values in the captions to make a figure understandable, then your figure is a failure (see, e.g., Fig. 4).
-
-%Fig 5 caption - "We checked how both..." Write formally. This is commentary and poor writing. "evaluated" and "analyzed" are both much better descriptions of what you did.
-
-
-LANL is certain the signal recorded for analysis is the acoustic signal emanating from the fault %\cite{Bertrand}.\par
-
-%The data is 157.275 seconds of seismic data recorded at 4MHz hence 629,143,480 observations. Each observation is accompanied by a record of the time remaining before the next laboratory earthquake occurred. The observations are a continuous segment. The seismic signals are signed integer values ranging from -5515 to 5444. The time to failure recordings are floating point decimal ranging from {\em min max} in seconds. \par
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{../GPUProject/allDataDefaultPlot}
-	\caption{The magnitude of each seismic signal and the time remaining before the next laboratory earthquake. There are 16 lab earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds.}
-	\label{fig:alldatadefaultplot}
-\end{figure}
+\section{Data} 
+The data used in this work is a  157.275 second chunk of seismic data (ordered in time), which is recorded at 4MHz, hence 629,145,480 data points accompanied by the time remaining until the following lab earthquake, in seconds. \par
+The seismic data is recorded using a piezoceramic sensor, which outputs a voltage upon deformation by incoming seismic waves (henceforth we will use the term acoustic signal). The seismic data, which serves as the input to our analysis, is this recorded voltage, in integers. \par
+% to prevent images from floating all over the place in the document: https://tex.stackexchange.com/questions/16207/image-from-includegraphics-showing-up-in-wrong-location
 \begin{table}[h!]
 	\begin{center}
-		\caption{Sample of Data Provided}
-		\label{tab:table1}
-		\begin{tabular}{l|c|r} 
-			\textbf{Index} & \textbf{Seismic Signal} & \textbf{Time to Failure}\\
-			\hline
-			0 & 12 & 1.469099998474121 \\ 
-			1 & 6 & 1.469099998474121 \\ 
-			2 & 8 & 1.469099998474121 \\ 
-			3 & 5 & 1.469099998474121 \\ 
-			4 & 8 & 1.469099998474121 \\ 
+		\caption{Data Definitions}
+		\label{tab:DataDefinitions}
+		\begin{tabular}{ll}
+			\textbf{Acoustic Signal} & Voltage upon deformation by incoming seismic waves. \\
+			\textbf{Time To Failure} & The remaining time in seconds until an actual stick-slip failure occurred.  \\
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{figure}
-	\centering
-	\includegraphics[width=.8\linewidth]{../GPUProject/acousticRand60000DistPlot}
-	\caption{The distribution of seismic signal measurements by LANL}
-	\label{fig:acousticRand60000DistPlot}
-\end{figure}
-The acoustic data are integers ranging from -5515 to 5444 and have mean of 4.52. The time to failure is in seconds. We can see that acoustic data shows large fluctuations just before the failure and recurs cyclically. Failures can be predicted visually as cases when huge fluctuations in the signal are followed by smaller signal values. This could be useful for predicting time to failure changes from 0 to high values.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{../GPUProject/acousticFeatureIntegers}
-	\caption[]{1\% random sample from 629,143,480 observations}
-	\label{fig:acousticfeatureintegers}
-\end{figure}
-
-
 
 \begin{table}[h!]
 	\begin{center}
-		\caption{Seismic Signal Stats}
-		\label{tab:table2}
-		\begin{tabular}{l|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-			\textbf{Index} & \textbf{Seismic Signal} \\
+		\caption{Sample Data}
+		\label{tab:SampleData}
+		\begin{tabular}{c|r} 
+			\textbf{Acoustic Signal} & \textbf{Time to Failure}\\
 			\hline
-			count &  6.29145480\\ 
-			mean & 4.47708428 \\ 
-			std &  2.61278939\\ 
-			min &  9.55039650\\ 
-			25 & 2.62599707 \\ 
-			50 &  5.34979773\\ 
-			75 &  8.17339516\\ 
-			max & 1.61074009 \\ 
+			12 & 1.469099998474121 \\ 
+			6 & 1.469099998474121 \\ 
+			8 & 1.469099998474121 \\ 
+			5 & 1.469099998474121 \\ 
+			8 & 1.469099998474121 \\ 
 		\end{tabular}
 	\end{center}
 \end{table}
-\begin{figure}[h]
+
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../GPUProject/timeToFailureDistribution}
-	\caption[]{The min value is very close to zero and the max is 16 seconds.}
-	\label{fig:timetofailuredistribution}
-\end{figure}
-
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\linewidth]{../GPUProject/timeSeries}
-	\caption{We checked how both variables changed over time. The red line is the acoustic data and the blue one is the time to failure. On a plot above we can see, that training data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7seconds for the 7th, while the longest is around 16 seconds.}
+	\includegraphics[width=01\linewidth]{timeSeries}
+	\caption{We can see that usually acoustic data shows huge fluctuations just before the failure. Another important point: visually failures can be predicted as cases when huge fluctuations in signal are followed by small signal values.}
 	\label{fig:timeseries}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../GPUProject/zoomedInTimePlot}
-	\caption{On this zoomed-in-time plot we can see that actually the large oscillation before the failure is not quite in the last moment. There are also trains of intense oscillations proceeding the large one and also some oscillations with smaller peaks after the large one. Then, after some minor oscillations, the failure occurs. Interesting thing to check is the time between high levels of seismic signal and the earthquakes. We are considering any acoustic data with absolute value greater than 1000 as a high level}
-	\label{fig:zoomedintimeplot}
+	\includegraphics[width=01\linewidth]{zoomedInTimePLot}
+	\caption{On zoomed-in-time plot we can see that the large oscillation before the failure is not in the last moment. There are trains of intense oscillations preceding the large one and also some oscillations with smaller peaks after it.}
+	\label{fig:zoomeInTimePlot}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../GPUProject/moreThan90percent}
-	\caption{More than 90\% of high acoustic values are around 0.31 seconds before an earthquake}
-		\label{fig:morethan90percenta}
-	\end{figure}
-
-\section{Methods and Experiments}
-%Methods and Experiments [sic] - change this title (this is a repeat comment)
-% Describe the solution approach here.
-% Define algorithms, methods and experiments
-% DO NOT give play by play of everything we did
-% Don't put code in paper; if anything put in appendix.
-% Put versions of software but no one cares about how to use technology; just state what we did.
-
-%Need to have background information on your methods used, particularly neural networks..
-
-%Keep all text within the box of your text.  Websites should be footnoted.
-
-Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divide our data into windows containing 150,000 observations each (0.0375 seconds of seismic data)therefore 4194 windows. From each time window, we compute a set of 98 potentially relevant statistical features (e.g., mean, variance, kurtosis). 
-We apply machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor, Extra Trees Regressor to the new continuous windows of values.\par
-Similar to the LANL study we create new features separated into two main classes: 
-Distribution of signal’s energy: we use couple of higher order moments of the acoustic data to capture the evolution of the signal’s energy. Within each time window we compute the signal’s normalized mean, minimum, maximum and higher moments  (variance, skewness, kurtosis).\par
-Precursors: the system enters a critical state when close to failure. We rely on different percentiles and thresholds to monitor this precursory activity. We use the 1st - 9th and 91th - 99th percentiles. Our thresholds measure the count of observations that the acoustic signal spends over a threshold value f0 and under a threshold value f1.
-
-In order to avoid correlation between new features we applied principal component analysis.  Instead of using 98 features, we created just 10 that represented 99.9 percent of the full data variation.
-We use a 70/30 random split of the full time series as training and testing data sets respectively. We compute regularization hyper-parameters for each machine learning predicting technique by random grid search based on a 3-fold cross-validation.
-\subsection{Data Transformations}
-%No subsections are needed in what you have written.
-The distribution of time to failure is right skewed. We apply a square root transformation to normalize it and improve the prediction models. It is still not ideally normal, but has improved.
-
-
-\begin{figure}
-	\centering
-	\includegraphics[width=1\linewidth]{../GPUProject/transform1}
-	\caption{Distribution of Time to Failure showing right skew}
-	\label{fig:morethan90percentb}
+	\includegraphics[width=01\linewidth]{timeToFailureHistogram}
+	\caption{The voltage amplitude of acoustic precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted. We used 1\% sample of the data. Red line indicates, that quake occurs, when time to failure approaches to 0. Minimum time remaining until the quake in the data is  -5.5150e+03 sec.}
+	\label{fig:timeToFailureHistogram}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{../GPUProject/transform2}
-	\caption{Distribution of Time to Failure showing improved normality after applying square root}
-	\label{fig:morethan90percentc}
+	\includegraphics[width=01\linewidth]{timeDistribution}
+	\caption{We found that more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake!}
+	\label{fig:timeDistribution}
 \end{figure}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=01\linewidth]{acousticDataDistribution}
+	\caption{Acoustic data distribution has a very high peak and we see outliers in both directions}
+	\label{fig:acousticDataDistribution}
+\end{figure}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=01\linewidth]{timeToFailureDistribution}
+	\caption{Distribution of time to failure seems to be right skewed. It should be normalized.}
+	\label{fig:timeToFailureDistribution}
+\end{figure}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=01\linewidth]{logTimeToFailureDistribution}
+	\caption{Log transformed time distribution looks more left skewed than normal.}
+	\label{fig:logTimeToFailureDistribution}
+\end{figure}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=01\linewidth]{sqrtTimeToFailureDistribution}
+	\caption{The distribution of the time after square root transformation is still not ideally normal, but looks much better than the distribution of the time after log transformation.}
+	\label{fig:sqrtTimeToFailureDistribution}
+\end{figure}
 
-\subsection{Algorithms}
-\subsection{Recursive Neural Network}
-LSTM is a type of RNN that helps us deal with vanishing or exploding gradients (incorrect slope). For example most of our acoustic signal observations are within x however more extreme signals occur just before failure. The extreme differences between these observations can skew the accuracy of more traditional RNN algorithms.
+\section{Feature Engineering}
+LANL, working with quasi periodic seismic signals, achieved 0.89 coefficient of determination, using Random Forest technique and dividing data by 1.8 seconds time windows \cite{Bertrand}.  The most important features in LANL model were variance, kurtosis and threshold. We used a similar approach. Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divided our data into time windows that each contain 0.3 seconds of data (1,500,000 observations), which is small enough compared with lab quake cycle that we have (8 to 16 sec). As we discussed above, more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake. It makes sense to divide our data by 0.3 sec windows to reduce error at the end of the quake cycle. 
 
-LSTM separates the long term(fault slip) from short term (slow slip)
-Hidden state= memory from prior observations
-Typical RNN input+priorhiddenstate>tanh (-1,1) activation function>new hidden state
-LSTM is same but includes gates to determine what information is included in hidden state and what is not.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=01\linewidth]{rSquaredandMAE}
+	\caption{We checked how sensitive our results are to the size of the window, and found that the highest R2 and smallest MAE we were able to get with 1.5M observations in each time window.}
+	\label{fig:rSquaredandMAE}
+\end{figure}
 
-The gates are rnn's themselves.
+So our new data set is 419 time windows (0.3 sec long each).  From each time window, we compute a set of 95 potentially relevant statistical features (e.g., mean, variance, kurtosis, min/max, threshold and so on), but using feature importance we found that only the following were important:
+\begin{table}[h!]
+	\begin{center}
+		\caption{Engineered Features}
+		\label{tab:engineeredFeatrures}
+		\begin{tabular}{l} 
+Standard Deviation \\
+90\% Quantile \\
+95\% Quantile \\
+99\% Quantile \\
+Absolute Standard Deviation \\
+Average Rolling Standard Deviation for 100, 1000 and 10000 observations \\
+Variance of Rolling Standard Deviation for 100, 1000 and 10000 observations \\
+Minimum Rolling Standard Deviation for 100, 1000 and 10000 observations \\
+1\% Quantile of rolling standard deviation for 100, 1000, 10000 observations \\
+5\% Quantile of rolling standard deviation for 100, 1000, 10000 observations \\
+10\% Quantile of rolling standard deviation for 100, 1000, 10000 observations \\
+90\% Quantile of rolling standard deviation for 100, 1000, 10000 observations \\
+95\% Quantile of rolling standard deviation for 100, 1000, 10000 observations \\
+99\% Quantile of rolling standard deviation for 100, 1000, 10000 observations \\
+Variance of Rolling Absolute Mean for 100, 1000 and 10000 observations \\
+		\end{tabular}
+	\end{center}
+\end{table}
 
-input+priorhiddenstate>sigmoid (0,1) activation function>new hidden state. 0, 1 allows us to forget or remmeber 
-Patrick Yam: LSTM cannot handle data with 150000 sequence length therefore we wavenet in the earlier layers as feature extraction and reduce the sequence length to 150.\par
-
-Forget gate decides what to include 1, or exclude 0. 
-https://www.youtube.com/watch?v=2GNbIKTKCfE
-https://www.youtube.com/watch?v=8HyCNIVRbSU
-
-\subsection{Auto Regressive integrated Moving Average (ARIMA)}
-The data shows evidence of non-stationarity (the mean, variance change over time). We use an ARMIA model to analyze the changing means and variance. This this model also can also account for white noise.\par ARIMA(0,0,0)
-
-\subsection{Gradient Boosting Decision Tree}
-
-%http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explained/
-%mean absolute error: 2.230923263623967
-%r2 score: 0.42923076680297423
+We apply different machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor, Extra Trees Regressor to the new continuous values that we got, analysing acoustic time series data. \par
+In order to avoid correlation between new features we applied principal component analysis.  Instead of using 35 features, we created just 5 that represented 99.9\% of the full data variation. \par
+We use a 50/50 continuous split of the full time series for use as training and testing data sets respectively. Contiguity of train and test data sets is important, since we want to minimize contamination of the training data with information about the test data. \par
+We computed regularization hyper-parameters for each machine learning predicting techniques by random grid search based on a 3-fold cross-validation.
 
 \section{Results}
+We run different techniques on a training data set (50\% of the full data) before principal component analysis and after. Principal component analysis did not improve our findings significantly. We quantify the accuracy of our model using $r^2$ (the coefficient of determination) and MAE (mean absolute error), applying predicting model on test data set. The best results we achieved using  Extra Trees Regressor technique: MAE: 1.61, $r^2 = 0.65$. \par
 
-%Results section is meant to contain results.  It contains nothing but a lab report of what you did.  DO NOT WRITE A LAB REPORT. Include your results in the results section.
+Hyper-parameters for this technique are 'maxdepth': 25,  'maxfeatures': 'auto', 'minsamplesleaf': 16,  'minsamplessplit': 30, 'minweightfractionleaf': 0.06225661421078982,  'nestimators': 400. The Extra Trees Regressor overview is presented in the section 2.2.
 
-%.89 coe... is pure geek and not very meaningful even when you include that in your results.  It needs explanation.
-
-%Include evaluation methodology
-%Use tables and graphs
-%Don't forget explanations
-
-We run 5 different techniques on a train data set (70 percent of the full data) before principal component analysis and after. Principal component analysis did not improve our findings significantly, that is why we are not represent those results here. For each model we provide hyper-parameters details for future reproducibility (Table 2).
-When making a prediction (red curve), we emphasize that there is no past or future information considered: each prediction uses only the information within one single time window of the acoustic signal. We quantify the accuracy of our model using R2 (the coefficient of determination) and MAE (mean absolute error), applying predicting model on a 30 percent of the full data (test data).
-
-
-%It is clear that the LSTM + Wave-net algorithms %are superior performers.
-%This is because it handles extreme variations in the slope (gradient descent) and we can tune it to remember not only the common signals but the extreme signals which occur only when failure is imminent.
-%Use tables and graphs
-%Use tables and graphs
-%Use tables and graphs
-%Don't forget explanations
-
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{../GPUProject/Results1.PNG}
-	\caption{Results by Model}
-	\label{fig:morethan90percentd}
+	\includegraphics[width=01\linewidth]{results1}
+	\caption{When making a prediction (red curve), we emphasize that there is no past or future information considered: each prediction uses only the information within one single time window of the acoustic signal.}
+	\label{fig:results1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{../GPUProject/Results2.PNG}
-	\caption{Results by Model}
-	\label{fig:morethan90percent}
+	\includegraphics[width=01\linewidth]{results2}
+	\caption{Results we achieved using AdaBoostRegressor: MAE: 1.67, r2score: 0.62 (Fig.11).
+		Hyper-parameters for this technique are: 'learningrate': 0.018261985736355728, 'loss': 'square', nestimators = 500, baseestimator=Ridge(alpha=1).
+	}
+	\label{fig:results2}
 \end{figure}
 
 \section{Analysis}
-%Figures 10 through 12 are too small to read.  Use larger fonts so that they can be read. And, break them out of the tables you have put them in. The graphs are unreadable, the words are unreadable, and consequently, the graphs are useless. Even worse, they are a waste of space. Make them legible at normal scale.
 
-
-The most accurate results with coefficient of determination 0.5 and mean absolute error 2.03 we got using Random Forest Regressor. The most important features, shown on Fig. 7, suggest to check our data for correlated features, since rolling standard deviations show the same patterns. Plus in order to improve our predicting model, we need to get rid of features that have importance equal to 0 or close to 0, such as hypermoment, minimum, maximum and some of the rolling means. Currently we are working on improving of the model to make prediction for the beginning and the end of the one quake cycle. As you can see on a Fig. 1, seismic waves with small voltage are in our interest. Random forest model accurately predicts failure across load level, but hardly can predict outliers. It means that we still need to think about new features that we missing. Precursors that we choose during feature engineering were not good enough when the system enters a critical state close to failure.
-\begin{figure}
+The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we got using Extra Trees Regressor. The most important features are shown on Fig. 12. Top 5 are 90\% and 95\% Quartiles rolling standard deviations, standard deviation of rolling absolute mean, average rolling standard deviation.
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{../GPUProject/Analysis1.png}
-	\caption{Predictions by Model}
-	\label{fig:morethan90percent}
+	\includegraphics[width=01\linewidth]{analysis}
+	\caption{}
+	\label{fig:analysis}
 \end{figure}
+
 
 \section{Ethics}
 
-Our responsibility to report our results has to be weighed with our responsibility not to cause social disturbance. If the method demonstrated in this paper is scaled and applied to predict natural earthquakes this balance must be considered. Unwarranted predictions could have affects on personal property value while failure to report warranted predictions could result in loss of life. \cite{Ayhan}. \par
+Our responsibility to report our results has to be weighed with our responsibility not to cause social disturbance. If the method demonstrated in this paper is scaled and applied to predict natural earthquakes this balance must be considered. Unwarranted predictions could have affects on personal property value while failure to report warranted predictions could result in loss of life or avoidable property damage. \cite{Ayhan}. \par
 
 \section{Conclusions}
 
