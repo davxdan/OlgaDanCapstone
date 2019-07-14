@@ -1,0 +1,17 @@
+\begin{table}[ht]
+	\centering
+	\scalebox{1}{
+	\begin{tabular}{|l|c|r|}
+		\hline
+		Statistic & Description & Formula\\
+		\hline
+		1 & Row1Col1 & Row1Col2 \\
+		\hline
+		1 & Row1Col1 & Row1Col2 \\
+		\hline
+		1 & Row1Col1 & Row1Col2 \\
+		\hline
+	\end{tabular}}
+\caption{First Table}
+\label{tab:firstTable}
+\end{table}

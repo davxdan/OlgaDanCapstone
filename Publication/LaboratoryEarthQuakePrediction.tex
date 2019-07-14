@@ -36,28 +36,20 @@ The data, hardware and software allows us to predict impending earthquakes. Howe
 
 
 \section{Background}
+In 2017 Los Alamos National Laboratory (LANL) researchers discovered a way to successfully predict Slow Slip Earthquakes (SSE) in a laboratory experiment that simulates natural conditions. The team trained a computer to pinpoint and analyze quasi‐periodic seismic and acoustic signals emitted during the movements along the fault. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times, using time window of 1.8 sec of the data to make each prediction, with 89\% coefficient of determination \cite{LANLNews}. This result they achieved using machine learning technique Random Forest Regression. Their results were achieved using quasi‐periodic data and can not be generalized over aperiodic data. \par
 
-\begin{table}[ht]
-	\centering
-	\scalebox{1}{
-	\begin{tabular}{|l|c|r|}
-		\hline
-		Statistic & Description & Formula\\
-		\hline
-		1 & Row1Col1 & Row1Col2 \\
-		\hline
-		1 & Row1Col1 & Row1Col2 \\
-		\hline
-		1 & Row1Col1 & Row1Col2 \\
-		\hline
-	\end{tabular}}
-\caption{First Table}
-\label{tab:firstTable}
-\end{table}
+In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers \cite{LANLNews}. For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy \cite{LANLNews}. The team’s lab results reveal that the fault does not fail randomly but in a predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state \cite{LANLNews}. So far seismologists and Earth scientists have mostly relied on catalogues of historical data to try to characterize the state of faults. These catalogs contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that—in the case of their laboratory faults--hidden in this noiselike data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues \cite{LANLNews}. \par
 
-\begin{equation} \left(\frac{a^{2} + b^{2}}{c^{3}} \right) = 1 \quad \mbox{ if } c\neq 0 \mbox{ and if } a,b,c\in \bbbr \enspace . \end{equation}
+The laboratory system is a two‐fault configuration that contains fault gouge material submitted to double direct shear \cite{kaggle}.
+%missing image
+Two fault gouge layers are sheared simultaneously while subjected to a constant normal load and a prescribed shear velocity \cite{kaggle}. The laboratory faults fail in repetitive cycles of stick and slip that is meant to mimic the cycle of loading and failure on tectonic faults \cite{kaggle}. While the experiment is considerably simpler than a fault in Earth, it shares many physical characteristics \cite{kaggle}. \par
 
-		
+The driving piston displaces at a very constant velocity during the inter-event time and accelerates briefly during slip \cite{Bertrand}. An accelerometer records the acoustic emission emanating from the shearing layers \cite{Bertrand}. The steel blocks are extremely stiff, so the deformation takes place largely in the gouge \cite{Bertrand}. Under a broad range of load and shear velocity conditions, the apparatus stick‐slips quasi‐periodically for hundreds of stress cycles during a single experiment and in general follows predictions from rate and state friction \cite{Bertrand}. The rate of impulsive precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted \cite{Bertrand}.
+Experimental data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds.
+
+
+
+	
 
 
 
