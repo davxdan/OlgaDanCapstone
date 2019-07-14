@@ -11,7 +11,7 @@
 \institute{Southern Methodist University, Dallas TX 75205, USA otanyuk@mail.smu.edu, danieldavieau@mail.smu.edu, csouth@mail.smu.edu, dwe@lyle.smu.edu}
 \maketitle
 \begin{abstract}
-Our goal is to find the pattern of aperiodic seismic signals that precede earthquakes at any time in the earthquake’s cycle using small window of time. We apply machine learning to data set, that comes from a classic laboratory experiment involving repeated stick-slip displacement (“earthquake”) on a sliding interface, a type of experiment which has been studied in depth as a tabletop analog of seismogenic faults for decades. Here we show that by listening to the acoustic signal emitted by a laboratory fault, an algorithm tuned through machine learning can predict the time remaining before it fails. These predictions are based solely on the instantaneous physical characteristics of the acoustical signal and do not make use of its history. Los Alamos' initial work showed that the prediction of laboratory earthquakes from continuous seismic data is possible in the case of quasi-periodic laboratory seismic cycles. In this work we use a much more challenging dataset with considerably more aperiodic earthquake failures with more akin to the observed behavior of natural earthquakes. \par
+Our goal is to find the pattern of aperiodic seismic signals that precede earthquakes at any time in the earthquake’s cycle using a small window of time. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We apply machine learning to data set, that comes from a classic laboratory experiment involving repeated stick-slip displacement (“earthquake”) on a sliding interface, a type of experiment which has been studied in depth as a tabletop analog of seismogenic faults for decades. Here we show that by listening to the acoustic signal emitted by a laboratory fault, an algorithm tuned through machine learning can predict the time remaining before it fails. These predictions are based solely on the instantaneous physical characteristics of the acoustical signal and do not make use of its history. Los Alamos' initial work showed that the prediction of laboratory earthquakes from continuous seismic data is possible in the case of quasi-periodic laboratory seismic cycles.  \par
 	
 %In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71\% accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
 \end{abstract}
@@ -56,7 +56,7 @@ In the lab, the team imitated a real earthquake using steel blocks interacting w
 The laboratory system is a two‐fault configuration that contains fault gouge material submitted to double direct shear \cite{kaggle}. \par
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=.9\linewidth]{lab}
+	\includegraphics[width=.6\linewidth]{lab}
 	\caption{}
 	\label{fig:lab}
 \end{figure}
@@ -79,16 +79,18 @@ The sklearn.ensemble module in Python programing language includes averaging alg
 The data used in this work is a  157.275 second chunk of seismic data (ordered in time), which is recorded at 4MHz, hence 629,145,480 data points accompanied by the time remaining until the following lab earthquake, in seconds. \par
 The seismic data is recorded using a piezoceramic sensor, which outputs a voltage upon deformation by incoming seismic waves (henceforth we will use the term acoustic signal). The seismic data, which serves as the input to our analysis, is this recorded voltage, in integers. \par
 % to prevent images from floating all over the place in the document: https://tex.stackexchange.com/questions/16207/image-from-includegraphics-showing-up-in-wrong-location
-\begin{table}
-	\begin{center}
-		\caption{Data Definitions}
-		\label{tab:DataDefinitions}
-		\begin{tabular}{ll}
-			\textbf{Acoustic Signal} & Voltage upon deformation by incoming seismic waves. \\
-			\textbf{Time To Failure} & The remaining time in seconds until an actual stick-slip failure occurred.  \\
-		\end{tabular}
-	\end{center}
-\end{table}
+%\begin{table}
+%	\begin{center}
+%		\caption{Data Definitions}
+%		\label{tab:DataDefinitions}
+%		\begin{tabular}{ll}
+%			\textbf{Acoustic Signal} & Voltage upon deformation by incoming seismic waves. \\
+%			\textbf{Time To Failure} & The remaining time in seconds until an actual stick-slip failure occurred.  \\
+%		\end{tabular}
+%	\end{center}
+%\end{table}
+Acoustic signal is voltage upon deformation by incoming seismic waves. \par
+Time to failure is the remaining time in seconds until an actual stick-slip failure occurred. \par
 
 \begin{table}
 	\begin{center}
@@ -119,13 +121,13 @@ The seismic data is recorded using a piezoceramic sensor, which outputs a voltag
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=.9\linewidth]{timeToFailureHistogram}
+	\includegraphics[width=.8\linewidth]{timeToFailureHistogram}
 	\caption{The voltage amplitude of acoustic precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted. We used 1\% sample of the data. Red line indicates, that quake occurs, when time to failure approaches to 0. Minimum time remaining until the quake in the data is  -5.5150e+03 sec.}
 	\label{fig:timeToFailureHistogram}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=.9\linewidth]{timeDistribution}
+	\includegraphics[width=.8\linewidth]{timeDistribution}
 	\caption{We found that more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake!}
 	\label{fig:timeDistribution}
 \end{figure}
@@ -194,12 +196,13 @@ We apply different machine learning techniques such as the Random Forest Regress
 In order to avoid correlation between new features we applied principal component analysis.  Instead of using 35 features, we created just 5 that represented 99.9\% of the full data variation. \par
 We use a 50/50 continuous split of the full time series for use as training and testing data sets respectively. Contiguity of train and test data sets is important, since we want to minimize contamination of the training data with information about the test data. \par
 We computed regularization hyper-parameters for each machine learning predicting techniques by random grid search based on a 3-fold cross-validation.
-\clearpage
-\newpage
+%\clearpage
+%\newpage
 \section{Results}
 We run different techniques on a training data set (50\% of the full data) before principal component analysis and after. Principal component analysis did not improve our findings significantly. We quantify the accuracy of our model using $r^2$ (the coefficient of determination) and MAE (mean absolute error), applying predicting model on test data set. The best results we achieved using  Extra Trees Regressor technique: MAE: 1.61, $r^2 = 0.65$. \par
 
-Hyper-parameters for this technique are 'maxdepth': 25,  'maxfeatures': 'auto', 'minsamplesleaf': 16,  'minsamplessplit': 30, 'minweightfractionleaf': 0.06225661421078982,  'nestimators': 400. The Extra Trees Regressor overview is presented in the section 2.2.
+%Add Scitkitlearn definitions? Add top background definitions as well?
+Hyper-parameters for this technique are 'maxdepth': 25,  'maxfeatures': 'auto', 'minsamplesleaf': 16,  'Minimum Sample Split': 30, 'minweightfractionleaf': 0.06225661421078982,  'nestimators': 400. The Extra Trees Regressor overview is presented in the section 2.2.
 
 \begin{figure}
 	\centering
@@ -211,8 +214,8 @@ Hyper-parameters for this technique are 'maxdepth': 25,  'maxfeatures': 'auto', 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.9\linewidth]{results2}
-	\caption{Results we achieved using AdaBoostRegressor: MAE: 1.67, r2score: 0.62 (Fig.11).
-		Hyper-parameters for this technique are: 'learningrate': 0.018261985736355728, 'loss': 'square', nestimators = 500, baseestimator=Ridge(alpha=1).}
+	\caption{Results we achieved using Ada Boost Regressor: MAE: 1.67, r2score: 0.62.
+		Hyper-parameters for this technique are:'learningrate': 0.018261985736355728, 'loss': 'square', nestimators = 500, baseestimator=Ridge(alpha=1).}
 	\label{fig:results2}
 \end{figure}
 \clearpage
@@ -229,13 +232,18 @@ The most accurate results with coefficient of determination 0.65 and mean absolu
 
 \section{Ethics}
 
-Our responsibility to report our results has to be weighed with our responsibility not to cause social disturbance. If the method demonstrated in this paper is scaled and applied to predict natural earthquakes this balance must be considered. Unwarranted predictions could have affects on personal property value while failure to report warranted predictions could result in loss of life or avoidable property damage. \cite{Ayhan}. \par
+Our responsibility to report our results has to be weighed with our responsibility not to cause social disturbance. If the method demonstrated in this paper is scaled and applied to predict natural earthquakes this balance must be considered. Unwarranted predictions could have affects on personal property value while failure to report warranted predictions could result in loss of life or avoidable property damage \cite{Ayhan}. \par
 
 \section{Conclusions}
 
-The results show that laboratory earthquakes can be predicted up to 16 seconds in advance. The acoustic signal measurement is an indicator of imminent failure. The recurrence interval is not needed to make a prediction. \par
+Given the more realistic data, Machine Learning can provide failure forecasts based on small time windows. The acoustic signal measurement is an indicator of imminent failure. The recurrence interval is not needed to make a prediction. The Extra Trees Regressor machine learning technique provides the most accurate results.
 
-In this study we are using only 157 seconds of data. Future work should introduce higher volumes of data to determine if accuracy can be improved. Also the combination of the acoustic signal and the recurrence interval should be tested to determine it's affect on accuracy. 
+%The results are another step toward learning the siesmic signals encouraging Machine Learning analysis of seismic signals in Earth.
+
+
+%The results show that laboratory earthquakes can be predicted up to 16 seconds in advance.  \par
+%
+In this study we are using only 157 seconds of data. Future work should introduce higher volumes of data to determine if accuracy can be improved. Also the combination of the acoustic signal and the recurrence interval should be tested to determine it's affect on accuracy.
 \par
 
 \section{Acknowledgment}
