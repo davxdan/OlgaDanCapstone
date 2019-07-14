@@ -35,25 +35,13 @@
 %	1 sentence main conclusion (singular)
 
 \begin{abstract}
-In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71 percent accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
+In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71\% accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
 \end{abstract}
 
 \section{Introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Remember that both the Abstract and the Introduction are executive summaries of your work.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%DR Engels Requirements
-%INTRODUCTION
-%1 Paragraph Motivtion (Sets Generral problem domain)
-%1 Paragraph Problem Statement (Specific Problem solved by the work)
-%2-3 paragraphs on solution
-% 1 Paragraph on main results (plural)
-% 1 Paragraph on main conclusions (plural)
-% 1 Paragraph on paper organization
 
 Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence interval based models. Recurrence based predictions can only be made within decade spanning time windows and have not been successful. One such model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
 
-%What is a "laboratory earthquake"?
 Researchers imitate natural earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes.\par
 
 %Don't use quotes within your Introduction.
@@ -63,7 +51,7 @@ We use data which was collected by the Los Alamos National Laboratory and provid
 The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71 percent accuracy.\par
 
 %Conclusion
-The data, hardware and software allows us to predict impending earthquakes accurately. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
+The data, hardware and software allows us to predict impending earthquakes. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
 
 
 \section{Background}
@@ -363,31 +351,16 @@ The most accurate results with coefficient of determination 0.5 and mean absolut
 
 \section{Ethics}
 
-%What are the ethical dilemmas you are addressing? You've got a couple potential ones, but you need to go into greater details.
+Our responsibility to report our results has to be weighed with our responsibility not to cause social disturbance. If the method demonstrated in this paper is scaled and applied to predict natural earthquakes this balance must be considered. Unwarranted predictions could have affects on personal property value while failure to report warranted predictions could result in loss of life. \cite{Ayhan}. \par
 
-If people believe us and we are wrong; bad things can happen. If people believe us and we are right; good and bad things can happen.\par
-
-Scientists’ responsibility to inform the public about their results may conflict with their responsibility not to cause social disturbance by the communication of these results. A study of the well-known Brady-Spence and Iben Browning earthquake predictions illustrates this conflict in the publication of scientifically unwarranted predictions. Furthermore, a public policy that considers public sensitivity caused by such publications as an opportunity to promote public awareness is ethically problematic from (i) a refined consequentialist point of view that any means cannot be justified by any ends, and (ii) a rights view according to which individuals should never be treated as a mere means to ends \cite{Ayhan}.
 \section{Conclusions}
 
-%"suggests that" - NEVER. Draw conclusions. Be definitive.
-%As you stated in your first draft "This is NOT a summary section."  However, you have written a summary. Draw conclusions.
+The results show that laboratory earthquakes can be predicted with 71\% accuracy up to 16 seconds in advance. The acoustic signal measurement is an indicator of imminent failure. The recurrence interval is not needed to achieve the 71\% accuracy prediction. \par
 
-%Your last paragraph is pure speculation.  Do not speculate. State conclusions based upon the work you present in the paper.
-
-
-The evidence in this new {\em observational} study suggests that {\em (Measure against prior study TBD. We have to state the fact that we cannot prove that the data collection technology improvements are better or that our algorithm is better unless we can accurately reproduce the prior model's results. Consider confounding variables such as different collection methods and unavailable details about the 2017 model.)}\par
-Our application of machine learning predicts laboratory earthquakes with 2.03 seconds mean absolute error and 0.5 coefficient of determination. This is based on the analysis of the acoustic signal every moment in the slip cycle. However this is only 8-16 seconds in advance therefore practical applications may be limited. This only applies to laboratory experiments and not real life threatening earthquakes.\par
-Machine learning searches for patterns that humans may not easily perceive. This method may be useful if LANL can scale it from the lab to the field. It can also be useful in researching industrial and natural materials.
+In this study we are using only 157 seconds of data. Future work should introduce higher volumes of data to determine if accuracy can be improved. Also the combination of the acoustic signal and the recurrence interval should be tested to determine it's affect on accuracy. 
 \par
 
-
-
-
 %References
-
-%Your References are not correct as they are all missing significant information.  Use BibTeX for your references. It will force you to have all the information and put it in the correct format for you.
-
 \bibliographystyle{splncs}
 \bibliography{myBibliography}
 
