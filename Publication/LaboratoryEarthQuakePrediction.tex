@@ -1,7 +1,6 @@
 %\documentclass[runningheads]{llncs}
 %In general this is written like a lab report...need to write a technical paper. 
-
-\documentclass[]{llncs}
+\documentclass[]{llncs} % "you can ignore this hint if your document works"
 \usepackage{makeidx}
 \usepackage{graphicx}
 \begin{document}
@@ -10,29 +9,13 @@
 \title{Laboratory Earthquake Prediction}
 %\subtitle{Optional Subtitle Goes Here}
 
-\author{Olha Tanyuk\inst{1}, Daniel Davieau\inst{1}, Michael L. Blanpied\inst{2}, Charles South\inst{1} \and Daniel W. Engels\inst1}
+\author{Olha Tanyuk, Daniel Davieau, Charles South \and Daniel W. Engels}
 
 %Email:  Add author emails.
 
-\institute{Southern Methodist University, Dallas TX 75205, USA \and United States Geological Survey, Fort Worth, TX 76115}
+\institute{Southern Methodist University, Dallas TX 75205, USA}
 
 \maketitle
-
-% Write a clear engaging story
-% Write in present tense
-% No opinion words
-%Define important words i.e Random Forest
-%Short sentences
-% Use tables instead of bullets - all bullets and lists should be tables.
-% Visualizations should explain a lot. Viewer should get the point without having to read.
-
-%DR Engels Requirements
-% Abstract Structure:
-%	Problem sentence
-%	Motivation Sentence
-%	2=3 what you did to solve the problem
-%	1 sentence main result(singular with a number)
-%	1 sentence main conclusion (singular)
 
 \begin{abstract}
 In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71\% accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
@@ -40,11 +23,9 @@ In this paper we present a method for predicting the timing of laboratory earthq
 
 \section{Introduction}
 
-Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence interval based models. Recurrence based predictions can only be made within decade spanning time windows and have not been successful. One such model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
+Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence interval based models. Because the recurrences are not constant predictions can only be made within decade spanning time windows. One such model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
 
-Researchers imitate natural earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes.\par
-
-%Don't use quotes within your Introduction.
+Researchers imitate natural earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns and make predictions from realistic, unpredictable laboratory earthquake data \cite{kaggle}.\par
 
 We use data which was collected by the Los Alamos National Laboratory and provided to the public via a Kaggle competition \cite{kaggle}. It consists of 629 million acoustic signal observations and an accompanying record of the time remaining until a laboratory earthquake (failure) occurred \cite{Bertrand}. We calculate additional statistical measures such as variance, kurtosis and skew for each observation. We use half of the data to train a machine learning algorithm. With the remaining half of the data, using only the acoustic signal as input we calculate a prediction of the time remaining until failure. We measure  accuracy by comparing the predicted to actual remaining time to failure from the original data. \par
 
@@ -56,72 +37,27 @@ The data, hardware and software allows us to predict impending earthquakes. Howe
 
 \section{Background}
 
-%There have been improvements in the technology used to measure and collect laboratory seismic signal data. LANL has collected additional data and made it available to the public for a 2019 Kaggle competition. \par
+\begin{table}[ht]
+	\centering
+	\scalebox{1}{
+	\begin{tabular}{|l|c|r|}
+		\hline
+		Statistic & Description & Formula\\
+		\hline
+		1 & Row1Col1 & Row1Col2 \\
+		\hline
+		1 & Row1Col1 & Row1Col2 \\
+		\hline
+		1 & Row1Col1 & Row1Col2 \\
+		\hline
+	\end{tabular}}
+\caption{First Table}
+\label{tab:firstTable}
+\end{table}
 
+\begin{equation} \left(\frac{a^{2} + b^{2}}{c^{3}} \right) = 1 \quad \mbox{ if } c\neq 0 \mbox{ and if } a,b,c\in \bbbr \enspace . \end{equation}
 
-%“For this challenge we selected an experiment that exhibits a very a-periodic and more realistic behavior compared to the data we studied in our early work, with earthquakes occurring very irregularly" “If this challenge is solved and the physics are ultimately shown to scale from the laboratory to the field, researchers will have the potential to improve earthquake hazard assessments that could save lives and billions of dollars in infrastructure" \cite{kaggle}. 
-
-
-%There have also been improvements in computing capabilities. There are now publicly available software packages Keras, Tensorflow, Nvidia CUDA™ and Turing™ GPU architecture. These improvements enable us to apply complex deep learning algorithms which were more difficult or impossible to employ in the past.\par
-
-In August 2017 the Los Alamos National Laboratory (LANL) conducted an experiment \cite{Bertrand} which predicted \emph{laboratory} earthquakes with 90\% accuracy. The team imitated an earthquake using steel blocks interacting with rocky material to induce slipping that emitted seismic signals. An accelerometer was used to record them. A random forest algorithm was trained on the signals and stick‐slip failures (laboratory earthquakes). The trained algorithm was then used to generate predictions from separate signals (not used in the training). The predictions were measured against actual failures to determine the accuracy of the predictions \cite{LANLNews}.\par
-
-
-
-%Need more details on earthquakes and another section on the LANL experiment to get their data.
-
-%Use tables to summarize the information. 
-%Need to relate the earthquakes to the data being generated.
-%Need a new section on the LANL experiment setup.
-
-%Tutorial Sections drafted and complete -  13/20  - you have some tutorial material, but you are lacking significant pieces on earthquakes and significant details on the data and the previous work.
-
-%Is "Regular Earthquake" a standard term in the industry or just your term?  If it is your term, don't use it.  Use the standard terms, eg stick-slip earthquake, to refer to these.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Draft Two should include all of the tutorial sections in well-written nearly polished form. Your paper is targeted at a general technical audience (think – students who are just beginning the MSDS program, but have not yet taken any classes in the program, except the Stats Bridge and the Programming Bridge). Therefore, background sections on your problem domain are necessary for all readers to be able to properly understand your work.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Paper should be tutorial in nature
-%Audience is data scientists of varying levels of knowledge. Keep newer students in mind
-
-%"We hear about..." Write formally and just the facts.  Start with your second sentence - Earthquakes are stick-slip events that ...  You understand that your definition of Regular Earthquakes applies to Slow Slip Earthquakes too ?  Slow slip earthquakes DO SHAKE THE GROUND! However, the shaking is generally not noticeable by humans or significant enough to cause damage. 
-
-We hear about earthquakes usually via news media when there is a large seismic event which is noticeable and causes death and destruction. These are stick–slip events that radiate seismic energy along the faults between tectonic plates. In this study we refer to these as {\em Regular Earthquakes}. Regular earthquakes are caused by a sudden slip on a fault. Tectonic plates move slowly but can get stuck at their edges due to friction. Stress builds gradually over time until it overcomes the friction resulting in a slip between the tectonic plates. Energy is released in waves that travel through the earth's crust. This is the shaking that we feel and know as an earthquake \cite{USGSfaqs}.
-\par
-%You really need to have better definitions and descriptions of earthquakes.  Your stick-slip definition does not appear to be correct on its face.
-
-Another type of earthquake we refer to in this study is a {\em Slow Slip Earthquake} (SSE). SSE's are fault behaviors that occur slowly enough to make them undetectable without instrumentation. We cannot feel slow slip earthquakes shake the ground. They occur near the boundaries of large earthquake rupture zones \cite{Slip}.
- \par
-
-LANL researchers discovered a way to predict earthquakes in a laboratory experiment that simulates natural conditions. In 2017 they discovered a way to train a computer to pinpoint and analyze seismic signals emitted during movements along faults to predict an earthquake. They processed massive amounts of data and identified a particular sound pattern previously thought to be just white noise that preceded an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times \cite{LANLNews}.
- \par
-
-%In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers[6].\par
-
-For the first time they discovered a pattern that accurately predicted when a laboratory earthquake would occur. The team acknowledged that the physical traits of the lab experiment differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy \cite{LANLNews}.\par
-
-The results revealed that the faults failed in a predictable manner. The observations also demonstrated that the fault’s critical stress state can be determined using exclusively an equation of state \cite{LANLNews}.\par
-
-Traditionally scientists have relied exclusively on historical data to  characterize the state of faults and predict regular earthquakes. Only a small fraction of seismic data had typically been collected and some was discarded during analysis as noise. The LANL team discovered that hidden in this noise are signals emitted by the fault that inform them of the state of the fault much more precisely \cite{LANLNews}.\par
-\begin{quote}
-“Our work shows that machine learning can be used to extract new meaningful physics from a very well studied system,” said Bertrand Rouet-Leduc, Los Alamos Earth and Environmental Sciences Division scientist and the paper’s lead author. “It also shows that seismogenic faults are continuously broadcasting a signal that precisely informs us of their physical state and how close they are to rupture, at least in the laboratory.”
-\end{quote}
-
-This suggests that there is a relationship between slow slip earthquakes and more noticeable regular earthquakes \cite{SlowSlip}. 
-
-%Need to define "fault" (you have defined "fault line" but not "fault").
-
-%"This study analyzes..." What your study does is NOT "Tutorial Information" and does not belong in this section.
-This {\em new} study is an analysis of the relationship between slow slip and regular earthquakes. We use this relationship information to predict regular laboratory earthquakes. \par
-
-%You write too informally and abstractly. Write formally and specifically. eg "Regular earthquakes [sic] are caused by a sudden slip on a fault."  What's a slip? Isn't that usually followed by a fall? Or is that small piece of paper? 
-
-%"get stuck at their edges due to friction" - what's an "edge"? And, is this truly friction or something else?
-
-%You really need to have a section on the geography of tectonic plates and how they move past one another.  then you can be talking intelligently (to the reader) about how their motion causes earthquakes.
-
-%Lab earthquakes should be a section unto itself. 
-
-%You have not provided enough information on the LANL work for the reader to understand what they did.  You need to describe their experiments in some detail as well as their analysis techniques and results so that the reader can understand it.
+		
 
 
 
