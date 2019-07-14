@@ -1,40 +1,43 @@
-%\documentclass[runningheads]{llncs}
-%In general this is written like a lab report...need to write a technical paper. 
 \documentclass[]{llncs} % "you can ignore this hint if your document works"
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{makecell}
 \usepackage{float}
 \begin{document}
-\addtocmark{Southern Methodist University} % additional mark in the TOC
+\addtocmark{Southern Methodist University}
 
-\title{Laboratory Earthquake Prediction}
-%\subtitle{Optional Subtitle Goes Here}
-
+\title{Machine Learning Predicts Aperiodic Laboratory Earthquakes}
 \author{Olha Tanyuk, Daniel Davieau, Charles South \and Daniel W. Engels}
-
-%Email:  Add author emails.
-
-\institute{Southern Methodist University, Dallas TX 75205, USA}
-
+\institute{Southern Methodist University, Dallas TX 75205, USA otanyuk@mail.smu.edu, danieldavieau@mail.smu.edu, csouth@mail.smu.edu, dwe@lyle.smu.edu}
 \maketitle
-
 \begin{abstract}
-In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71\% accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
+Our goal is to find the pattern of aperiodic seismic signals that precede earthquakes at any time in the earthquake’s cycle using small window of time. We apply machine learning to data set, that comes from a classic laboratory experiment involving repeated stick-slip displacement (“earthquake”) on a sliding interface, a type of experiment which has been studied in depth as a tabletop analog of seismogenic faults for decades. Here we show that by listening to the acoustic signal emitted by a laboratory fault, an algorithm tuned through machine learning can predict the time remaining before it fails. These predictions are based solely on the instantaneous physical characteristics of the acoustical signal and do not make use of its history. Los Alamos' initial work showed that the prediction of laboratory earthquakes from continuous seismic data is possible in the case of quasi-periodic laboratory seismic cycles. In this work we use a much more challenging dataset with considerably more aperiodic earthquake failures with more akin to the observed behavior of natural earthquakes. \par
+	
+%In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71\% accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
 \end{abstract}
 
 \section{Introduction}
+Earthquakes cause mass destruction and loss of life. A traditional method to predict earthquakes is to look to past recurrence intervals. Because the recurrences are not constant, predictions can only be made within broad time windows. One such model predicted that a strong earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
 
-Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence interval based models. Because the recurrences are not constant predictions can only be made within decade spanning time windows. One such model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
+Over the last 15 years, there has been renewed hope that progress can be made regarding forecasting owing to tremendous advances in instrumentation quality and density. These advances have led to exciting discoveries of previously unidentified slip processes such as slow slips. Slow Slip Earthquakes (SSE) are fault behaviors that occur slowly enough to make them undetectable without instrumentation. They do not shake the ground and cause widespread destruction like regular earthquakes do. They occur near the boundaries of large earthquake rupture zones \cite{Slip}. There is evidence to suggest that there is a relationship between slow slip earthquakes and more noticeable regular earthquakes \cite{SlowSlip}. \par
 
-Researchers imitate natural earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns and make predictions from realistic, unpredictable laboratory earthquake data \cite{kaggle}.\par
+Researchers imitate natural  slow slip earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{kaggle} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However, processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes. \par
 
-We use data which was collected by the Los Alamos National Laboratory and provided to the public via a Kaggle competition \cite{kaggle}. It consists of 629 million acoustic signal observations and an accompanying record of the time remaining until a laboratory earthquake (failure) occurred \cite{Bertrand}. We calculate additional statistical measures such as variance, kurtosis and skew for each observation. We use half of the data to train a machine learning algorithm. With the remaining half of the data, using only the acoustic signal as input we calculate a prediction of the time remaining until failure. We measure  accuracy by comparing the predicted to actual remaining time to failure from the original data. \par
+In this paper, given seismic signal data with considerably more aperiodic slow-slip laboratory earthquake failures, we find the pattern of  acoustic signals to predict the time at which  laboratory earthquakes will occur at any time in the slip cycle. \par
 
-The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71 percent accuracy.\par
+We use acoustic data, which was provided by LANL in January 2019, as part of Kaggle project \cite{kaggle}, which also represent laboratory slow-slip earthquakes, but very aperiodic and it has more natural behavior compared to the data LANL studied earlier, with earthquakes occurring very irregularly in time \cite{kaggle}. The results of this experiment are potentially applicable to the field of real world earthquakes \cite{Bertrand}. Other potential applications include avalanche prediction or failure of machine parts \cite{Bertrand}. \par
 
-%Conclusion
-The data, hardware and software allows us to predict impending earthquakes. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
+
+%Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence interval based models. Because the recurrences are not constant predictions can only be made within decade spanning time windows. One such model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
+%
+%Researchers imitate natural earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{Bertrand} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns and make predictions from realistic, unpredictable laboratory earthquake data \cite{kaggle}.\par
+%
+%We use data which was collected by the Los Alamos National Laboratory and provided to the public via a Kaggle competition \cite{kaggle}. It consists of 629 million acoustic signal observations and an accompanying record of the time remaining until a laboratory earthquake (failure) occurred \cite{Bertrand}. We calculate additional statistical measures such as variance, kurtosis and skew for each observation. We use half of the data to train a machine learning algorithm. With the remaining half of the data, using only the acoustic signal as input we calculate a prediction of the time remaining until failure. We measure  accuracy by comparing the predicted to actual remaining time to failure from the original data. \par
+%
+%The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71 percent accuracy.\par
+%
+%%Conclusion
+%The data, hardware and software allows us to predict impending earthquakes. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
 
 \section{Background}
 \subsection{Statistical Values to Evaluate Predictions}
@@ -49,7 +52,6 @@ The data, hardware and software allows us to predict impending earthquakes. Howe
 In 2017 Los Alamos National Laboratory (LANL) researchers discovered a way to successfully predict Slow Slip Earthquakes (SSE) in a laboratory experiment that simulates natural conditions. The team trained a computer to pinpoint and analyze quasi‐periodic seismic and acoustic signals emitted during the movements along the fault. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times, using time window of 1.8 sec of the data to make each prediction, with 89\% coefficient of determination \cite{LANLNews}. This result they achieved using machine learning technique Random Forest Regression. Their results were achieved using quasi‐periodic data and can not be generalized over aperiodic data. \par
 
 In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers \cite{LANLNews}. For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy \cite{LANLNews}. The team’s lab results reveal that the fault does not fail randomly but in a predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state \cite{LANLNews}. So far seismologists and Earth scientists have mostly relied on catalogues of historical data to try to characterize the state of faults. These catalogs contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that—in the case of their laboratory faults--hidden in this noiselike data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues \cite{LANLNews}. \par
-\newpage
 \subsection{Experimental Setup}
 The laboratory system is a two‐fault configuration that contains fault gouge material submitted to double direct shear \cite{kaggle}. \par
 \begin{figure}[h]
@@ -90,7 +92,7 @@ The seismic data is recorded using a piezoceramic sensor, which outputs a voltag
 
 \begin{table}
 	\begin{center}
-		\caption{Sample Data}
+		\caption{}
 		\label{tab:SampleData}
 		\begin{tabular}{c|r} 
 			\textbf{Acoustic Signal} & \textbf{Time to Failure}\\
@@ -163,10 +165,10 @@ LANL, working with quasi periodic seismic signals, achieved 0.89 coefficient of 
 	\label{fig:rSquaredandMAE}
 \end{figure}
 
-So our new data set is 419 time windows (0.3 sec long each).  From each time window, we compute a set of 95 potentially relevant statistical features (e.g., mean, variance, kurtosis, min/max, threshold and so on), but using feature importance we found that only the following were important:
+So our new data set is 419 time windows (0.3 sec long each).  From each time window, we compute a set of 95 potentially relevant statistical features (e.g., mean, variance, kurtosis, min/max, threshold and so on), but using feature importance we found that only the following (in Table 3) were important:
 \begin{table}[H]
 	\begin{center}
-		\caption{Engineered Features}
+		\caption{List of Engineered Features}
 		\label{tab:engineeredFeatrures}
 		\begin{tabular}{l} 
 Standard Deviation \\
@@ -192,7 +194,8 @@ We apply different machine learning techniques such as the Random Forest Regress
 In order to avoid correlation between new features we applied principal component analysis.  Instead of using 35 features, we created just 5 that represented 99.9\% of the full data variation. \par
 We use a 50/50 continuous split of the full time series for use as training and testing data sets respectively. Contiguity of train and test data sets is important, since we want to minimize contamination of the training data with information about the test data. \par
 We computed regularization hyper-parameters for each machine learning predicting techniques by random grid search based on a 3-fold cross-validation.
-
+\clearpage
+\newpage
 \section{Results}
 We run different techniques on a training data set (50\% of the full data) before principal component analysis and after. Principal component analysis did not improve our findings significantly. We quantify the accuracy of our model using $r^2$ (the coefficient of determination) and MAE (mean absolute error), applying predicting model on test data set. The best results we achieved using  Extra Trees Regressor technique: MAE: 1.61, $r^2 = 0.65$. \par
 
@@ -205,17 +208,18 @@ Hyper-parameters for this technique are 'maxdepth': 25,  'maxfeatures': 'auto', 
 	\label{fig:results1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=.9\linewidth]{results2}
 	\caption{Results we achieved using AdaBoostRegressor: MAE: 1.67, r2score: 0.62 (Fig.11).
 		Hyper-parameters for this technique are: 'learningrate': 0.018261985736355728, 'loss': 'square', nestimators = 500, baseestimator=Ridge(alpha=1).}
 	\label{fig:results2}
 \end{figure}
-
+\clearpage
+\newpage
 \section{Analysis}
 The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we got using Extra Trees Regressor. The most important features are shown on Fig. 12. Top 5 are 90\% and 95\% Quartiles rolling standard deviations, standard deviation of rolling absolute mean, average rolling standard deviation.
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=.9\linewidth]{analysis}
 	\caption{}
@@ -229,10 +233,13 @@ Our responsibility to report our results has to be weighed with our responsibili
 
 \section{Conclusions}
 
-The results show that laboratory earthquakes can be predicted with 71\% accuracy up to 16 seconds in advance. The acoustic signal measurement is an indicator of imminent failure. The recurrence interval is not needed to achieve the 71\% accuracy prediction. \par
+The results show that laboratory earthquakes can be predicted up to 16 seconds in advance. The acoustic signal measurement is an indicator of imminent failure. The recurrence interval is not needed to make a prediction. \par
 
 In this study we are using only 157 seconds of data. Future work should introduce higher volumes of data to determine if accuracy can be improved. Also the combination of the acoustic signal and the recurrence interval should be tested to determine it's affect on accuracy. 
 \par
+
+\section{Acknowledgment}
+This research was supported by Dr. Michael L. Blanpied,  U.S. Geological Survey. We thank Dr. Michael L. Blanpied for comments that greatly improved our work.
 
 %References
 \bibliographystyle{splncs}

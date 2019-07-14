@@ -7,15 +7,16 @@ Jackson, D.D.:
 \newblock Bulletin of the Seismological Society of America \textbf{96}(4B)
   (2006)  397--409 https://doi.org/10.1785/0120050821.
 
-\bibitem{Bertrand}
-Rouet‐Leduc, B.:
-\newblock Machine learning predicts laboratory earthquakes.
-\newblock Geophysical Research Letters \textbf{44}(18) (August 2017)
+\bibitem{Slip}
+Ikari, M.J.:
+\newblock Slip weakening as a mechanism for slow earthquakes.
+\newblock Nature Geoscience \textbf{6} (May 2013)  468
+  https://doi.org/10.1038/ngeo1818.
 
-\bibitem{kaggle}
-Kaggle:
-\newblock Lanl earthquake prediction.
-\newblock https://www.kaggle.com/lanl (March 2019)
+\bibitem{SlowSlip}
+Rousset, B., B{\"u}rgmann, R., Campillo, M.:
+\newblock Slow slip events in the roots of the san andreas fault.
+\newblock Science Advances \textbf{5}(2) (2019)
 
 \bibitem{LANLNews}
 Rouet-Leduc, B.:
@@ -23,6 +24,16 @@ Rouet-Leduc, B.:
   fault behavior.
 \newblock Los Alamos National Laboratory, P.O. Box 1663 Los Alamos, NM 87545.
   Science briefs 2018 edn. (March 2018)
+
+\bibitem{kaggle}
+Kaggle:
+\newblock Lanl earthquake prediction.
+\newblock https://www.kaggle.com/lanl (March 2019)
+
+\bibitem{Bertrand}
+Rouet‐Leduc, B.:
+\newblock Machine learning predicts laboratory earthquakes.
+\newblock Geophysical Research Letters \textbf{44}(18) (August 2017)
 
 \bibitem{ExtremeRandomTrees}
 Geurts, P.:
