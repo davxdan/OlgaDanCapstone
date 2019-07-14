@@ -4,6 +4,7 @@
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{makecell}
+\usepackage{float}
 \begin{document}
 \addtocmark{Southern Methodist University} % additional mark in the TOC
 
@@ -35,27 +36,35 @@ The result shows that the timing of laboratory earthquakes can be predicted up t
 %Conclusion
 The data, hardware and software allows us to predict impending earthquakes. However we only know 8-16 seconds before failure. Therefore practical applications may be limited. This may prove useful but only applies to laboratory experiments. This could be used in industry perhaps in researching materials for wallboard, machine parts and others.\par
 
-
 \section{Background}
+\subsection{Statistical Values to Evaluate Predictions}
+\begin{figure}
+	\centering
+	\includegraphics[width=.9\linewidth]{background}
+	\caption{The values used to evaluate predictions in our work are the coefficient of determination $r^2$ and mean absolute error (MAE).}
+	\label{fig:background}
+\end{figure}
+
+\subsection{Los Alamos National Laboratory's Findings}
 In 2017 Los Alamos National Laboratory (LANL) researchers discovered a way to successfully predict Slow Slip Earthquakes (SSE) in a laboratory experiment that simulates natural conditions. The team trained a computer to pinpoint and analyze quasi‐periodic seismic and acoustic signals emitted during the movements along the fault. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times, using time window of 1.8 sec of the data to make each prediction, with 89\% coefficient of determination \cite{LANLNews}. This result they achieved using machine learning technique Random Forest Regression. Their results were achieved using quasi‐periodic data and can not be generalized over aperiodic data. \par
 
 In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material (fault gouge) to induce slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers \cite{LANLNews}. For the first time, researchers discovered a pattern that accurately predicted when a quake would occur. The team acknowledges that the physical traits of the lab experiment (such as shear stresses and thermal properties) differ from the real world but the application of the analysis to real earthquakes to validate their results is ongoing. This method can also be applied outside of seismology to support materials’ failure research in many fields such as aerospace and energy \cite{LANLNews}. The team’s lab results reveal that the fault does not fail randomly but in a predictable manner. The observations also demonstrate that the fault’s critical stress state, which indicates when it might slip, can be determined using exclusively an equation of state \cite{LANLNews}. So far seismologists and Earth scientists have mostly relied on catalogues of historical data to try to characterize the state of faults. These catalogs contain a minute fraction of seismic data, and remaining seismic data is discarded during analysis as useless noise. The authors discovered that—in the case of their laboratory faults--hidden in this noiselike data there are signals emitted by the fault that inform them of the state of the fault much more precisely than catalogues \cite{LANLNews}. \par
-
-\begin{figure}[h!]
+\newpage
+\subsection{Experimental Setup}
+The laboratory system is a two‐fault configuration that contains fault gouge material submitted to double direct shear \cite{kaggle}. \par
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=.9\linewidth]{lab}
 	\caption{}
 	\label{fig:lab}
 \end{figure}
-
-The laboratory system is a two‐fault configuration that contains fault gouge material submitted to double direct shear \cite{kaggle}.
-%missing image
 Two fault gouge layers are sheared simultaneously while subjected to a constant normal load and a prescribed shear velocity \cite{kaggle}. The laboratory faults fail in repetitive cycles of stick and slip that is meant to mimic the cycle of loading and failure on tectonic faults \cite{kaggle}. While the experiment is considerably simpler than a fault in Earth, it shares many physical characteristics \cite{kaggle}. \par
 
 The driving piston displaces at a very constant velocity during the inter-event time and accelerates briefly during slip \cite{Bertrand}. An accelerometer records the acoustic emission emanating from the shearing layers \cite{Bertrand}. The steel blocks are extremely stiff, so the deformation takes place largely in the gouge \cite{Bertrand}. Under a broad range of load and shear velocity conditions, the apparatus stick‐slips quasi‐periodically for hundreds of stress cycles during a single experiment and in general follows predictions from rate and state friction \cite{Bertrand}. The rate of impulsive precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted \cite{Bertrand}. \par
 
 Experimental data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake and 7 seconds for the 7th, while the longest is around 16 seconds. \par
 
+\subsection{Extra Trees Regressor Overview}
 The Extra-Trees algorithm builds an ensemble of unpruned regression trees according to the classical top-down procedure. Its two main differences with other treebased ensemble methods are that it splits nodes by choosing cut-points fully at random and that it uses the whole learning sample (rather than a bootstrap replica) to grow the trees \cite{ExtremeRandomTrees}. \par
 
 The Extra-Trees splitting procedure uses two parameters: K (the number of attributes randomly selected at each node) and nmin (the minimum sample size for splitting a node). It is used several times with the (full) original learning sample to generate an ensemble model (we denote by M the number of trees of this ensemble) \cite{ExtremeRandomTrees}. 
@@ -68,7 +77,7 @@ The sklearn.ensemble module in Python programing language includes averaging alg
 The data used in this work is a  157.275 second chunk of seismic data (ordered in time), which is recorded at 4MHz, hence 629,145,480 data points accompanied by the time remaining until the following lab earthquake, in seconds. \par
 The seismic data is recorded using a piezoceramic sensor, which outputs a voltage upon deformation by incoming seismic waves (henceforth we will use the term acoustic signal). The seismic data, which serves as the input to our analysis, is this recorded voltage, in integers. \par
 % to prevent images from floating all over the place in the document: https://tex.stackexchange.com/questions/16207/image-from-includegraphics-showing-up-in-wrong-location
-\begin{table}[h!]
+\begin{table}
 	\begin{center}
 		\caption{Data Definitions}
 		\label{tab:DataDefinitions}
@@ -79,7 +88,7 @@ The seismic data is recorded using a piezoceramic sensor, which outputs a voltag
 	\end{center}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}
 	\begin{center}
 		\caption{Sample Data}
 		\label{tab:SampleData}
@@ -94,75 +103,68 @@ The seismic data is recorded using a piezoceramic sensor, which outputs a voltag
 		\end{tabular}
 	\end{center}
 \end{table}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{timeSeries}
+	\includegraphics[width=.9\linewidth]{timeSeries}
 	\caption{We can see that usually acoustic data shows huge fluctuations just before the failure. Another important point: visually failures can be predicted as cases when huge fluctuations in signal are followed by small signal values.}
 	\label{fig:timeseries}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{zoomedInTimePLot}
+	\includegraphics[width=.9\linewidth]{zoomedInTimePLot}
 	\caption{On zoomed-in-time plot we can see that the large oscillation before the failure is not in the last moment. There are trains of intense oscillations preceding the large one and also some oscillations with smaller peaks after it.}
 	\label{fig:zoomeInTimePlot}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{timeToFailureHistogram}
+	\includegraphics[width=.9\linewidth]{timeToFailureHistogram}
 	\caption{The voltage amplitude of acoustic precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted. We used 1\% sample of the data. Red line indicates, that quake occurs, when time to failure approaches to 0. Minimum time remaining until the quake in the data is  -5.5150e+03 sec.}
 	\label{fig:timeToFailureHistogram}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{timeDistribution}
+	\includegraphics[width=.9\linewidth]{timeDistribution}
 	\caption{We found that more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake!}
 	\label{fig:timeDistribution}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{acousticDataDistribution}
+	\includegraphics[width=.9\linewidth]{acousticDataDistribution}
 	\caption{Acoustic data distribution has a very high peak and we see outliers in both directions}
 	\label{fig:acousticDataDistribution}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{timeToFailureDistribution}
+	\includegraphics[width=.9\linewidth]{timeToFailureDistribution}
 	\caption{Distribution of time to failure seems to be right skewed. It should be normalized.}
 	\label{fig:timeToFailureDistribution}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{logTimeToFailureDistribution}
+	\includegraphics[width=.9\linewidth]{logTimeToFailureDistribution}
 	\caption{Log transformed time distribution looks more left skewed than normal.}
 	\label{fig:logTimeToFailureDistribution}
 \end{figure}
-
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{sqrtTimeToFailureDistribution}
+	\includegraphics[width=.9\linewidth]{sqrtTimeToFailureDistribution}
 	\caption{The distribution of the time after square root transformation is still not ideally normal, but looks much better than the distribution of the time after log transformation.}
 	\label{fig:sqrtTimeToFailureDistribution}
 \end{figure}
-
+\clearpage
+\newpage
 \section{Feature Engineering}
 LANL, working with quasi periodic seismic signals, achieved 0.89 coefficient of determination, using Random Forest technique and dividing data by 1.8 seconds time windows \cite{Bertrand}.  The most important features in LANL model were variance, kurtosis and threshold. We used a similar approach. Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divided our data into time windows that each contain 0.3 seconds of data (1,500,000 observations), which is small enough compared with lab quake cycle that we have (8 to 16 sec). As we discussed above, more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake. It makes sense to divide our data by 0.3 sec windows to reduce error at the end of the quake cycle. 
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{rSquaredandMAE}
+	\includegraphics[width=.9\linewidth]{rSquaredandMAE}
 	\caption{We checked how sensitive our results are to the size of the window, and found that the highest R2 and smallest MAE we were able to get with 1.5M observations in each time window.}
 	\label{fig:rSquaredandMAE}
 \end{figure}
 
 So our new data set is 419 time windows (0.3 sec long each).  From each time window, we compute a set of 95 potentially relevant statistical features (e.g., mean, variance, kurtosis, min/max, threshold and so on), but using feature importance we found that only the following were important:
-\begin{table}[h!]
+\begin{table}[H]
 	\begin{center}
 		\caption{Engineered Features}
 		\label{tab:engineeredFeatrures}
@@ -196,28 +198,26 @@ We run different techniques on a training data set (50\% of the full data) befor
 
 Hyper-parameters for this technique are 'maxdepth': 25,  'maxfeatures': 'auto', 'minsamplesleaf': 16,  'minsamplessplit': 30, 'minweightfractionleaf': 0.06225661421078982,  'nestimators': 400. The Extra Trees Regressor overview is presented in the section 2.2.
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{results1}
+	\includegraphics[width=.9\linewidth]{results1}
 	\caption{When making a prediction (red curve), we emphasize that there is no past or future information considered: each prediction uses only the information within one single time window of the acoustic signal.}
 	\label{fig:results1}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{results2}
+	\includegraphics[width=.9\linewidth]{results2}
 	\caption{Results we achieved using AdaBoostRegressor: MAE: 1.67, r2score: 0.62 (Fig.11).
-		Hyper-parameters for this technique are: 'learningrate': 0.018261985736355728, 'loss': 'square', nestimators = 500, baseestimator=Ridge(alpha=1).
-	}
+		Hyper-parameters for this technique are: 'learningrate': 0.018261985736355728, 'loss': 'square', nestimators = 500, baseestimator=Ridge(alpha=1).}
 	\label{fig:results2}
 \end{figure}
 
 \section{Analysis}
-
 The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we got using Extra Trees Regressor. The most important features are shown on Fig. 12. Top 5 are 90\% and 95\% Quartiles rolling standard deviations, standard deviation of rolling absolute mean, average rolling standard deviation.
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=01\linewidth]{analysis}
+	\includegraphics[width=.9\linewidth]{analysis}
 	\caption{}
 	\label{fig:analysis}
 \end{figure}
