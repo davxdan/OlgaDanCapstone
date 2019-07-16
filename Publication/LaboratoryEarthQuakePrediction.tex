@@ -74,8 +74,8 @@ The Extra-Trees splitting procedure uses the number of attributes randomly selec
 The sklearn.ensemble module in the Python programming language includes an averaging algorithm based on randomized decision trees known as the Extra-Trees method. \par
 %Left off here
 \section{Data} 
-The data used in this work is a  157.275 second chunk of seismic data (ordered in time), which is recorded at 4MHz, hence 629,145,480 data points accompanied by the time remaining until the following lab earthquake, in seconds. \par
-The seismic data is recorded using a piezoceramic sensor, which outputs a voltage upon deformation by incoming seismic waves (henceforth we will use the term acoustic signal). The seismic data, which serves as the input to our analysis, is this recorded voltage, in integers. \par
+The data used in this work is a 157.275 second recording of seismic signals (ordered in sequentially.) It was recorded at 4MHz hence 629,145,480 data points accompanied by the time remaining in seconds until the following lab earthquake. \par
+The seismic signals are recorded using a piezoceramic sensor which outputs a voltage upon deformation by incoming seismic waves (henceforth we will use the term acoustic signal). The seismic data, which serves as the input to our analysis, is this recorded voltage, in integers. \par
 % to prevent images from floating all over the place in the document: https://tex.stackexchange.com/questions/16207/image-from-includegraphics-showing-up-in-wrong-location
 %\begin{table}
 %	\begin{center}
@@ -108,64 +108,65 @@ Time to failure is the remaining time in seconds until an actual stick-slip fail
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{timeSeries}
-	\caption{We can see that usually acoustic data shows huge fluctuations just before the failure. Another important point: visually failures can be predicted as cases when huge fluctuations in signal are followed by small signal values.}
+	\caption{We can see that the acoustic signal shows huge fluctuations regularly just before the failure. It is also worth noting that failures can be predicted visually as cases when huge fluctuations in the signal are followed by smaller signals.}
 	\label{fig:timeseries}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{zoomedInTimePLot}
-	\caption{On zoomed-in-time plot we can see that the large oscillation before the failure is not in the last moment. There are trains of intense oscillations preceding the large one and also some oscillations with smaller peaks after it.}
+	\caption{On this zoomed-in time plot we can see that the large acoustic signal oscillation at the 1.572 second mark is not at the exact time of the failure but  just before it. There are trains of intense signal oscillations preceding the large one and some smaller ones after it.}
 	\label{fig:zoomeInTimePlot}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\linewidth]{timeToFailureHistogram}
-	\caption{The voltage amplitude of acoustic precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted. We used 1\% sample of the data. Red line indicates, that quake occurs, when time to failure approaches to 0. Minimum time remaining until the quake in the data is  -5.5150e+03 sec.}
+	\caption{In this 1\% sample of the data we can see that the voltage amplitude of acoustic precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted. The red line indicates that a quake occurs when the time to failure approaches 0. The minimum time remaining until the quake is -5.5150e+03 sec.}
 	\label{fig:timeToFailureHistogram}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\linewidth]{timeDistribution}
-	\caption{We found that more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake!}
+	\caption{We found that more than 90\% of high acoustic signal values (absolute value greater than 1000) are around 0.31 seconds before an earthquake!}
 	\label{fig:timeDistribution}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{acousticDataDistribution}
-	\caption{Acoustic data distribution has a very high peak and we see outliers in both directions}
+	\caption{The distribution of the acoustic signals have a very high peak and we see outliers in both directions}
 	\label{fig:acousticDataDistribution}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{timeToFailureDistribution}
-	\caption{Distribution of time to failure seems to be right skewed. It should be normalized.}
+	\caption{The distribution of the time to failure seems right skewed. It should dieally be normally distributed.}
 	\label{fig:timeToFailureDistribution}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{logTimeToFailureDistribution}
-	\caption{Log transformed time distribution looks more left skewed than normal.}
+	\caption{In this plot we can see that applying a logarithmic transform to the time to failure results in a left skewed distribution.}
 	\label{fig:logTimeToFailureDistribution}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{sqrtTimeToFailureDistribution}
-	\caption{The distribution of the time after square root transformation is still not ideally normal, but looks much better than the distribution of the time after log transformation.}
+	\caption{In this plot we can see that applying a square root transformation to the time to failure is still not normal but improved the distribution significantly}
 	\label{fig:sqrtTimeToFailureDistribution}
 \end{figure}
 \clearpage
 \newpage
 \section{Feature Engineering}
-LANL, working with quasi periodic seismic signals, achieved 0.89 coefficient of determination, using Random Forest technique and dividing data by 1.8 seconds time windows \cite{Bertrand}.  The most important features in LANL model were variance, kurtosis and threshold. We used a similar approach. Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divided our data into time windows that each contain 0.3 seconds of data (1,500,000 observations), which is small enough compared with lab quake cycle that we have (8 to 16 sec). As we discussed above, more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake. It makes sense to divide our data by 0.3 sec windows to reduce error at the end of the quake cycle. 
+Working with quasi periodic seismic signals LANL achieved a 0.89 coefficient of determination. They divided the data into 1.8 second time windows and used a Random Forest technique. \cite{Bertrand}. The most important features in the LANL model were variance, kurtosis and threshold. \par
+We used a similar approach in this study. Our goal is to predict the time remaining before the next failure using only moving time windows of the acoustic data. We divided the data into 0.3 second time windows (1,500,000 observations) which is small enough relative to the lab quake cycle which spans 8 to 16 seconds. As indicated in figure 6 more than 90\% of high acoustic values (absolute value greater than 1000) are around 0.31 seconds before an earthquake. It makes sense to divide our data by 0.3 sec windows to reduce error at the end of the quake cycle. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{rSquaredandMAE}
-	\caption{We checked how sensitive our results are to the size of the window, and found that the highest R2 and smallest MAE we were able to get with 1.5M observations in each time window.}
+	\caption{Checking how sensitive our results are to the size of the time window we find that the highest $r^2$ and smallest mean absolute error we were able to achieve is with 1.5M observations in each time window.}
 	\label{fig:rSquaredandMAE}
 \end{figure}
 
-So our new data set is 419 time windows (0.3 sec long each).  From each time window, we compute a set of 95 potentially relevant statistical features (e.g., mean, variance, kurtosis, min/max, threshold and so on), but using feature importance we found that only the following (in Table 3) were important:
+Our resulting transformed data set consists of 419 time windows (0.3 seconds each).  From each time window we compute a set of 95 potentially relevant statistical features (e.g., mean, variance, kurtosis, min/max, threshold and so on). Using feature importance techniques we found that only the following (in Table 3) are considerably important:
 \begin{table}[H]
 	\begin{center}
 		\caption{List of Engineered Features}
@@ -189,7 +190,7 @@ Variance of Rolling Absolute Mean for 100, 1000 and 10000 observations \\
 		\end{tabular}
 	\end{center}
 \end{table}
-
+%Left off here with grammar check
 We apply different machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor, Extra Trees Regressor to the new continuous values that we got, analysing acoustic time series data. \par
 In order to avoid correlation between new features we applied principal component analysis.  Instead of using 35 features, we created just 5 that represented 99.9\% of the full data variation. \par
 We use a 50/50 continuous split of the full time series for use as training and testing data sets respectively. Contiguity of train and test data sets is important, since we want to minimize contamination of the training data with information about the test data. \par

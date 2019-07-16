@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  15 JUL 2019 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  15 JUL 2019 21:44
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -346,21 +346,21 @@ ibution.png> <./sqrtTimeToFailureDistribution.png>]
 <rSquaredandMAE.png, id=58, 590.95781pt x 377.15906pt>
 File: rSquaredandMAE.png Graphic file (type png)
 <use rSquaredandMAE.png>
-Package pdftex.def Info: rSquaredandMAE.png  used on input line 163.
+Package pdftex.def Info: rSquaredandMAE.png  used on input line 164.
 (pdftex.def)             Requested size: 312.40906pt x 199.3869pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4366) has occurred while \output is active []
 
  [10
 
  <./rSquaredandMAE.png>]
-Overfull \hbox (1.26602pt too wide) in paragraph at lines 203--204
+Overfull \hbox (1.26602pt too wide) in paragraph at lines 204--205
 []\OT1/cmr/m/n/10 Hyper-parameters for this tech-nique are 'maxdepth': 25, 'max
 fea-tures': 'auto',
  []
 
 
-Overfull \hbox (70.12749pt too wide) in paragraph at lines 203--204
+Overfull \hbox (70.12749pt too wide) in paragraph at lines 204--205
 \OT1/cmr/m/n/10 'min-sam-plesleaf': 16, 'Min-i-mum Sam-ple Split': 30, 'min-wei
 ght-frac-tion-leaf': 0.06225661421078982,
  []
@@ -368,12 +368,12 @@ ght-frac-tion-leaf': 0.06225661421078982,
 <results1.png, id=63, 498.86375pt x 366.36874pt>
 File: results1.png Graphic file (type png)
 <use results1.png>
-Package pdftex.def Info: results1.png  used on input line 207.
+Package pdftex.def Info: results1.png  used on input line 208.
 (pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
 <results2.png, id=64, 498.86375pt x 366.36874pt>
 File: results2.png Graphic file (type png)
 <use results2.png>
-Package pdftex.def Info: results2.png  used on input line 214.
+Package pdftex.def Info: results2.png  used on input line 215.
 (pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
 [11]
 Overfull \vbox (18.50053pt too high) has occurred while \output is active []
@@ -383,7 +383,7 @@ Overfull \vbox (18.50053pt too high) has occurred while \output is active []
 <analysis.png, id=74, 1087.06125pt x 1056.94875pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
-Package pdftex.def Info: analysis.png  used on input line 225.
+Package pdftex.def Info: analysis.png  used on input line 226.
 (pdftex.def)             Requested size: 312.40906pt x 303.74945pt.
  [13
 
@@ -409,7 +409,7 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/danie
 mr6.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr7.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmr9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (14 pages, 908728 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (14 pages, 908965 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
