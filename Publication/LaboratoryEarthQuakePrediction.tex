@@ -150,7 +150,7 @@ Time to failure is the remaining time in seconds until an actual stick-slip fail
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{sqrtTimeToFailureDistribution}
-	\caption{In this plot we can see that applying a square root transformation to the time to failure is still not normal but improved the distribution significantly}
+	\caption{In this plot we can see that applying a square root transformation to the time to failure is still not normal but improved the distribution significantly.}
 	\label{fig:sqrtTimeToFailureDistribution}
 \end{figure}
 \clearpage
@@ -191,36 +191,54 @@ Variance of Rolling Absolute Mean for 100, 1000 and 10000 observations \\
 	\end{center}
 \end{table}
 %Left off here with grammar check
-We apply different machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor, Extra Trees Regressor to the new continuous values that we got, analysing acoustic time series data. \par
-In order to avoid correlation between new features we applied principal component analysis.  Instead of using 35 features, we created just 5 that represented 99.9\% of the full data variation. \par
-We use a 50/50 continuous split of the full time series for use as training and testing data sets respectively. Contiguity of train and test data sets is important, since we want to minimize contamination of the training data with information about the test data. \par
-We computed regularization hyper-parameters for each machine learning predicting techniques by random grid search based on a 3-fold cross-validation.
+We apply different machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor and Extra Trees Regressor to the new continuous values that we created analyzing acoustic time series data. \par
+To avoid correlation between the new features we applied a principal component analysis technique. The principle components allows us to reduce the number of features from 35 to only 5 which represents 99.9\% of the full data variation. \par
+We use a 50/50 continuous split of the data for use as training and testing data sets respectively. Contiguity of the train and test data sets is important to minimize contamination of the training data with information about the test data. \par
+We selected regularization hyper-parameters for each machine learning algorithm using random grid search technique based on a 3-fold cross-validation.
 %\clearpage
 %\newpage
 \section{Results}
-We run different techniques on a training data set (50\% of the full data) before principal component analysis and after. Principal component analysis did not improve our findings significantly. We quantify the accuracy of our model using $r^2$ (the coefficient of determination) and MAE (mean absolute error), applying predicting model on test data set. The best results we achieved using  Extra Trees Regressor technique: MAE: 1.61, $r^2 = 0.65$. \par
+We run different techniques on a training data set (50\% of the full data) before principal component analysis and after. Principal component analysis did not allow for any significant improvement in our results. We apply our model to generate predictions on the test data  and measure the accuracy of them using $r^2$ (the coefficient of determination) and MAE (mean absolute error). \par 
 
-%Add Scitkitlearn definitions? Add top background definitions as well?
-Hyper-parameters for this technique are 'maxdepth': 25,  'maxfeatures': 'auto', 'minsamplesleaf': 16,  'Minimum Sample Split': 30, 'minweightfractionleaf': 0.06225661421078982,  'nestimators': 400. The Extra Trees Regressor overview is presented in the section 2.2.
+The most accurate results were achieved by the Extra Trees Regressor algorithm with 1,61 seconds MAE and 0.65 $r^2$. The parameters used are displayed in table 3. %Add Scitkitlearn definitions? Add top background definitions as well? 
+The hyper-parameters used with the algorithm  were:
+
+\begin{table}
+	\begin{center}
+		\caption{Extra Trees Regressor Parameters}
+		\label{tab:hyperparameters}
+		\begin{tabular}{l|l} 
+			\textbf{Parameter} & \textbf{Setting}\\
+			\hline
+			maximum depth & 25 \\ 
+			maximum features & auto \\ 
+			minimum samples leaf & 16 \\ 
+			minimum samples split & 30 \\ 
+			mimimum weight fraction leaf & 0.0623 \\
+			number of estimators & 400 \\
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\par
 
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{results1}
-	\caption{When making a prediction (red curve), we emphasize that there is no past or future information considered: each prediction uses only the information within one single time window of the acoustic signal.}
+	\caption{We emphasize that there is no past or future information considered in calculating the predictions (red line). Each prediction uses only the acoustic signal information within one single time window.}
 	\label{fig:results1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.9\linewidth]{results2}
-	\caption{Results we achieved using Ada Boost Regressor: MAE: 1.67, r2score: 0.62.
-		Hyper-parameters for this technique are:'learningrate': 0.018261985736355728, 'loss': 'square', nestimators = 500, baseestimator=Ridge(alpha=1).}
+	\caption{Results achieved with the Ada Boost Regressor algorithm are 1.67 MAE and 0.62 $r^2$ score. The hyper parameters used are learning rate = 0.01826, loss = square, number of estimators = 500 and base estimator= Ridge(alpha=1).}
 	\label{fig:results2}
 \end{figure}
 \clearpage
 \newpage
 \section{Analysis}
-The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we got using Extra Trees Regressor. The most important features are shown on Fig. 12. Top 5 are 90\% and 95\% Quartiles rolling standard deviations, standard deviation of rolling absolute mean, average rolling standard deviation.
+The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we achieved using the Extra Trees Regressor. The most important features are shown on figure 14. The top 5 are 90\% and 95\% quartile rolling standard deviations, standard deviation of rolling absolute mean and average rolling standard deviation.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.9\linewidth]{analysis}
@@ -235,7 +253,7 @@ Our responsibility to report our results has to be weighed with our responsibili
 
 \section{Conclusions}
 
-Given the more realistic data, Machine Learning can provide failure forecasts based on small time windows. The acoustic signal measurement is an indicator of imminent failure. The recurrence interval is not needed to make a prediction. The Extra Trees Regressor machine learning technique provides the most accurate results.
+Given the more realistic data Machine Learning can provide failure forecasts based on small windows of time. The acoustic signal measurement is an indicator of imminent failure. The prior recurrence interval is not needed to make a prediction. The Extra Trees Regressor machine learning technique provides the most accurate results.
 
 %The results are another step toward learning the siesmic signals encouraging Machine Learning analysis of seismic signals in Earth.
 
