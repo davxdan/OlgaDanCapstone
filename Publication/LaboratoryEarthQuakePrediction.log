@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  20 JUL 2019 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  20 JUL 2019 10:49
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -365,17 +365,14 @@ File: results2.png Graphic file (type png)
 Package pdftex.def Info: results2.png  used on input line 234.
 (pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
  [11] [12 <./results1.png>] [13 <./results2.png>]
-<analysis.png, id=78, 737.75626pt x 1417.295pt>
+<analysis.png, id=78, 1469.49pt x 1425.325pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
-Package pdftex.def Info: analysis.png  used on input line 245.
-(pdftex.def)             Requested size: 207.34709pt x 398.3321pt.
-
-Underfull \vbox (badness 2452) has occurred while \output is active []
-
+Package pdftex.def Info: analysis.png  used on input line 246.
+(pdftex.def)             Requested size: 347.12354pt x 336.69131pt.
  [14
 
- <./analysis.png>] (LaboratoryEarthQuakePrediction.bbl [15]) [16]
+ <./analysis.png>] (LaboratoryEarthQuakePrediction.bbl) [15]
 (LaboratoryEarthQuakePrediction.aux) ) 
 Here is how much of TeX's memory you used:
  2194 strings out of 492895
@@ -396,9 +393,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (16 pages, 844403 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (15 pages, 919056 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
