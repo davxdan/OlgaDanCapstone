@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  20 JUL 2019 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  20 JUL 2019 11:03
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -269,27 +269,27 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 12.
+(Font)              <7> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 12.
+(Font)              <5> on input line 14.
  [1
 
 {C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <background.png, id=9, 519.81703pt x 201.00093pt>
 File: background.png Graphic file (type png)
 <use background.png>
-Package pdftex.def Info: background.png  used on input line 46.
+Package pdftex.def Info: background.png  used on input line 48.
 (pdftex.def)             Requested size: 312.40906pt x 120.80083pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 47.
+(Font)              <9> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 47.
+(Font)              <6> on input line 49.
 
 [2 <./background.png>]
 <lab.png, id=18, 286.671pt x 271.61475pt>
 File: lab.png Graphic file (type png)
 <use lab.png>
-Package pdftex.def Info: lab.png  used on input line 59.
+Package pdftex.def Info: lab.png  used on input line 61.
 (pdftex.def)             Requested size: 208.27623pt x 197.34459pt.
 
 
@@ -299,45 +299,45 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <timeSeries.png, id=26, 586.44093pt x 368.1253pt>
 File: timeSeries.png Graphic file (type png)
 <use timeSeries.png>
-Package pdftex.def Info: timeSeries.png  used on input line 110.
+Package pdftex.def Info: timeSeries.png  used on input line 112.
 (pdftex.def)             Requested size: 312.40906pt x 196.10533pt.
 <zoomedInTimePLot.png, id=27, 586.44093pt x 368.1253pt>
 File: zoomedInTimePLot.png Graphic file (type png)
 <use zoomedInTimePLot.png>
-Package pdftex.def Info: zoomedInTimePLot.png  used on input line 116.
+Package pdftex.def Info: zoomedInTimePLot.png  used on input line 118.
 (pdftex.def)             Requested size: 312.40906pt x 196.10533pt.
 <timeToFailureHistogram.png, id=28, 301.8778pt x 201.00093pt>
 File: timeToFailureHistogram.png Graphic file (type png)
 <use timeToFailureHistogram.png>
-Package pdftex.def Info: timeToFailureHistogram.png  used on input line 122.
+Package pdftex.def Info: timeToFailureHistogram.png  used on input line 124.
 (pdftex.def)             Requested size: 277.69987pt x 184.90161pt.
 <timeDistribution.png, id=29, 362.10281pt x 275.52937pt>
 File: timeDistribution.png Graphic file (type png)
 <use timeDistribution.png>
-Package pdftex.def Info: timeDistribution.png  used on input line 128.
+Package pdftex.def Info: timeDistribution.png  used on input line 130.
 (pdftex.def)             Requested size: 277.69987pt x 211.309pt.
 <acousticDataDistribution.png, id=30, 465.99094pt x 254.45062pt>
 File: acousticDataDistribution.png Graphic file (type png)
 <use acousticDataDistribution.png>
-Package pdftex.def Info: acousticDataDistribution.png  used on input line 134.
+Package pdftex.def Info: acousticDataDistribution.png  used on input line 136.
 (pdftex.def)             Requested size: 312.40906pt x 170.59361pt.
 <timeToFailureDistribution.png, id=31, 460.72125pt x 241.65282pt>
 File: timeToFailureDistribution.png Graphic file (type png)
 <use timeToFailureDistribution.png>
-Package pdftex.def Info: timeToFailureDistribution.png  used on input line 140.
+Package pdftex.def Info: timeToFailureDistribution.png  used on input line 142.
 
 (pdftex.def)             Requested size: 312.40906pt x 163.86082pt.
 <logTimeToFailureDistribution.png, id=32, 455.45157pt x 241.65282pt>
 File: logTimeToFailureDistribution.png Graphic file (type png)
 <use logTimeToFailureDistribution.png>
 Package pdftex.def Info: logTimeToFailureDistribution.png  used on input line 1
-46.
+48.
 (pdftex.def)             Requested size: 312.40906pt x 165.75978pt.
 <sqrtTimeToFailureDistribution.png, id=33, 455.45157pt x 241.65282pt>
 File: sqrtTimeToFailureDistribution.png Graphic file (type png)
 <use sqrtTimeToFailureDistribution.png>
 Package pdftex.def Info: sqrtTimeToFailureDistribution.png  used on input line 
-152.
+154.
 (pdftex.def)             Requested size: 312.40906pt x 165.75978pt.
  [5] [6 <./timeSeries.png> <./zoomedInTimePLot.png>]
 [7 <./timeToFailureHistogram.png> <./timeDistribution.png>] [8 <./acousticDataD
@@ -346,7 +346,7 @@ ibution.png> <./sqrtTimeToFailureDistribution.png>]
 <rSquaredandMAE.png, id=58, 590.95781pt x 377.15906pt>
 File: rSquaredandMAE.png Graphic file (type png)
 <use rSquaredandMAE.png>
-Package pdftex.def Info: rSquaredandMAE.png  used on input line 164.
+Package pdftex.def Info: rSquaredandMAE.png  used on input line 166.
 (pdftex.def)             Requested size: 312.40906pt x 199.3869pt.
 
 Underfull \vbox (badness 4366) has occurred while \output is active []
@@ -357,18 +357,18 @@ Underfull \vbox (badness 4366) has occurred while \output is active []
 <results1.png, id=63, 498.86375pt x 366.36874pt>
 File: results1.png Graphic file (type png)
 <use results1.png>
-Package pdftex.def Info: results1.png  used on input line 227.
+Package pdftex.def Info: results1.png  used on input line 229.
 (pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
 <results2.png, id=64, 498.86375pt x 366.36874pt>
 File: results2.png Graphic file (type png)
 <use results2.png>
-Package pdftex.def Info: results2.png  used on input line 234.
+Package pdftex.def Info: results2.png  used on input line 236.
 (pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
  [11] [12 <./results1.png>] [13 <./results2.png>]
 <analysis.png, id=78, 1469.49pt x 1425.325pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
-Package pdftex.def Info: analysis.png  used on input line 246.
+Package pdftex.def Info: analysis.png  used on input line 248.
 (pdftex.def)             Requested size: 347.12354pt x 336.69131pt.
  [14
 
@@ -393,7 +393,7 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (16 pages, 920429 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (16 pages, 920435 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
