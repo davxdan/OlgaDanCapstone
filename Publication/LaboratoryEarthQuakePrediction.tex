@@ -68,7 +68,7 @@ The experimental data has 16 earthquakes. The shortest time to failure is 1.5 se
 
 \subsection{Extra Trees Regressor Overview}
 The Extra Trees algorithm builds an ensemble of un-pruned regression trees according to the classical top down procedure. Its two main differences from other tree-based ensemble methods are that it splits nodes by choosing cut points fully at random and that it uses the whole learning sample (rather than a bootstrap replica) to grow the trees \cite{ExtremeRandomTrees}. \par
-%grammar check left off here
+
 The Extra-Trees splitting procedure uses the number of attributes randomly selected at each node $(k)$ and the minimum sample size for splitting a node $(nmin)$. It is used several times with the full original learning sample to generate an ensemble model. We denote the number of trees of the ensemble with $(M)$  \cite{ExtremeRandomTrees}. The predictions of the trees are aggregated to yield the final prediction by a majority vote in classification and an arithmetic average in regression problems \cite{ExtremeRandomTrees}. From the bias-variance point of view, the rationale behind the Extra-Trees method is that the explicit randomization of the cut-point and attribute combined with ensemble averaging should be able to reduce variance more strongly than the weaker randomization schemes used by other methods \cite{ExtremeRandomTrees}. The usage of the full original learning sample rather than bootstrap replicas is motivated in order to minimize bias \cite{ExtremeRandomTrees}. From a computational point of view, given the simplicity of the node splitting procedure we expect the constant factor to be much smaller than in other ensemble based methods which locally optimize cut-points \cite{ExtremeRandomTrees}. The parameters $k$, $nmin$ and $M$ have different effects: $k$ determines the strength of the attribute selection process, $nmin$ the strength of averaging output noise, and $M$ the strength of the variance reduction of the ensemble model aggregation. These parameters could be adapted to the problem specifics in a manual or an automatic way (e.g. by cross-validation) \cite{ExtremeRandomTrees}. \par
 
 The sklearn.ensemble module in the Python programming language includes an averaging algorithm based on randomized decision trees known as the Extra-Trees method \cite{scikit-learn}.\par
@@ -207,7 +207,7 @@ The hyper-parameters used with the algorithm  were:
 	\begin{center}
 		\caption{Extra Trees Regressor Parameters}
 		\label{tab:hyperparameters}
-		\begin{tabular}{l|l|c} 
+		\begin{tabular}{l|l} 
 			\textbf{Parameter} & \textbf{Setting}\\
 			\hline
 			Maximum Depth & 25 \\ 
