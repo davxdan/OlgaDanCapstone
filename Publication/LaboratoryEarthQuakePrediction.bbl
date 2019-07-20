@@ -18,13 +18,6 @@ Rousset, B., B{\"u}rgmann, R., Campillo, M.:
 \newblock Slow slip events in the roots of the san andreas fault.
 \newblock Science Advances \textbf{5}(2) (2019)
 
-\bibitem{LANLNews}
-Rouet-Leduc, B.:
-\newblock Los Alamos machine learning discovers patterns that reveal earthquake
-  fault behavior.
-\newblock Los Alamos National Laboratory, P.O. Box 1663 Los Alamos, NM 87545.
-  Science briefs 2018 edn. (March 2018)
-
 \bibitem{kaggle}
 Kaggle:
 \newblock Lanl earthquake prediction.
@@ -35,10 +28,24 @@ Rouet‐Leduc, B.:
 \newblock Machine learning predicts laboratory earthquakes.
 \newblock Geophysical Research Letters \textbf{44}(18) (August 2017)
 
+\bibitem{LANLNews}
+Rouet-Leduc, B.:
+\newblock Los Alamos machine learning discovers patterns that reveal earthquake
+  fault behavior.
+\newblock Los Alamos National Laboratory, P.O. Box 1663 Los Alamos, NM 87545.
+  Science briefs 2018 edn. (March 2018)
+
 \bibitem{ExtremeRandomTrees}
 Geurts, P.:
 \newblock Extremely randomized trees.
 \newblock Springer Science + Business Media, Inc, (March 2006)
+
+\bibitem{scikit-learn}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
+  O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J.,
+  Passos, A., Cournapeau, D., Brucher, M., Perrot, M., Duchesnay, E.:
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock Journal of Machine Learning Research \textbf{12} (2011)  2825--2830
 
 \bibitem{Ayhan}
 Ayhan~Sol, H.T.:

@@ -11,7 +11,7 @@
 \institute{Southern Methodist University, Dallas TX 75205, USA otanyuk@mail.smu.edu, danieldavieau@mail.smu.edu, csouth@mail.smu.edu, dwe@lyle.smu.edu}
 \maketitle
 \begin{abstract}
-Our goal is to find the pattern of aperiodic seismic signals that precede earthquakes at any time in the earthquake’s cycle using a small window of time. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We apply machine learning to a data set that comes from a classic laboratory experiment having several stick-slip displacements (earthquakes), a type of experiment which has been studied in depth as a simulation of seismologic faults for decades. We show that by listening to the acoustic signal emitted by the laboratory experiment, a machine learning algorithm can predict the time remaining before it fails. These predictions are based only on the the acoustic signal and not its history. Los Alamos' initial work showed that the prediction of laboratory earthquakes from continuous seismic data is possible in the case of quasi-periodic laboratory seismic cycles.  \par
+Our goal is to find the pattern of aperiodic seismic signals that precede earthquakes at any time in the earthquake’s cycle using a small window of time. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We apply machine learning to a data set that comes from a classic laboratory experiment having several stick-slip displacements (earthquakes), a type of experiment which has been studied in depth as a simulation of seismologic faults for decades. We show that by listening to the acoustic signal emitted by the laboratory experiment a machine learning algorithm can predict the time remaining before it fails. These predictions are based only on the the acoustic signal and not its history. Los Alamos' initial work showed that the prediction of laboratory earthquakes from continuous seismic data is possible in the case of quasi-periodic laboratory seismic cycles.  \par
 	
 %In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71\% accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
 \end{abstract}
@@ -21,11 +21,11 @@ Earthquakes cause mass destruction and loss of life. A traditional method to pre
 
 Advances in instrumentation quality and density have fostered hope that progress can be made in forecasting. These advances have led to exciting discoveries of previously unidentified slip processes such as slow slips. Slow Slip Earthquakes (SSE) are fault behaviors that occur slowly enough to make them undetectable without instrumentation. They do not cause immediate widespread destruction like regular earthquakes do. They occur near the boundaries of large earthquake rupture zones \cite{Slip}. There is evidence to suggest that there is a relationship between slow slip earthquakes and more noticeable regular earthquakes \cite{SlowSlip}. \par
 
-Researchers imitate natural  slow slip earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{kaggle} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However, processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes. \par
+Researchers imitate natural slow slip earthquakes in the laboratory by placing rocky material between steel blocks and applying shear stress to induce slipping. Recent improvements in the instruments \cite{kaggle} used to measure signals have enabled the collection of larger volume data from more realistic and unpredictable laboratory earthquakes. However, processing the data and detecting patterns in it has become more difficult to work with. In this paper we demonstrate that machine learning can be used to detect patterns in the more realistic data and predict laboratory earthquakes. \par
 
-In this paper, given seismic signal data with considerably more aperiodic slow-slip laboratory earthquake failures, we find the pattern of  acoustic signals to predict the time at which  laboratory earthquakes will occur at any time in the slip cycle. \par
+In this paper, given seismic signal data with considerably more aperiodic slow-slip laboratory earthquake failures, we find the pattern of acoustic signals to predict the time at which laboratory earthquakes will occur at any time in the slip cycle. \par
 
-We use acoustic data provided by LANL as part of a 2019 Kaggle competition \cite{kaggle}, which also represents laboratory slow-slip earthquakes. The data is very aperiodic and more realistic compared to the data LANL studied earlier in 2017. \cite{kaggle}. The results of this experiment are potentially applicable to the field of real world earthquakes \cite{Bertrand}. Other potential applications include avalanche prediction or failure of machine parts \cite{Bertrand}. \par
+We use acoustic data provided by the Los Alamos National Laboratory (LANL) as part of a 2019 Kaggle competition \cite{kaggle}, which also represents laboratory slow-slip earthquakes. The data is very aperiodic and more realistic than the data LANL studied earlier in 2017. \cite{kaggle}. The results of this experiment are potentially applicable to the field of real world earthquakes \cite{Bertrand}. Other potential applications include avalanche prediction or failure of machine parts \cite{Bertrand}. \par
 
 
 %Earthquakes cause mass destruction and loss of life. Traditional earthquake prediction methods have relied on recurrence interval based models. Because the recurrences are not constant predictions can only be made within decade spanning time windows. One such model predicted that a magnitude 6 earthquake would occur between 1985 and 1993 in the Parkfield California area but no significant event occurred until 2004 \cite{Jackson}. \par
@@ -71,8 +71,8 @@ The Extra Trees algorithm builds an ensemble of un-pruned regression trees accor
 %grammar check left off here
 The Extra-Trees splitting procedure uses the number of attributes randomly selected at each node $(k)$ and the minimum sample size for splitting a node $(nmin)$. It is used several times with the full original learning sample to generate an ensemble model. We denote the number of trees of the ensemble with $(M)$  \cite{ExtremeRandomTrees}. The predictions of the trees are aggregated to yield the final prediction by a majority vote in classification and an arithmetic average in regression problems \cite{ExtremeRandomTrees}. From the bias-variance point of view, the rationale behind the Extra-Trees method is that the explicit randomization of the cut-point and attribute combined with ensemble averaging should be able to reduce variance more strongly than the weaker randomization schemes used by other methods \cite{ExtremeRandomTrees}. The usage of the full original learning sample rather than bootstrap replicas is motivated in order to minimize bias \cite{ExtremeRandomTrees}. From a computational point of view, given the simplicity of the node splitting procedure we expect the constant factor to be much smaller than in other ensemble based methods which locally optimize cut-points \cite{ExtremeRandomTrees}. The parameters $k$, $nmin$ and $M$ have different effects: $k$ determines the strength of the attribute selection process, $nmin$ the strength of averaging output noise, and $M$ the strength of the variance reduction of the ensemble model aggregation. These parameters could be adapted to the problem specifics in a manual or an automatic way (e.g. by cross-validation) \cite{ExtremeRandomTrees}. \par
 
-The sklearn.ensemble module in the Python programming language includes an averaging algorithm based on randomized decision trees known as the Extra-Trees method. \par
-%Left off here
+The sklearn.ensemble module in the Python programming language includes an averaging algorithm based on randomized decision trees known as the Extra-Trees method \cite{scikit-learn}.\par
+
 \section{Data} 
 The data used in this work is a 157.275 second recording of seismic signals (ordered in sequentially.) It was recorded at 4MHz hence 629,145,480 data points accompanied by the time remaining in seconds until the following lab earthquake. \par
 The seismic signals are recorded using a piezoceramic sensor which outputs a voltage upon deformation by incoming seismic waves (henceforth we will use the term acoustic signal). The seismic data, which serves as the input to our analysis, is this recorded voltage, in integers. \par
@@ -207,15 +207,15 @@ The hyper-parameters used with the algorithm  were:
 	\begin{center}
 		\caption{Extra Trees Regressor Parameters}
 		\label{tab:hyperparameters}
-		\begin{tabular}{l|l} 
+		\begin{tabular}{l|l|c} 
 			\textbf{Parameter} & \textbf{Setting}\\
 			\hline
-			maximum depth & 25 \\ 
-			maximum features & auto \\ 
-			minimum samples leaf & 16 \\ 
-			minimum samples split & 30 \\ 
-			mimimum weight fraction leaf & 0.0623 \\
-			number of estimators & 400 \\
+			Maximum Depth & 25 \\ 
+			Maximum Features & Auto \\ 
+			Minimum Samples Leaf & 16 \\ 
+			Minimum Samples Split & 30 \\ 
+			Minimum Weight Fraction Leaf & 0.0623 \\
+			Number of Estimators & 400 \\
 		\end{tabular}
 	\end{center}
 \end{table}
