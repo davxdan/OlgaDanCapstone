@@ -190,7 +190,7 @@ Variance of Rolling Absolute Mean for 100, 1000 and 10000 observations \\
 		\end{tabular}
 	\end{center}
 \end{table}
-%Left off here with grammar check
+
 We apply different machine learning techniques such as the Random Forest Regressor, XGB Regressor,  Decision Tree Regressor, LGBM Regressor and Extra Trees Regressor to the new continuous values that we created analyzing acoustic time series data. \par
 To avoid correlation between the new features we applied a principal component analysis technique. The principle components allows us to reduce the number of features from 35 to only 5 which represents 99.9\% of the full data variation. \par
 We use a 50/50 continuous split of the data for use as training and testing data sets respectively. Contiguity of the train and test data sets is important to minimize contamination of the training data with information about the test data. \par
@@ -239,13 +239,14 @@ The hyper-parameters used with the algorithm  were:
 \newpage
 \section{Analysis}
 The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we achieved using the Extra Trees Regressor. The most important features are shown on figure 14. The top 5 are 90\% and 95\% quartile rolling standard deviations, standard deviation of rolling absolute mean and average rolling standard deviation.
+%$SD = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.9\linewidth]{analysis}
+	\includegraphics[width=14cm,height=14cm,keepaspectratio]{analysis}
+%	\includegraphics[width=1\linewidth]{analysis}
 	\caption{}
 	\label{fig:analysis}
 \end{figure}
-
 
 \section{Ethics}
 
