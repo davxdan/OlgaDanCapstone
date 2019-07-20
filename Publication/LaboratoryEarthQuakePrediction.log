@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  20 JUL 2019 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  20 JUL 2019 12:07
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -275,11 +275,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<background.png, id=9, 622.95235pt x 289.08pt>
+<background.png, id=9, 624.45796pt x 287.95078pt>
 File: background.png Graphic file (type png)
 <use background.png>
 Package pdftex.def Info: background.png  used on input line 48.
-(pdftex.def)             Requested size: 312.40906pt x 144.97191pt.
+(pdftex.def)             Requested size: 312.40906pt x 144.05852pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -393,7 +393,7 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (16 pages, 930544 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (16 pages, 930194 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
