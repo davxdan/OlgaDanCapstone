@@ -1,0 +1,97 @@
+\relax 
+\citation{Jackson}
+\citation{Slip}
+\citation{SlowSlip}
+\citation{kaggle}
+\@writefile{toc}{\contentsline {chapter}{Southern Methodist University}{0}}
+\@writefile{toc}{\contentsline {title}{Machine Learning Predicts Aperiodic Laboratory Earthquakes}{1}\protected@file@percent }
+\@writefile{toc}{\authcount {2}}
+\@writefile{toc}{\contentsline {author}{Olha Tanyuk, Daniel Davieau, Charles South \and Daniel W. Engels}{1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}\protected@file@percent }
+\citation{kaggle}
+\citation{kaggle}
+\citation{Bertrand}
+\citation{Bertrand}
+\citation{LANLNews}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Statistical Values to Evaluate Predictions}{2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The values used to evaluate predictions in our work are the coefficient of determination $r^2$ and mean absolute error ($MAE$).}}{2}\protected@file@percent }
+\newlabel{fig:background}{{1}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Los Alamos National Laboratory's Findings}{2}\protected@file@percent }
+\citation{LANLNews}
+\citation{LANLNews}
+\citation{LANLNews}
+\citation{LANLNews}
+\citation{kaggle}
+\citation{kaggle}
+\citation{kaggle}
+\citation{kaggle}
+\citation{Bertrand}
+\citation{Bertrand}
+\citation{Bertrand}
+\citation{Bertrand}
+\citation{Bertrand}
+\citation{ExtremeRandomTrees}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Experimental Setup}{3}\protected@file@percent }
+\citation{ExtremeRandomTrees}
+\citation{ExtremeRandomTrees}
+\citation{ExtremeRandomTrees}
+\citation{ExtremeRandomTrees}
+\citation{ExtremeRandomTrees}
+\citation{ExtremeRandomTrees}
+\citation{scikit-learn}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces }}{4}\protected@file@percent }
+\newlabel{fig:lab}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Extra Trees Regressor Overview}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Data}{5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces }}{5}\protected@file@percent }
+\newlabel{tab:SampleData}{{1}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces We can see that the acoustic signal shows huge fluctuations regularly just before the failure. It is also worth noting that failures can be predicted visually as cases when huge fluctuations in the signal are followed by smaller signals.}}{6}\protected@file@percent }
+\newlabel{fig:timeseries}{{3}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces On this zoomed-in time plot we can see that the large acoustic signal oscillation at the 1.572 second mark is not at the exact time of the failure but just before it. There are trains of intense signal oscillations preceding the large one and some smaller ones after it.}}{6}\protected@file@percent }
+\newlabel{fig:zoomeInTimePlot}{{4}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces In this 1\% sample of the data we can see that the voltage amplitude of acoustic precursors accelerates as failure approaches, suggesting that upcoming laboratory earthquake timing could be predicted. The red line indicates that a quake occurs when the time to failure approaches 0. The minimum time remaining until the quake is -5.5150e+03 sec.}}{7}\protected@file@percent }
+\newlabel{fig:timeToFailureHistogram}{{5}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces We found that more than 90\% of high acoustic signal values (absolute value greater than 1000) are around 0.31 seconds before an earthquake!}}{7}\protected@file@percent }
+\newlabel{fig:timeDistribution}{{6}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The distribution of the acoustic signals have a very high peak and we see outliers in both directions}}{8}\protected@file@percent }
+\newlabel{fig:acousticDataDistribution}{{7}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The distribution of the time to failure seems right skewed. It should dieally be normally distributed.}}{8}\protected@file@percent }
+\newlabel{fig:timeToFailureDistribution}{{8}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces In this plot we can see that applying a logarithmic transform to the time to failure results in a left skewed distribution.}}{9}\protected@file@percent }
+\newlabel{fig:logTimeToFailureDistribution}{{9}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces In this plot we can see that applying a square root transformation to the time to failure is still not normal but improved the distribution significantly.}}{9}\protected@file@percent }
+\newlabel{fig:sqrtTimeToFailureDistribution}{{10}{9}}
+\citation{Bertrand}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Feature Engineering}{10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Checking how sensitive our results are to the size of the time window we find that the highest $r^2$ and smallest mean absolute error we were able to achieve is with 1.5M observations in each time window.}}{10}\protected@file@percent }
+\newlabel{fig:rSquaredandMAE}{{11}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces List of Engineered Features}}{11}\protected@file@percent }
+\newlabel{tab:engineeredFeatrures}{{2}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{11}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Extra Trees Regressor Parameters}}{12}\protected@file@percent }
+\newlabel{tab:hyperparameters}{{3}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces We emphasize that there is no past or future information considered in calculating the predictions (red line). Each prediction uses only the acoustic signal information within one single time window.}}{12}\protected@file@percent }
+\newlabel{fig:results1}{{12}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Results achieved with the Ada Boost Regressor algorithm are 1.67 MAE and 0.62 $r^2$ score. The hyper parameters used are learning rate = 0.01826, loss = square, number of estimators = 500 and base estimator= Ridge(alpha=1).}}{13}\protected@file@percent }
+\newlabel{fig:results2}{{13}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Analysis}{14}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces }}{14}\protected@file@percent }
+\newlabel{fig:analysis}{{14}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Ethics}{14}\protected@file@percent }
+\citation{Ayhan}
+\citation{Ayhan}
+\citation{Ayhan}
+\bibstyle{splncs}
+\bibdata{myBibliography}
+\bibcite{Jackson}{1}
+\bibcite{Slip}{2}
+\bibcite{SlowSlip}{3}
+\bibcite{kaggle}{4}
+\bibcite{Bertrand}{5}
+\bibcite{LANLNews}{6}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusions}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Acknowledgment}{15}\protected@file@percent }
+\bibcite{ExtremeRandomTrees}{7}
+\bibcite{scikit-learn}{8}
+\bibcite{Ayhan}{9}
