@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  20 JUL 2019 12:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  12 AUG 2019 19:55
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -285,117 +285,124 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 49.
 
-[2 <./background.png>]
-<lab.png, id=18, 286.671pt x 271.61475pt>
+[2 <./background.png>] [3]
+<lab.png, id=21, 286.671pt x 271.61475pt>
 File: lab.png Graphic file (type png)
 <use lab.png>
-Package pdftex.def Info: lab.png  used on input line 61.
+Package pdftex.def Info: lab.png  used on input line 70.
 (pdftex.def)             Requested size: 208.27623pt x 197.34459pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3] [4 <./lab.png>]
-<timeSeries.png, id=26, 586.44093pt x 368.1253pt>
+ [4 <./lab.png>]
+<timeSeries.png, id=25, 586.44093pt x 368.1253pt>
 File: timeSeries.png Graphic file (type png)
 <use timeSeries.png>
-Package pdftex.def Info: timeSeries.png  used on input line 112.
+Package pdftex.def Info: timeSeries.png  used on input line 122.
 (pdftex.def)             Requested size: 312.40906pt x 196.10533pt.
-<zoomedInTimePLot.png, id=27, 586.44093pt x 368.1253pt>
+<zoomedInTimePLot.png, id=26, 586.44093pt x 368.1253pt>
 File: zoomedInTimePLot.png Graphic file (type png)
 <use zoomedInTimePLot.png>
-Package pdftex.def Info: zoomedInTimePLot.png  used on input line 118.
+Package pdftex.def Info: zoomedInTimePLot.png  used on input line 128.
 (pdftex.def)             Requested size: 312.40906pt x 196.10533pt.
-<timeToFailureHistogram.png, id=28, 301.8778pt x 201.00093pt>
+<timeToFailureHistogram.png, id=27, 301.8778pt x 201.00093pt>
 File: timeToFailureHistogram.png Graphic file (type png)
 <use timeToFailureHistogram.png>
-Package pdftex.def Info: timeToFailureHistogram.png  used on input line 124.
+Package pdftex.def Info: timeToFailureHistogram.png  used on input line 134.
 (pdftex.def)             Requested size: 277.69987pt x 184.90161pt.
-<timeDistribution.png, id=29, 362.10281pt x 275.52937pt>
+<timeDistribution.png, id=28, 362.10281pt x 275.52937pt>
 File: timeDistribution.png Graphic file (type png)
 <use timeDistribution.png>
-Package pdftex.def Info: timeDistribution.png  used on input line 130.
+Package pdftex.def Info: timeDistribution.png  used on input line 140.
 (pdftex.def)             Requested size: 277.69987pt x 211.309pt.
-<acousticDataDistribution.png, id=30, 465.99094pt x 254.45062pt>
+<acousticDataDistribution.png, id=29, 465.99094pt x 254.45062pt>
 File: acousticDataDistribution.png Graphic file (type png)
 <use acousticDataDistribution.png>
-Package pdftex.def Info: acousticDataDistribution.png  used on input line 136.
+Package pdftex.def Info: acousticDataDistribution.png  used on input line 146.
 (pdftex.def)             Requested size: 312.40906pt x 170.59361pt.
-<timeToFailureDistribution.png, id=31, 460.72125pt x 241.65282pt>
+<timeToFailureDistribution.png, id=30, 460.72125pt x 241.65282pt>
 File: timeToFailureDistribution.png Graphic file (type png)
 <use timeToFailureDistribution.png>
-Package pdftex.def Info: timeToFailureDistribution.png  used on input line 142.
+Package pdftex.def Info: timeToFailureDistribution.png  used on input line 152.
 
 (pdftex.def)             Requested size: 312.40906pt x 163.86082pt.
-<logTimeToFailureDistribution.png, id=32, 455.45157pt x 241.65282pt>
+<logTimeToFailureDistribution.png, id=31, 455.45157pt x 241.65282pt>
 File: logTimeToFailureDistribution.png Graphic file (type png)
 <use logTimeToFailureDistribution.png>
 Package pdftex.def Info: logTimeToFailureDistribution.png  used on input line 1
-48.
+58.
 (pdftex.def)             Requested size: 312.40906pt x 165.75978pt.
-<sqrtTimeToFailureDistribution.png, id=33, 455.45157pt x 241.65282pt>
+<sqrtTimeToFailureDistribution.png, id=32, 455.45157pt x 241.65282pt>
 File: sqrtTimeToFailureDistribution.png Graphic file (type png)
 <use sqrtTimeToFailureDistribution.png>
 Package pdftex.def Info: sqrtTimeToFailureDistribution.png  used on input line 
-154.
+164.
 (pdftex.def)             Requested size: 312.40906pt x 165.75978pt.
- [5] [6 <./timeSeries.png> <./zoomedInTimePLot.png>]
-[7 <./timeToFailureHistogram.png> <./timeDistribution.png>] [8 <./acousticDataD
-istribution.png> <./timeToFailureDistribution.png>] [9 <./logTimeToFailureDistr
-ibution.png> <./sqrtTimeToFailureDistribution.png>]
-<rSquaredandMAE.png, id=58, 590.95781pt x 377.15906pt>
+ [5] [6 <./timeSeries.png>] [7 <./zoomedInTimePLot.png> <./timeToFailureHistogr
+am.png>] [8 <./timeDistribution.png> <./acousticDataDistribution.png>] [9 <./ti
+meToFailureDistribution.png> <./logTimeToFailureDistribution.png>] [10 <./sqrtT
+imeToFailureDistribution.png>]
+<rSquaredandMAE.png, id=61, 590.95781pt x 377.15906pt>
 File: rSquaredandMAE.png Graphic file (type png)
 <use rSquaredandMAE.png>
-Package pdftex.def Info: rSquaredandMAE.png  used on input line 166.
+Package pdftex.def Info: rSquaredandMAE.png  used on input line 176.
 (pdftex.def)             Requested size: 312.40906pt x 199.3869pt.
 
 Underfull \vbox (badness 4366) has occurred while \output is active []
 
- [10
+ [11
 
  <./rSquaredandMAE.png>]
-<results1.png, id=63, 498.86375pt x 366.36874pt>
+<results1.png, id=66, 498.86375pt x 366.36874pt>
 File: results1.png Graphic file (type png)
 <use results1.png>
-Package pdftex.def Info: results1.png  used on input line 229.
+Package pdftex.def Info: results1.png  used on input line 239.
 (pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
-<results2.png, id=64, 498.86375pt x 366.36874pt>
+<results2.png, id=67, 498.86375pt x 366.36874pt>
 File: results2.png Graphic file (type png)
 <use results2.png>
-Package pdftex.def Info: results2.png  used on input line 236.
+Package pdftex.def Info: results2.png  used on input line 246.
 (pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
- [11] [12 <./results1.png>] [13 <./results2.png>]
-<analysis.png, id=78, 1469.49pt x 1425.325pt>
+ [12] [13 <./results1.png>] [14 <./results2.png>]
+<analysis.png, id=81, 1469.49pt x 1425.325pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
-Package pdftex.def Info: analysis.png  used on input line 248.
+Package pdftex.def Info: analysis.png  used on input line 258.
 (pdftex.def)             Requested size: 347.12354pt x 336.69131pt.
- [14
+ [15
 
- <./analysis.png>] (LaboratoryEarthQuakePrediction.bbl [15]) [16]
-(LaboratoryEarthQuakePrediction.aux) ) 
+ <./analysis.png>] (LaboratoryEarthQuakePrediction.bbl [16]
+Overfull \hbox (37.42274pt too wide) in paragraph at lines 32--35
+[]\OT1/cmr/m/n/9 Wald, L.:  The sci-ence of earth-quakes.  https://earthquake.u
+sgs.gov/learn/kids/eqscience.php
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--65
+\OT1/cmr/m/n/9 https://www.acm.org/binaries/content/assets/about/acm-code-of-et
+hics-
+ []
+
+) [17] (LaboratoryEarthQuakePrediction.aux) ) 
 Here is how much of TeX's memory you used:
- 2194 strings out of 492895
- 31823 string characters out of 3123736
- 104923 words of memory out of 3000000
- 6085 multiletter control sequences out of 15000+200000
+ 2196 strings out of 492895
+ 31813 string characters out of 3123736
+ 105932 words of memory out of 3000000
+ 6087 multiletter control sequences out of 15000+200000
  7289 words of font info for 26 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,25p,1686b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/danie/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/danie/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danie
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:
-/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (16 pages, 930194 bytes).
+ 41i,8n,25p,1485b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/danie/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/danie/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
+s/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.
+pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on LaboratoryEarthQuakePrediction.pdf (17 pages, 931818 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

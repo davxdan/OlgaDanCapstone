@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Jackson}
 Jackson, D.D.:
@@ -28,6 +28,16 @@ Rouet‐Leduc, B.:
 \newblock Machine learning predicts laboratory earthquakes.
 \newblock Geophysical Research Letters \textbf{44}(18) (August 2017)
 
+\bibitem{Wald}
+Wald, L.:
+\newblock The science of earthquakes.
+\newblock https://earthquake.usgs.gov/learn/kids/eqscience.php (8 2019)
+
+\bibitem{Hayes}
+Hayes, G., Wald, D.:
+\newblock Earthquake magnitude, energy release, and shaking intensity.
+\newblock https://earthquake.usgs.gov/learn/topics/mag-intensity/ (8 2019)
+
 \bibitem{LANLNews}
 Rouet-Leduc, B.:
 \newblock Los Alamos machine learning discovers patterns that reveal earthquake
@@ -35,22 +45,22 @@ Rouet-Leduc, B.:
 \newblock Los Alamos National Laboratory, P.O. Box 1663 Los Alamos, NM 87545.
   Science briefs 2018 edn. (March 2018)
 
-\bibitem{ExtremeRandomTrees}
-Geurts, P.:
-\newblock Extremely randomized trees.
-\newblock Springer Science + Business Media, Inc, (March 2006)
-
-\bibitem{scikit-learn}
-Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
-  O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J.,
-  Passos, A., Cournapeau, D., Brucher, M., Perrot, M., Duchesnay, E.:
-\newblock Scikit-learn: Machine learning in {P}ython.
-\newblock Journal of Machine Learning Research \textbf{12} (2011)  2825--2830
+\bibitem{Liaw}
+Liaw, A., Wiener, M.:
+\newblock Classification and regression by randomforest.
+\newblock Forest \textbf{23} (11 2001)
 
 \bibitem{Ayhan}
 Ayhan~Sol, H.T.:
 \newblock The ethics of earthquake prediction.
 \newblock Science and Engineering Ethics \textbf{10}(4) (December 2004)
   655--666
+
+\bibitem{ACM}
+Committee, A.f.C.M.:
+\newblock Acm code of ethics and professional conduct.
+\newblock Web,
+  https://www.acm.org/binaries/content/assets/about/acm-code-of-ethics-booklet.pdf
+  (8 2018)
 
 \end{thebibliography}

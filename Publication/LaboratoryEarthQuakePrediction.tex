@@ -13,7 +13,7 @@
 
 \maketitle
 \begin{abstract}
-Our goal is to find the pattern of aperiodic seismic signals that precede earthquakes at any time in the earthquake’s cycle using a small window of time. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes, so the same approach may work in predicting the timing of natural earthquakes. We apply machine learning to a data set that comes from a classic laboratory experiment having several stick-slip displacements (earthquakes), a type of experiment which has been studied in depth as a simulation of seismologic faults for decades. We show that by listening to the acoustic signal emitted by the laboratory experiment a machine learning algorithm can predict the time remaining before it fails. These predictions are based only on the the acoustic signal and not its history. \par
+ In this paper we find a pattern of aperiodic seismic signals that precede earthquakes at any time in a laboratory earthquake’s cycle using a small window of time.  We use data collected from an experiment which exhibits similar behavior to natural earthquakes, so the same approach may work in predicting the timing of natural earthquakes. We apply machine learning to a data set that comes from a classic laboratory experiment having several stick-slip displacements (earthquakes), a type of experiment which has been studied in depth as a simulation of seismologic faults for decades. We show that by listening to the acoustic signal emitted by the laboratory experiment a machine learning algorithm can predict the time remaining before it fails. These predictions are based only on the the acoustic signal and not its history. \par
 	
 %In this paper we present a method for predicting the timing of laboratory earthquakes using machine learning. If a similar approach can be applied to improve natural earthquake prediction it will save lives. We use data collected from a laboratory experiment which exhibits similar behavior to natural earthquakes. We train a machine learning algorithm using half of the data, then predict using the other half. We compare predicted versus actual timings to measure the algorithm's accuracy. The result shows that the timing of laboratory earthquakes can be predicted up to 16 seconds in advance with 71\% accuracy. The method and result demonstrates that machine learning can help if it can be scaled from the laboratory experiment to natural earthquakes. \par
 \end{abstract}
@@ -50,6 +50,15 @@ We use acoustic data provided by the Los Alamos National Laboratory (LANL) as pa
 	\label{fig:background}
 \end{figure}
 
+\subsection{Earthquakes}
+An earthquake is the shaking of the surface of the Earth, resulting from the sudden release of energy in the Earth’s lithosphere that creates seismic waves. It happens when two blocks of the earth suddenly slip past one another. The surface where they slip is called the fault or fault plane \cite{Wald}. \par
+
+The earth has four major layers: the inner core, outer core, mantle and crust \cite{Wald}. The crust and the top of the mantle make up a thin skin on the surface of our
+planet; this skin is not all in one piece – it is made up of many pieces like a puzzle covering the surface of the earth \cite{Wald}. These puzzle pieces are called tectonic plates, and the edges of the plates are called the plate boundaries. Tectonic plates keep slowly moving around, sliding past one another and bumping into each other. The plate boundaries are made up of many faults, and most of the earthquakes around the world occur on these faults \cite{Wald}. Since the edges of the plates are rough, they get stuck while the rest of the plate keeps moving \cite{Wald}. Finally, when the plate has moved far enough, the edges unstick on one of the faults and there is an earthquake \cite{Wald}. \par
+
+The size of an earthquake depends on the size of the fault and the amount of slip on the fault, but that’s not something scientists can simply measure with a measuring tape since faults are many kilometers deep beneath the earth’s surface \cite{Wald}. The size of the earthquake is called its magnitude. The Richter Scale (ML) is what most people have heard about, but in practice it is not commonly used anymore, except for small earthquakes recorded locally, for which ML and short-period surface wave magnitude (Mblg) are the only magnitudes that can be measured \cite{Hayes}. For all other earthquakes, the moment magnitude (Mw) scale is a more accurate measure of the earthquake size \cite{Hayes}.
+
+
 \subsection{Los Alamos National Laboratory's Findings}
 In 2017 Los Alamos National Laboratory (LANL) researchers discovered a way to successfully predict Slow Slip Earthquakes (SSE) in a laboratory experiment that simulates natural conditions. The team trained a computer to pinpoint and analyze quasi‐periodic seismic and acoustic signals emitted during the movements along the fault. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times using time window of 1.8 sec of the data to make each prediction with 89\% coefficient of determination \cite{LANLNews}. This result was achieved using a Random Forest Regression machine learning technique and quasi‐periodic data. \par
 
@@ -68,12 +77,13 @@ A driving piston displaces at a very constant velocity during the inter-event ti
 
 The experimental data has 16 earthquakes. The shortest time to failure is 1.5 seconds for the first earthquake, 7 seconds for the 7th and the longest is around 16 seconds. \par
 
-\subsection{Extra Trees Regressor Overview}
-The Extra Trees algorithm builds an ensemble of un-pruned regression trees according to the classical top down procedure. Its two main differences from other tree-based ensemble methods are that it splits nodes by choosing cut points fully at random and that it uses the whole learning sample (rather than a bootstrap replica) to grow the trees \cite{ExtremeRandomTrees}. \par
-
-The Extra-Trees splitting procedure uses the number of attributes randomly selected at each node $(k)$ and the minimum sample size for splitting a node $(nmin)$. It is used several times with the full original learning sample to generate an ensemble model. We denote the number of trees of the ensemble with $(M)$  \cite{ExtremeRandomTrees}. The predictions of the trees are aggregated to yield the final prediction by a majority vote in classification and an arithmetic average in regression problems \cite{ExtremeRandomTrees}. From the bias-variance point of view, the rationale behind the Extra-Trees method is that the explicit randomization of the cut-point and attribute combined with ensemble averaging should be able to reduce variance more strongly than the weaker randomization schemes used by other methods \cite{ExtremeRandomTrees}. The usage of the full original learning sample rather than bootstrap replicas is motivated in order to minimize bias \cite{ExtremeRandomTrees}. From a computational point of view, given the simplicity of the node splitting procedure we expect the constant factor to be much smaller than in other ensemble based methods which locally optimize cut-points \cite{ExtremeRandomTrees}. The parameters $k$, $nmin$ and $M$ have different effects: $k$ determines the strength of the attribute selection process, $nmin$ the strength of averaging output noise, and $M$ the strength of the variance reduction of the ensemble model aggregation. These parameters could be adapted to the problem specifics in a manual or an automatic way (e.g. by cross-validation) \cite{ExtremeRandomTrees}. \par
-
-The sklearn.ensemble module in the Python programming language includes an averaging algorithm based on randomized decision trees known as the Extra-Trees method \cite{scikit-learn}.\par
+\subsection{Random Forest Regressor Overview}
+The random forest (RF) algorithm is as follows:\par
+1. Draw $n$(tree) bootstrap samples from the original data \cite{Liaw}.\par
+2. For each of the bootstrap samples, grow an unpruned regression tree, with the following modification: at each node, rather than choosing the best split among all predictors, randomly sample m(try) of the predictors and choose the best split from among those variables \cite{Liaw}.\par
+3. Predict new data by aggregating the predictions of the n(tree) trees \cite{Liaw}.\par
+In our work the training data is used to generate the RF model. The testing data is used to evaluate the performance of the RF model; this constitutes a fair measure of the RF performance because the testing data is independent from the training process (i.e. out of sample performance). It is very important to ensure that testing data does not leak into the training process \cite{Bertrand}. \par
+The tree is given by a bootstrap re-sampling of the training data, which induces variation between the trees and mitigates the effect of outliers on the forest \cite{Bertrand}. To generate each node, we formulate a "yes"/"no" decision (corresponding to a split into left/right branches) operating on the data available at the current node. At each node, we select a random subset of the available features. From the selected features, we construct the decision that best predicts the time to failure \cite{Bertrand}.
 
 \section{Data} 
 The data used in this work is a 157.275 second recording of seismic signals (ordered in sequentially.) It was recorded at 4MHz hence 629,145,480 data points accompanied by the time remaining in seconds until the following lab earthquake. \par
@@ -140,7 +150,7 @@ Time to failure is the remaining time in seconds until an actual stick-slip fail
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{timeToFailureDistribution}
-	\caption{The distribution of the time to failure seems right skewed. It should dieally be normally distributed.}
+	\caption{The distribution of the time to failure seems right skewed. It should ideally be normally distributed.}
 	\label{fig:timeToFailureDistribution}
 \end{figure}
 \begin{figure}
@@ -152,7 +162,7 @@ Time to failure is the remaining time in seconds until an actual stick-slip fail
 \begin{figure}
 	\centering
 	\includegraphics[width=.9\linewidth]{sqrtTimeToFailureDistribution}
-	\caption{In this plot we can see that applying a square root transformation to the time to failure is still not normal but improved the distribution significantly.}
+	\caption{ In this plot we can see that applying a square root transformation to the time to failure is still not normal but improved the distribution significantly. We used a square root transformation for normalization of the time to failure distribution.}
 	\label{fig:sqrtTimeToFailureDistribution}
 \end{figure}
 \clearpage
@@ -254,7 +264,9 @@ The most accurate results with coefficient of determination 0.65 and mean absolu
 
 Our responsibility to report our results has to be weighed with our responsibility not to cause social disturbance. If the method demonstrated in this paper is scaled and applied to predict natural earthquakes this balance must be considered. Unwarranted predictions could have affects on personal property value while failure to report warranted predictions could result in loss of life or avoidable property damage. \par
 
-Clarence R. Allen, the chairman of the National Earthquake Prediction Evaluation Council claimed that keeping information, from the public and discussing hypotheses on earthquake prediction “behind closed doors” would cause more harm than good, for free speech is the only means to promote research and to increase public responsibility of scientists \cite{Ayhan}. The public’s demand for accurate information would encourage scientists to further their research and hinder them from making unwarranted statements that may cause disturbance in society \cite{Ayhan}. Allen seems to suggest that free scientific communication in its due course would bring order to the scientific environment by eliminating unwarranted scientific hypotheses and predictions, together with the guesses of amateurs and cranks \cite{Ayhan}.
+Clarence R. Allen, the chairman of the National Earthquake Prediction Evaluation Council claimed that keeping information, from the public and discussing hypotheses on earthquake prediction “behind closed doors” would cause more harm than good, for free speech is the only means to promote research and to increase public responsibility of scientists \cite{Ayhan}. The public’s demand for accurate information would encourage scientists to further their research and hinder them from making unwarranted statements that may cause disturbance in society \cite{Ayhan}. Allen seems to suggest that free scientific communication in its due course would bring order to the scientific environment by eliminating unwarranted scientific hypotheses and predictions, together with the guesses of amateurs and cranks \cite{Ayhan}. \par
+
+In this study we follow the principles of the Association for Computing Machinery (ACM) Code of Ethics and Professional Conduct \cite{ACM} to ensure both privacy and security of individuals, and other codes of conduct related to good ethical practices. Ethical principles to make no harm, be honest and trustworthy, respect the work required to produce new ideas were used in our work. We also took professional responsibilities to achieve high quality in both the processes and professional work, maintain high standards of professional competence, accept and provide appropriate professional review, know and respect existing rules pertaining to professional work. \par
 
 \section{Conclusions}
 
