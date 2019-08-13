@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  12 AUG 2019 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.2)  13 AUG 2019 19:52
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -350,25 +350,42 @@ Underfull \vbox (badness 4366) has occurred while \output is active []
  [11
 
  <./rSquaredandMAE.png>]
-<results1.png, id=66, 498.86375pt x 366.36874pt>
+<results1.png, id=66, 734.745pt x 506.89375pt>
 File: results1.png Graphic file (type png)
 <use results1.png>
 Package pdftex.def Info: results1.png  used on input line 239.
-(pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
-<results2.png, id=67, 498.86375pt x 366.36874pt>
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+<results1PCA.png, id=67, 734.745pt x 506.89375pt>
+File: results1PCA.png Graphic file (type png)
+<use results1PCA.png>
+Package pdftex.def Info: results1PCA.png  used on input line 246.
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+<results2.png, id=68, 734.745pt x 506.89375pt>
 File: results2.png Graphic file (type png)
 <use results2.png>
-Package pdftex.def Info: results2.png  used on input line 246.
-(pdftex.def)             Requested size: 312.40906pt x 229.43831pt.
- [12] [13 <./results1.png>] [14 <./results2.png>]
-<analysis.png, id=81, 1469.49pt x 1425.325pt>
+Package pdftex.def Info: results2.png  used on input line 253.
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+ [12] [13 <./results1.png>]
+<results2PCA.png, id=78, 734.745pt x 506.89375pt>
+File: results2PCA.png Graphic file (type png)
+<use results2PCA.png>
+Package pdftex.def Info: results2PCA.png  used on input line 260.
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./results1PCA.png> <./results2.png>] [15 <./results2PCA.png>]
+<analysis.png, id=88, 1469.49pt x 1425.325pt>
 File: analysis.png Graphic file (type png)
 <use analysis.png>
-Package pdftex.def Info: analysis.png  used on input line 258.
+Package pdftex.def Info: analysis.png  used on input line 274.
 (pdftex.def)             Requested size: 347.12354pt x 336.69131pt.
- [15
+ [16
 
- <./analysis.png>] (LaboratoryEarthQuakePrediction.bbl [16]
+ <./analysis.png>]
+(LaboratoryEarthQuakePrediction.bbl [17
+
+]
 Overfull \hbox (37.42274pt too wide) in paragraph at lines 32--35
 []\OT1/cmr/m/n/9 Wald, L.:  The sci-ence of earth-quakes.  https://earthquake.u
 sgs.gov/learn/kids/eqscience.php
@@ -380,12 +397,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--65
 hics-
  []
 
-) [17] (LaboratoryEarthQuakePrediction.aux) ) 
+) [18] (LaboratoryEarthQuakePrediction.aux) ) 
 Here is how much of TeX's memory you used:
- 2196 strings out of 492895
- 31813 string characters out of 3123736
- 105932 words of memory out of 3000000
- 6087 multiletter control sequences out of 15000+200000
+ 2208 strings out of 492895
+ 32035 string characters out of 3123736
+ 105952 words of memory out of 3000000
+ 6097 multiletter control sequences out of 15000+200000
  7289 words of font info for 26 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,25p,1485b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -400,9 +417,10 @@ fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (17 pages, 931818 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (18 pages, 1223273 bytes).
+
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 128 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
