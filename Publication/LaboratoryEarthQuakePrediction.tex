@@ -60,7 +60,7 @@ The size of an earthquake depends on the size of the fault and the amount of sli
 
 
 \subsection{Los Alamos National Laboratory's Findings}
-In 2017 Los Alamos National Laboratory (LANL) researchers discovered a way to successfully predict Slow Slip Earthquakes (SSE) in a laboratory experiment that simulates natural conditions. The team trained a computer to pinpoint and analyze quasi‐periodic seismic and acoustic signals emitted during the movements along the fault. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times using time window of 1.8 sec of the data to make each prediction with 89\% coefficient of determination \cite{LANLNews}. This result was achieved using a Random Forest Regression machine learning technique and quasi‐periodic data. \par
+In 2017 Los Alamos National Laboratory (LANL) researchers discovered a way to successfully predict Slow Slip Earthquakes (SSE) in a laboratory experiment that simulates natural conditions. The team trained a computer to pinpoint and analyze quasi‐periodic seismic and acoustic signals emitted during the movements along the fault. They processed massive amounts of data and identified a particular sound pattern previously thought to be noise that precedes an earthquake. The team was able to characterize the time remaining before a laboratory earthquake at all times using a time window of 1.8 sec of the data to make each prediction with 89\% coefficient of determination \cite{LANLNews}. This result was achieved using a Random Forest Regression machine learning technique and quasi‐periodic data. \par
 
 In the lab, the team imitated a real earthquake using steel blocks interacting with rocky material to cause slipping that emitted seismic sounds. An accelerometer recorded the acoustic emission emanating from the sheared layers \cite{LANLNews}. For the first time, researchers discovered a pattern that accurately predicted when a laboratory earthquake would occur. The LANL team acknowledges that the characteristics of the lab experiment such as shear stress differ from natural earthquakes but the application of the analysis to the real world to validate their results is ongoing. This method can also be applied outside of seismology to support material failure research in other fields such as aerospace and energy \cite{LANLNews}. The lab results reveal that the fault does not fail randomly but in a predictable manner. The observations also demonstrate that the fault’s critical stress state which indicates when it might slip can be determined using exclusively an equation of state \cite{LANLNews}. So far seismologists and earth scientists have mostly relied on catalogs of historical data to try to characterize the state of faults. These catalogs contain a minute fraction of seismic data with portions discarded during analysis as useless noise. The authors discovered that hidden in the noise-like data are signals that inform them of the state of the fault much more precisely than catalogs \cite{LANLNews}. \par
 \subsection{Experimental Setup}
@@ -86,7 +86,7 @@ In our work the training data is used to generate the RF model. The testing data
 The tree is given by a bootstrap re-sampling of the training data, which induces variation between the trees and mitigates the effect of outliers on the forest \cite{Bertrand}. To generate each node, we formulate a "yes"/"no" decision (corresponding to a split into left/right branches) operating on the data available at the current node. At each node, we select a random subset of the available features. From the selected features, we construct the decision that best predicts the time to failure \cite{Bertrand}.
 
 \section{Data} 
-The data used in this work is a 157.275 second recording of seismic signals (ordered in sequentially.) It was recorded at 4MHz hence 629,145,480 data points accompanied by the time remaining in seconds until the following lab earthquake. \par
+The data used in this work is a 157.275 second recording of seismic signals (ordered sequentially.) It was recorded at 4MHz hence 629,145,480 data points accompanied by the time remaining in seconds until the following lab earthquake. \par
 The seismic signals are recorded using a piezoceramic sensor which outputs a voltage upon deformation by incoming seismic waves (henceforth we will use the term acoustic signal). The seismic data, which serves as the input to our analysis, is this recorded voltage, in integers. \par
 % to prevent images from floating all over the place in the document: https://tex.stackexchange.com/questions/16207/image-from-includegraphics-showing-up-in-wrong-location
 %\begin{table}
@@ -138,7 +138,7 @@ Time to failure is the remaining time in seconds until an actual stick-slip fail
 \begin{figure}
 	\centering
 	\includegraphics[width=.8\linewidth]{timeDistribution}
-	\caption{We found that more than 90\% of high acoustic signal values (absolute value greater than 1000) are around 0.31 seconds before an earthquake!}
+	\caption{We found that more than 90\% of high acoustic signal values (absolute value greater than 1000) are around 0.31 seconds before an earthquake.}
 	\label{fig:timeDistribution}
 \end{figure}
 \begin{figure}
