@@ -212,12 +212,12 @@ We selected regularization hyper-parameters for each machine learning algorithm 
 \section{Results}
 We run different techniques on a training data set (50\% of the full data) before principal component analysis and after. Principal component analysis did not allow for any significant improvement in our results. We apply our model to generate predictions on the test data  and measure the accuracy of them using $r^2$ (the coefficient of determination) and MAE (mean absolute error). \par 
 
-The most accurate results were achieved by the Extra Trees Regressor algorithm with 1,61 seconds MAE and 0.65 $r^2$. The parameters used are displayed in table 3. %Add Scitkitlearn definitions? Add top background definitions as well? 
+The most accurate results were achieved by the Random Forest algorithm with 1,61 seconds MAE and 0.65 $r^2$. The parameters used are displayed in table 3. %Add Scitkitlearn definitions? Add top background definitions as well? 
 The hyper-parameters used with the algorithm  were:
 
 \begin{table}
 	\begin{center}
-		\caption{Extra Trees Regressor Parameters}
+		\caption{Random Forest Parameters}
 		\label{tab:hyperparameters}
 		\begin{tabular}{l|l} 
 			\textbf{Parameter} & \textbf{Setting}\\
@@ -266,7 +266,7 @@ The hyper-parameters used with the algorithm  were:
 \clearpage
 \newpage
 \section{Analysis}
-The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we achieved using the Extra Trees Regressor. The most important features are shown on figure 14. The top 5 are 90\% and 95\% quartile rolling standard deviations, standard deviation of rolling absolute mean and average rolling standard deviation.
+The most accurate results with coefficient of determination 0.65 and mean absolute error 1.61 seconds we achieved using the Random Forest algorithm. The most important features are shown on figure 14. The top 5 are 90\% and 95\% quartile rolling standard deviations, standard deviation of rolling absolute mean and average rolling standard deviation.
 %$SD = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$
 \begin{figure}[H]
 	\centering
@@ -289,7 +289,7 @@ In this study we follow the principles of the Association for Computing Machiner
 
 \section{Conclusions}
 
-Given the more realistic data Machine Learning can provide failure forecasts based on small windows of time. The acoustic signal measurement is an indicator of imminent failure. The prior recurrence interval is not needed to make a prediction. The Extra Trees Regressor machine learning technique provides the most accurate results.
+Given the more realistic data Machine Learning can provide failure forecasts based on small windows of time. The acoustic signal measurement is an indicator of imminent failure. The prior recurrence interval is not needed to make a prediction. The Random Forest machine learning technique provides the most accurate results.
 
 %The results are another step toward learning the siesmic signals encouraging Machine Learning analysis of seismic signals in Earth.
 
