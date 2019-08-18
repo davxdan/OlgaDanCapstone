@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.2)  18 AUG 2019 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.2)  18 AUG 2019 18:03
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -299,38 +299,38 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 122.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 122.
-<timeSeries.png, id=31, 586.44093pt x 368.1253pt>
+<timeSeries.png, id=31, 794.97pt x 504.88625pt>
 File: timeSeries.png Graphic file (type png)
 <use timeSeries.png>
 Package pdftex.def Info: timeSeries.png  used on input line 137.
-(pdftex.def)             Requested size: 312.40906pt x 196.10533pt.
+(pdftex.def)             Requested size: 312.40906pt x 198.41481pt.
  [7 <./lab.png>] [8 <./timeSeries.png>]
-<zoomedInTimePLot.png, id=41, 586.44093pt x 368.1253pt>
+<zoomedInTimePLot.png, id=41, 794.97pt x 504.88625pt>
 File: zoomedInTimePLot.png Graphic file (type png)
 <use zoomedInTimePLot.png>
 Package pdftex.def Info: zoomedInTimePLot.png  used on input line 145.
-(pdftex.def)             Requested size: 312.40906pt x 196.10533pt.
-<timeToFailureHistogram.png, id=42, 301.8778pt x 201.00093pt>
+(pdftex.def)             Requested size: 312.40906pt x 198.41481pt.
+<timeToFailureHistogram.png, id=42, 646.415pt x 398.48875pt>
 File: timeToFailureHistogram.png Graphic file (type png)
 <use timeToFailureHistogram.png>
 Package pdftex.def Info: timeToFailureHistogram.png  used on input line 153.
-(pdftex.def)             Requested size: 277.69987pt x 184.90161pt.
+(pdftex.def)             Requested size: 277.69987pt x 171.18872pt.
 <timeDistribution.png, id=43, 362.10281pt x 275.52937pt>
 File: timeDistribution.png Graphic file (type png)
 <use timeDistribution.png>
 Package pdftex.def Info: timeDistribution.png  used on input line 161.
 (pdftex.def)             Requested size: 277.69987pt x 211.309pt.
-<acousticDataDistribution.png, id=44, 465.99094pt x 254.45062pt>
+<acousticDataDistribution.png, id=44, 628.3475pt x 341.275pt>
 File: acousticDataDistribution.png Graphic file (type png)
 <use acousticDataDistribution.png>
 Package pdftex.def Info: acousticDataDistribution.png  used on input line 168.
-(pdftex.def)             Requested size: 312.40906pt x 170.59361pt.
-<timeToFailureDistribution.png, id=45, 460.72125pt x 241.65282pt>
+(pdftex.def)             Requested size: 312.40906pt x 169.67891pt.
+<timeToFailureDistribution.png, id=45, 614.295pt x 341.275pt>
 File: timeToFailureDistribution.png Graphic file (type png)
 <use timeToFailureDistribution.png>
 Package pdftex.def Info: timeToFailureDistribution.png  used on input line 175.
 
-(pdftex.def)             Requested size: 312.40906pt x 163.86082pt.
+(pdftex.def)             Requested size: 312.40906pt x 173.56364pt.
  [9 <./zoomedInTimePLot.png>] [10 <./timeToFailureHistogram.png> <./timeDistrib
 ution.png>]
 [11 <./acousticDataDistribution.png> <./timeToFailureDistribution.png>]
@@ -418,7 +418,7 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/U
 sers/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (19 pages, 1208593 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (19 pages, 1221938 bytes).
 
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
