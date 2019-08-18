@@ -1,0 +1,34 @@
+TY Type - JOUR
+AU  - Bakun, W. H.
+AU  - Aagaard, B.
+AU  - Dost, B.
+AU  - Ellsworth, W. L.
+AU  - Hardebeck, J. L.
+AU  - Harris, R. A.
+AU  - Ji, C.
+AU  - Johnston, M. J. S.
+AU  - Langbein, J.
+AU  - Lienkaemper, J. J.
+AU  - Michael, A. J.
+AU  - Murray, J. R.
+AU  - Nadeau, R. M.
+AU  - Reasenberg, P. A.
+AU  - Reichle, M. S.
+AU  - Roeloffs, E. A.
+AU  - Shakal, A.
+AU  - Simpson, R. W.
+AU  - Waldhauser, F.
+PY Published year - 2005
+DA  - 2005/10/01
+Title > TI  - Implications for prediction and hazard assessment from the 2004 Parkfield earthquake
+JOurnal Name> JO  - Nature
+Start page>  SP  - 969
+End Page >EP  - 974
+VL Volume  - 437
+IS  - 7061
+AB  - Obtaining high-quality measurements close to a large earthquake is not easy: one has to be in the right place at the right time with the right instruments. Such a convergence happened, for the first time, when the 28 September 2004 Parkfield, California, earthquake occurred on the San Andreas fault in the middle of a dense network of instruments designed to record it. The resulting data reveal aspects of the earthquake process never before seen. Here we show what these data, when combined with data from earlier Parkfield earthquakes, tell us about earthquake physics and earthquake prediction. The 2004 Parkfield earthquake, with its lack of obvious precursors, demonstrates that reliable short-term earthquake prediction still is not achievable. To reduce the societal impact of earthquakes now, we should focus on developing the next generation of models that can provide better predictions of the strength and location of damaging ground shaking.
+SN  - 1476-4687
+UR  - https://doi.org/10.1038/nature04067
+DO  - 10.1038/nature04067
+ID  - Bakun2005
+ER  - 
