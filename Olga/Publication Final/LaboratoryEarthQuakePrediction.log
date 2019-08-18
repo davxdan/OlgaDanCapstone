@@ -1,0 +1,427 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.2)  18 AUG 2019 18:03
+entering extended mode
+**./LaboratoryEarthQuakePrediction.tex
+(LaboratoryEarthQuakePrediction.tex
+LaTeX2e <2018-12-01>
+(llncs.cls
+Document Class: llncs 2004/08/17 v2.14 
+ LaTeX document class for Lecture Notes in Computer Science
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.s
+ty"
+Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box27
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box28
+\last@line=\box29
+\maxbalancingoverflow=\dimen108
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
+\mc@col@check@num=\count96
+)
+\c@chapter=\count97
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 360.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 361.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 368.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 369.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 370.
+\tocchpnum=\dimen112
+\tocsecnum=\dimen113
+\tocsectotal=\dimen114
+\tocsubsecnum=\dimen115
+\tocsubsectotal=\dimen116
+\tocsubsubsecnum=\dimen117
+\tocsubsubsectotal=\dimen118
+\tocparanum=\dimen119
+\tocparatotal=\dimen120
+\tocsubparanum=\dimen121
+\@tempcntc=\count98
+\fnindent=\dimen122
+\c@@inst=\count99
+\c@@auth=\count100
+\c@auco=\count101
+\instindent=\dimen123
+\authrun=\box53
+\authorrunning=\toks14
+\tocauthor=\toks15
+\titrun=\box54
+\titlerunning=\toks16
+\toctitle=\toks17
+\c@theorem=\count102
+\c@case=\count103
+\c@conjecture=\count104
+\c@corollary=\count105
+\c@definition=\count106
+\c@example=\count107
+\c@exercise=\count108
+\c@lemma=\count109
+\c@note=\count110
+\c@problem=\count111
+\c@property=\count112
+\c@proposition=\count113
+\c@question=\count114
+\c@solution=\count115
+\c@remark=\count116
+\headlineindent=\dimen124
+)
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\makeidx.sty"
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/makecell\makecell.
+sty"
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen127
+\ar@mcellbox=\box55
+\extrarowheight=\dimen128
+\NC@list=\toks19
+\extratabsurround=\skip45
+\backup@length=\skip46
+\ar@cellbox=\box56
+)
+\rotheadsize=\dimen129
+\c@nlinenum=\count117
+\TeXr@lab=\toks20
+) ("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count118
+\float@exts=\toks21
+\float@box=\box57
+\@float@everytoks=\toks22
+\@floatcapt=\box58
+) (LaboratoryEarthQuakePrediction.aux)
+\openout1 = `LaboratoryEarthQuakePrediction.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen130
+\scratchbox=\box59
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen131
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks24
+)
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\danie\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 14.
+ [1
+
+{C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+[4] [5]
+<background.png, id=21, 624.45796pt x 287.95078pt>
+File: background.png Graphic file (type png)
+<use background.png>
+Package pdftex.def Info: background.png  used on input line 80.
+(pdftex.def)             Requested size: 312.40906pt x 144.05852pt.
+<lab.png, id=23, 286.671pt x 271.61475pt>
+File: lab.png Graphic file (type png)
+<use lab.png>
+Package pdftex.def Info: lab.png  used on input line 90.
+(pdftex.def)             Requested size: 208.27623pt x 197.34459pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./background.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 122.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 122.
+<timeSeries.png, id=31, 794.97pt x 504.88625pt>
+File: timeSeries.png Graphic file (type png)
+<use timeSeries.png>
+Package pdftex.def Info: timeSeries.png  used on input line 137.
+(pdftex.def)             Requested size: 312.40906pt x 198.41481pt.
+ [7 <./lab.png>] [8 <./timeSeries.png>]
+<zoomedInTimePLot.png, id=41, 794.97pt x 504.88625pt>
+File: zoomedInTimePLot.png Graphic file (type png)
+<use zoomedInTimePLot.png>
+Package pdftex.def Info: zoomedInTimePLot.png  used on input line 145.
+(pdftex.def)             Requested size: 312.40906pt x 198.41481pt.
+<timeToFailureHistogram.png, id=42, 646.415pt x 398.48875pt>
+File: timeToFailureHistogram.png Graphic file (type png)
+<use timeToFailureHistogram.png>
+Package pdftex.def Info: timeToFailureHistogram.png  used on input line 153.
+(pdftex.def)             Requested size: 277.69987pt x 171.18872pt.
+<timeDistribution.png, id=43, 362.10281pt x 275.52937pt>
+File: timeDistribution.png Graphic file (type png)
+<use timeDistribution.png>
+Package pdftex.def Info: timeDistribution.png  used on input line 161.
+(pdftex.def)             Requested size: 277.69987pt x 211.309pt.
+<acousticDataDistribution.png, id=44, 628.3475pt x 341.275pt>
+File: acousticDataDistribution.png Graphic file (type png)
+<use acousticDataDistribution.png>
+Package pdftex.def Info: acousticDataDistribution.png  used on input line 168.
+(pdftex.def)             Requested size: 312.40906pt x 169.67891pt.
+<timeToFailureDistribution.png, id=45, 614.295pt x 341.275pt>
+File: timeToFailureDistribution.png Graphic file (type png)
+<use timeToFailureDistribution.png>
+Package pdftex.def Info: timeToFailureDistribution.png  used on input line 175.
+
+(pdftex.def)             Requested size: 312.40906pt x 173.56364pt.
+ [9 <./zoomedInTimePLot.png>] [10 <./timeToFailureHistogram.png> <./timeDistrib
+ution.png>]
+[11 <./acousticDataDistribution.png> <./timeToFailureDistribution.png>]
+<rSquaredandMAE.png, id=60, 590.95781pt x 377.15906pt>
+File: rSquaredandMAE.png Graphic file (type png)
+<use rSquaredandMAE.png>
+Package pdftex.def Info: rSquaredandMAE.png  used on input line 199.
+(pdftex.def)             Requested size: 312.40906pt x 199.3869pt.
+
+[12
+
+ <./rSquaredandMAE.png>] [13]
+<results1.png, id=69, 734.745pt x 506.89375pt>
+File: results1.png Graphic file (type png)
+<use results1.png>
+Package pdftex.def Info: results1.png  used on input line 263.
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+<results1PCA.png, id=70, 734.745pt x 506.89375pt>
+File: results1PCA.png Graphic file (type png)
+<use results1PCA.png>
+Package pdftex.def Info: results1PCA.png  used on input line 271.
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+<results2.png, id=71, 734.745pt x 506.89375pt>
+File: results2.png Graphic file (type png)
+<use results2.png>
+Package pdftex.def Info: results2.png  used on input line 279.
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+ [14 <./results1.png>]
+<results2PCA.png, id=78, 734.745pt x 506.89375pt>
+File: results2PCA.png Graphic file (type png)
+<use results2PCA.png>
+Package pdftex.def Info: results2PCA.png  used on input line 286.
+(pdftex.def)             Requested size: 312.40906pt x 215.5314pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./results1PCA.png> <./results2.png>] [16 <./results2PCA.png>]
+<analysis.png, id=88, 1469.49pt x 1425.325pt>
+File: analysis.png Graphic file (type png)
+<use analysis.png>
+Package pdftex.def Info: analysis.png  used on input line 301.
+(pdftex.def)             Requested size: 347.12354pt x 336.69131pt.
+ [17
+
+ <./analysis.png>]
+[18
+
+] (LaboratoryEarthQuakePrediction.bbl
+Overfull \hbox (37.42274pt too wide) in paragraph at lines 32--35
+[]\OT1/cmr/m/n/9 Wald, L.:  The sci-ence of earth-quakes.  https://earthquake.u
+sgs.gov/learn/kids/eqscience.php
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
+[]\OT1/cmr/m/n/9 Drakos, G.:  Ran-dom for-est re-gres-sion model ex-plained in 
+depth.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--66
+\OT1/cmr/m/n/9 https://www.acm.org/binaries/content/assets/about/acm-code-of-et
+hics-
+ []
+
+) [19] (LaboratoryEarthQuakePrediction.aux) ) 
+Here is how much of TeX's memory you used:
+ 2198 strings out of 492895
+ 31662 string characters out of 3123736
+ 104936 words of memory out of 3000000
+ 6088 multiletter control sequences out of 15000+200000
+ 7635 words of font info for 27 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,8n,25p,1752b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/danie/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/danie/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
+s/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.
+pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/U
+sers/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb>
+Output written on LaboratoryEarthQuakePrediction.pdf (19 pages, 1221938 bytes).
+
+PDF statistics:
+ 132 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+
