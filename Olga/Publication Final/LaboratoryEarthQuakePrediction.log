@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  18 AUG 2019 20:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  18 AUG 2019 20:53
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -373,29 +373,29 @@ Package pdftex.def Info: analysis.png  used on input line 300.
 [18
 
 ] (LaboratoryEarthQuakePrediction.bbl
-Overfull \hbox (37.42274pt too wide) in paragraph at lines 32--35
+Overfull \hbox (37.42274pt too wide) in paragraph at lines 37--40
 []\OT1/cmr/m/n/9 Wald, L.:  The sci-ence of earth-quakes.  https://earthquake.u
 sgs.gov/learn/kids/eqscience.php
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--53
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 []\OT1/cmr/m/n/9 Drakos, G.:  Ran-dom for-est re-gres-sion model ex-plained in 
 depth.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
 \OT1/cmr/m/n/9 https://www.acm.org/binaries/content/assets/about/acm-code-of-et
 hics-
  []
 
 ) [19] (LaboratoryEarthQuakePrediction.aux) ) 
 Here is how much of TeX's memory you used:
- 2198 strings out of 492895
- 31700 string characters out of 3123736
- 104936 words of memory out of 3000000
- 6088 multiletter control sequences out of 15000+200000
+ 2199 strings out of 492895
+ 31706 string characters out of 3123736
+ 104940 words of memory out of 3000000
+ 6089 multiletter control sequences out of 15000+200000
  7635 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,25p,1759b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -412,7 +412,7 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/U
 sers/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (19 pages, 1223239 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (19 pages, 1223337 bytes).
 
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
