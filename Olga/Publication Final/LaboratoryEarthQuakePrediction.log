@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  18 AUG 2019 20:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.1)  18 AUG 2019 20:56
 entering extended mode
 **./LaboratoryEarthQuakePrediction.tex
 (LaboratoryEarthQuakePrediction.tex
@@ -275,10 +275,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {C:/Users/danie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[2]
+Underfull \vbox (badness 2158) has occurred while \output is active []
 
- [2]
-[3] [4] [5]
+ [3]
+[4] [5]
 <background.png, id=21, 624.45796pt x 287.95078pt>
 File: background.png Graphic file (type png)
 <use background.png>
@@ -289,6 +290,9 @@ File: lab.png Graphic file (type png)
 <use lab.png>
 Package pdftex.def Info: lab.png  used on input line 89.
 (pdftex.def)             Requested size: 208.27623pt x 197.34459pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [6 <./background.png>] [7 <./lab.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 121.
@@ -333,8 +337,7 @@ File: rSquaredandMAE.png Graphic file (type png)
 <use rSquaredandMAE.png>
 Package pdftex.def Info: rSquaredandMAE.png  used on input line 198.
 (pdftex.def)             Requested size: 312.40906pt x 199.3869pt.
-
-[12
+ [12
 
  <./rSquaredandMAE.png>] [13]
 <results1.png, id=69, 734.745pt x 506.89375pt>
@@ -394,7 +397,7 @@ hics-
 Here is how much of TeX's memory you used:
  2199 strings out of 492895
  31706 string characters out of 3123736
- 104940 words of memory out of 3000000
+ 103940 words of memory out of 3000000
  6089 multiletter control sequences out of 15000+200000
  7635 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -412,7 +415,7 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/danie/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/U
 sers/danie/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb>
-Output written on LaboratoryEarthQuakePrediction.pdf (19 pages, 1223337 bytes).
+Output written on LaboratoryEarthQuakePrediction.pdf (19 pages, 1223403 bytes).
 
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
